@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>MS-700 認證模擬系統</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="exam-wrapper" id="examMain">
+        <div class="exam-header">
+            <h2 id="qTitle">載入中...</h2>
+            <div class="progress-info">題號: <span id="currentNum">1</span> / <span id="totalNum">0</span></div>
+        </div>
+
+        <div id="questionDisplay"></div>
+
+        <div class="footer-nav">
+            <button class="btn" onclick="changeQ(-1)">上一頁</button>
+            <div id="normalNav">
+                <button class="btn" onclick="changeQ(1)">下一頁</button>
+                <button class="btn btn-finish" onclick="endExam()">結束並查看結果</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/topic.js"></script>
+    <script src="js/questions_topic1.js"></script>
+    <script src="js/questions_topic2.js"></script>
+    <script src="js/questions_topic3.js"></script>
+    <script src="js/questions_topic5.js"></script>
+    <script src="js/questions.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

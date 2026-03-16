@@ -1,0 +1,395 @@
+:root { --primary-blue: #2b3e50; --microsoft-blue: #0078d4; --bg-gray: #f3f3f3; --correct: #28a745; --wrong: #dc3545; }
+
+        body { font-family: "Segoe UI", "Microsoft JhengHei", sans-serif; background: var(--bg-gray); margin: 0; padding: 0; }
+
+        .exam-wrapper { max-width: 1100px; margin: 20px auto; background: #fff; min-height: 90vh; display: flex; flex-direction: column; box-shadow: 0 0 20px rgba(0,0,0,0.1); position: relative;}
+
+        .exam-header { padding: 15px 25px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; }
+
+       
+
+        .question-container { padding: 40px; flex-grow: 1; display: none; }
+
+        .question-container.active { display: block; }
+
+        .instruction { color: #666; font-size: 0.9em; margin-bottom: 20px; padding: 10px; background: #f9f9f9; border-left: 4px solid var(--microsoft-blue); }
+
+        .question-text { font-weight: bold; margin-bottom: 25px; white-space: pre-wrap; }
+
+        /* 題目區塊外層容器 */
+        .resizable-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px; /* 稍微縮小間距 */
+        border: 1px solid #ddd;
+        border-radius: 0 4px 4px 4px;
+        height: 220px; /* <--- 從 350px 改成 220px */
+        background: #fff;
+        overflow: hidden;
+    }
+
+/* --- 題目內容區 --- */
+    .question-content-scroll {
+        flex: 1;
+        padding: 15px 25px; /* <--- 上下從 25px 縮減到 15px */
+        background-color: #fff;
+        overflow-y: auto; 
+        white-space: pre-wrap;
+        text-align: left;
+        box-sizing: border-box;
+    }
+
+
+/* --- 下方拉霸條 --- */
+.resizer-bar {
+    height: 12px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #eee;
+    cursor: ns-resize; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* 1. 當處於長題目模式，外層容器直接解除高度限制 */
+.case-study-mode .resizable-container {
+    height: auto !important; 
+    max-height: none !important;
+    border: none; /* 移除外框 */
+    background: transparent; /* 移除外層背景 */
+}
+/* 3. 隱藏拉霸 */
+.case-study-mode .resizer-bar {
+    display: none !important;
+}
+
+/* 4. 在 Case Study 模式下，如果需要底線區隔，加在內容區底部即可 */
+.case-study-mode #ex-view {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+        .resizer-bar .dots {
+            color: #0078d4; /* 使用微軟藍色點點 */
+            font-size: 18px;
+            letter-spacing: 4px;
+            line-height: 0;
+        }
+
+        .resizer-bar:hover {
+            background-color: #e0e0e0;
+        }
+        /* 讓捲軸看起來精緻一點 (Webkit 瀏覽器) */
+        .question-content-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        .question-content-scroll::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 10px;
+        }
+
+        /* 修改後的圖片樣式 */
+        .img-area { 
+            margin: 15px 0; 
+        }
+
+        /* 這裡稍微放寬限制，並增加置中效果 */
+        .question-img { 
+            display: block;    /* 讓它像段落一樣獨立佔位 */
+            max-width: 100%; 
+            max-height: 500px; /* 稍微提高上限，避免架構圖太小看不清楚 */
+            margin: 10px auto; /* 置中並增加上下間距 */
+            border: 1px solid #ddd; 
+            border-radius: 4px; /* 增加一點圓角比較現代 */
+        }
+
+        /* 隱藏空圖片 */
+        .question-img[src=""], .question-img:not([src]) { 
+            display: none; 
+        }
+
+
+
+        /* 題型樣式 */
+
+        .drag-section { display: flex; gap: 20px; margin-top: 20px; }
+
+        .source-box { border: 1px solid #ccc; min-height: 150px; width: 250px; padding: 10px; background: #fdfdfd; }
+
+        .drag-item { padding: 8px; margin: 5px; background: #eee; border: 1px solid #999; cursor: move; font-size: 0.9em; text-align: center; }
+
+        .drop-zone-rank { border: 2px dashed var(--microsoft-blue); min-height: 45px; margin-bottom: 12px; display: flex; align-items: center; padding: 0 10px; background: #f0f7ff; }
+
+        /* 讓填空框根據內容自動撐開 */
+        .drop-zone-fill {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            
+            /* 核心：自動寬度與換行 */
+            min-width: 150px;       /* 最小寬度 */
+            width: fit-content;    /* 根據內容長度調整 */
+            max-width: 100%;       /* 不超出父容器 */
+            min-height: 36px;
+            height: auto !important;
+            
+            padding: 5px 12px;
+            margin: 5px;
+            border: 2px dashed #ccc;
+            background-color: #fafafa;
+            border-radius: 4px;
+            
+            /* 允許文字換行 */
+            white-space: normal !important; 
+            word-break: break-word;
+            vertical-align: middle;
+        }
+        
+        /* 確保拖進去的選項也會自動換行 */
+        .drop-zone-fill .drag-item {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            white-space: normal;
+        }
+       
+
+        /* 回顧模式專用 */
+
+        .review-note { margin-top: 20px; padding: 15px; border-radius: 5px; display: none; font-weight: bold; }
+
+        .review-active .review-note { display: block; }
+
+        .correct-ans { color: var(--correct); background: #eaffef; border: 1px solid var(--correct); }
+
+        .wrong-ans { color: var(--wrong); background: #ffeaea; border: 1px solid var(--wrong); }
+
+
+
+        /* 底部導覽 */
+
+        .footer-nav { 
+            position: fixed;         /* 關鍵：改為固定定位 */
+            bottom: 20px;            /* 距離底部 20px */
+            right: 20px;             /* 距離右側 20px */
+            background: var(--primary-blue); 
+            padding: 12px 20px; 
+            display: flex; 
+            gap: 15px;               /* 增加按鈕間距 */
+            border-radius: 8px;      /* 增加圓角讓它更像漂浮工具列 */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* 增加陰影避免被內容混淆 */
+            z-index: 9999;           /* 確保它永遠在最上層 */
+        }
+
+        /* 確保按鈕本身不會太擠 */
+        .footer-nav .btn {
+            padding: 10px 25px;
+            border-radius: 4px;
+            white-space: nowrap;     /* 防止文字換行 */
+        }
+
+        .btn { padding: 8px 30px; border: 1px solid #4a5c6d; background: #253849; color: white; cursor: pointer; }
+
+        .btn-finish { background: var(--correct); border: none; }
+
+
+
+        /* 讓右側的籃框容器佔據更多空間 */
+
+        .rank-answer-box {
+
+            flex-grow: 1;      /* 讓它自動佔滿剩餘的橫向空間 */
+
+            max-width: 600px;  /* 設定一個最大寬度，避免在超大螢幕上拉得太長 */
+
+        }
+
+
+
+        /* 修改籃框樣式 */
+
+        .drop-zone-rank {
+
+            border: 2px dashed var(--microsoft-blue);
+
+            min-height: 55px;  /* 保持高度 */
+
+            margin-bottom: 12px;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 8px 20px;
+
+            background: #f0f7ff;
+
+            width: 100%;       /* 強制寬度 100% 撐開 */
+
+            box-sizing: border-box;
+
+            justify-content: flex-start;
+
+            color: #0078d4;
+
+            font-size: 0.95em;
+
+            border-radius: 4px; /* 加一點圓角比較像微軟風格 */
+
+        }
+
+        /* 模擬考試的程式碼方塊 */
+        .exam-code-block {
+            background-color: #ffffff; /* 白底 */
+            color: #333333;           /* 黑字 */
+            padding: 20px;
+            border: 1px solid #ccc;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            overflow-x: auto;
+            white-space: pre;         /* 保持原始縮排 */
+        }
+
+        /* 作答區標題 */
+        .answer-area-title {
+            font-weight: bold;
+            margin-top: 10px;
+            color: #666;
+        }
+
+        /* 下拉選單樣式 */
+        .inline-dropdown {
+            border: 1px solid #0078d4;
+            background-color: #f3f2f1;
+            font-family: inherit;
+            padding: 2px;
+        }
+
+        /* 確保拖進去的項目也是長條狀，填滿籃框 */
+
+        .drop-zone-rank .drag-item {
+
+            margin: 0;
+
+            width: 100%;       /* 讓拖進去的藍色塊也變長 */
+
+            text-align: left;  /* 文字靠左對齊 */
+
+            padding-left: 15px;
+
+        }
+
+
+
+
+
+        /* 2. 讓內容區直接撐開，不要滾動條，不要背景色 */
+        .case-study-mode .question-content-scroll {
+            overflow: visible !important; 
+            padding: 20px 0; /* 移除左右 padding 讓它對齊頁籤 */
+            background: transparent; /* 透明背景 */
+        }
+        /* 隱藏所有不需要的組件 */
+        .case-study-mode select,      
+        .case-study-mode .instruction,
+        .case-study-mode .resizer-bar,
+        .case-study-mode .img-area,
+        .case-study-mode label,
+        .case-study-mode .drag-section,
+        .case-study-mode table,
+        .case-study-mode .review-note,
+        .case-study-mode br,
+        /* 【關鍵修正】：當切換到 Case Study 時，直接隱藏外層的程式碼作答區 */
+        .case-study-mode > .exam-code-block {
+            display: none !important; 
+        }
+
+        /* 確保穿插模式中的下拉選單絕對要顯示出來 */
+        .exam-code-block .inline-dropdown {
+            display: inline-block !important; 
+            width: auto; 
+            min-width: 120px;
+            margin: 0 5px;
+        }
+        
+
+        /* 找到 .btn-finish 並確保它預設可能是隱藏的，或是透過 JS 控制 */
+
+        .btn-finish {
+
+            background: var(--correct);
+
+            border: none;
+
+            display: none; /* 預設隱藏，由 renderQuestion 控制顯示 */
+
+        }
+        /* 頁籤容器 */
+        .tab-container {
+            display: flex;
+            margin-bottom: -2px; /* 讓邊框與內容連接 */
+            gap: 5px;
+        }
+
+        .tab-btn {
+            padding: 10px 20px;
+            border: 2px solid #ddd;
+            border-bottom: none;
+            background: #e0e0e0;
+            cursor: pointer;
+            border-radius: 8px 8px 0 0;
+            font-weight: bold;
+            color: #666;
+        }
+
+        .tab-btn.active {
+            background: #f9f9f9;
+            border-color: #ddd;
+            color: var(--microsoft-blue);
+            border-top: 3px solid var(--microsoft-blue);
+        }
+
+        /* 內容切換控制 */
+        .content-view { display: none; }
+        .content-view.active { display: block; }
+        /* Hotspot 表格化排版 */
+        .hotspot-table-container {
+            display: table;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hotspot-row {
+            display: table-row;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hotspot-label {
+            display: table-cell;
+            padding: 10px;
+            width: 40%;          /* 讓標籤佔據固定比例，防止過寬 */
+            vertical-align: middle;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .hotspot-select-cell {
+            display: table-cell;
+            padding: 10px;
+            width: 60%;
+            vertical-align: middle;
+        }
+
+        .hotspot-select-cell .inline-dropdown {
+            width: 100%;         /* 下拉選單填滿右側儲存格 */
+            max-width: 400px;    /* 限制最大寬度，避免在寬螢幕太難看 */
+            padding: 4px;
+        }
+
+        /* 針對程式碼區塊的 Hotspot 進行背景修正 */
+        .exam-code-block .hotspot-table-container {
+            background: #fff;
+        }
