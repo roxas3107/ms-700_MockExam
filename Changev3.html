@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>題目轉換產生器</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="number"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .btn-insert { background-color: #e2e8f0; color: #2d3748; margin-top: 5px; }
+        .btn-insert:hover { background-color: #cbd5e0; }
+        .btn-primary { background-color: #3182ce; color: white; width: 100%; margin-top: 20px; font-size: 16px;}
+        .btn-primary:hover { background-color: #2b6cb0; }
+        .btn-success { background-color: #38a169; color: white; width: 100%; margin-top: 10px; font-size: 16px;}
+        .btn-success:hover { background-color: #2f855a; }
+        .grid-pair {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+        pre {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: "Consolas", monospace;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>📝 考題 JSON 產生器 (精準文字插圖版)</h2>
+    
+    <div style="display: flex; gap: 15px;">
+        <div class="form-group" style="flex: 1;">
+            <label for="qNum">題目編號：</label>
+            <input type="number" id="qNum" value="148">
+        </div>
+        <div class="form-group" style="flex: 2;">
+            <label>快速插入圖片（輸入數字後點按鈕）：</label>
+            <div style="display: flex; gap: 5px;">
+                <input type="number" id="imgNum" value="17" style="width: 80px;">
+                <button type="button" class="btn btn-insert" onclick="insertImgTag()">在游標處插入圖片標籤</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="qText">題目文字 (text)：</label>
+        <textarea id="qText" rows="6">Your company has a Microsoft Office 365 subscription.
+The company has the administrators and the security requirements shown in the following table.
+You need to assign a role to each administrator to ensure that the administrators can meet the security requirements by using the Microsoft Teams admin center. The solution must use the principle of least privilege.
+Which role should you assign to each administrator? To answer, drag the appropriate roles to the correct users. Each role may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content. NOTE: Each correct selection is worth one point.</textarea>
+    </div>
+
+    <div class="form-group">
+        <label>左側所有選項 (options，以半形逗號 `,` 分隔)：</label>
+        <textarea id="qOptions" rows="2">Teams Communications Administrator, Teams Communications Support Engineer, Teams Communications Support Specialist, Teams Service Administrator</textarea>
+    </div>
+
+    <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+    <label>作答區與答案配置 (fillHtml & answer)：</label>
+    <div id="pairContainer">
+        <div class="grid-pair">
+            <input type="text" class="admin-name" value="Admin5" placeholder="欄位名稱 (如 Admin5)">
+            <input type="text" class="admin-ans" value="Teams Communications Support Specialist" placeholder="正確答案選項">
+        </div>
+        <div class="grid-pair">
+            <input type="text" class="admin-name" value="Admin6" placeholder="欄位名稱 (如 Admin6)">
+            <input type="text" class="admin-ans" value="Teams Communications Administrator" placeholder="正確答案選項">
+        </div>
+        <div class="grid-pair">
+            <input type="text" class="admin-name" value="Admin7" placeholder="欄位名稱 (如 Admin7)">
+            <input type="text" class="admin-ans" value="Teams Service Administrator" placeholder="正確答案選項">
+        </div>
+    </div>
+    <button type="button" class="btn btn-insert" style="width: auto;" onclick="addPairRow()">＋ 增加作答欄位</button>
+
+    <button type="button" class="btn btn-primary" onclick="generateCode()">⚡ 產生程式碼</button>
+
+    <div class="form-group" style="margin-top: 25px;">
+        <label>✨ 產出的程式碼：</label>
+        <pre id="outputCode">// 點擊上方按鈕產生程式碼...</pre>
+        <button type="button" class="btn btn-success" onclick="copyToClipboard()">📋 複製此段程式碼</button>
+    </div>
+</div>
+
+<script>
+    // 在 textarea 的游標位置插入圖片標籤
+    function insertImgTag() {
+        const txtArea = document.getElementById('qText');
+        const imgNum = document.getElementById('imgNum').value;
+        const tag = `\\n<img src='images/${imgNum}.png' class='question-img'>\\n`;
+        
+        const startPos = txtArea.selectionStart;
+        const endPos = txtArea.selectionEnd;
+        const text = txtArea.value;
+        
+        txtArea.value = text.substring(0, startPos) + tag + text.substring(endPos, text.length);
+        txtArea.focus();
+        // 重新設定游標位置在插入標籤之後
+        txtArea.selectionStart = txtArea.selectionEnd = startPos + tag.length;
+    }
+
+    function addPairRow() {
+        const container = document.getElementById('pairContainer');
+        const div = document.createElement('div');
+        div.className = 'grid-pair';
+        div.innerHTML = `
+            <input type="text" class="admin-name" placeholder="欄位名稱">
+            <input type="text" class="admin-ans" placeholder="正確答案選項">
+        `;
+        container.appendChild(div);
+    }
+
+    function generateCode() {
+        const qNum = document.getElementById('qNum').value;
+        
+        // 處理 text 欄位（將換行符號轉成字面上的 \n）
+        const qText = document.getElementById('qText').value.replace(/\n/g, '\\n');
+        
+        // 處理 options 陣列
+        const optionsRaw = document.getElementById('qOptions').value;
+        const optionsArr = optionsRaw.split(',').map(item => item.trim()).filter(item => item !== "");
+
+        // 處理作答區 HTML 與答案陣列
+        const names = document.querySelectorAll('.grid-pair .admin-name');
+        const answers = document.querySelectorAll('.grid-pair .admin-ans');
+        
+        let fillHtmlRows = "";
+        let answerArr = [];
+
+        names.forEach((nameEl, index) => {
+            const nameVal = nameEl.value.trim();
+            const ansVal = answers[index].value.trim();
+            
+            if(nameVal) {
+                // 組裝成像你範例一樣乾淨的作答排版
+                fillHtmlRows += `\n                    <div>${nameVal}：<div class='drop-zone-fill' data-idx='${index}' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div>`;
+                answerArr.push(ansVal);
+            }
+        });
+
+        // 完全按照你的範例格式進行字串拼裝
+        const template = `// 題目編號：${qNum}
+            {
+                type: "fill",
+                text: \`${qText}\`,
+                instruction: "拖選填空：將選項拖入空格。",
+                options: ${JSON.stringify(optionsArr, null, 20).replace(/\n/g, '\n    ')},
+                fillHtml: \`
+                    <div class='question-content-scroll'><div>${fillHtmlRows.trim()}</div></div>
+                \`,
+                answer: ${JSON.stringify(answerArr)}
+            },`;
+
+        document.getElementById('outputCode').innerText = template;
+    }
+
+    function copyToClipboard() {
+        const codeText = document.getElementById('outputCode').innerText;
+        navigator.clipboard.withText ? navigator.clipboard.writeText(codeText).then(() => alert('複製成功！')) : alert('請手動複製代碼');
+    }
+</script>
+
+</body>
+</html>

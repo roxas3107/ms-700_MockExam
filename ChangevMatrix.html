@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix 題目轉換產生器</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            padding: 20px;
+        }
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="number"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .btn-insert { background-color: #e2e8f0; color: #2d3748; }
+        .btn-insert:hover { background-color: #cbd5e0; }
+        .btn-primary { background-color: #3182ce; color: white; width: 100%; margin-top: 20px; font-size: 16px;}
+        .btn-primary:hover { background-color: #2b6cb0; }
+        .btn-success { background-color: #38a169; color: white; width: 100%; margin-top: 10px; font-size: 16px;}
+        .btn-success:hover { background-color: #2f855a; }
+        
+        .matrix-row {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .matrix-statement {
+            flex: 1;
+        }
+        .matrix-ans-group {
+            display: flex;
+            gap: 15px;
+            white-space: nowrap;
+            font-weight: bold;
+        }
+        .matrix-ans-group label {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+            margin: 0;
+        }
+        pre {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: "Consolas", monospace;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>📝 考題 JSON 產生器 (Matrix 矩陣是非題專用版)</h2>
+    
+    <div style="display: flex; gap: 15px; align-items: flex-end;">
+        <div class="form-group" style="flex: 1;">
+            <label for="qNum">題目編號：</label>
+            <input type="number" id="qNum" value="119">
+        </div>
+        <div class="form-group" style="flex: 2;">
+            <label>快速插入圖片（輸入編號並點擊）：</label>
+            <div style="display: flex; gap: 5px;">
+                <input type="number" id="imgNum" value="20" style="width: 80px;">
+                <button type="button" class="btn btn-insert" onclick="insertImgTag()">在游標處插入圖片標籤</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="qText">題目文字 (text，可插入多張圖片)：</label>
+        <textarea id="qText" rows="9">Your company has a Microsoft Office 365 subscription.
+A user reports that a conference call on October 2 had poor audio quality.
+You view the call history as shown in the Call History exhibit. (Click the Call History tab.)
+\n<img src='images/20.png' class='question-img'>\n
+You view the call analytics as shown in the Call Analytics exhibit. (Click the Call Analytics tab.)
+\n<img src='images/21.png' class='question-img'>\n
+For each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE: Each correct selection is worth one point.</textarea>
+    </div>
+
+    <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+    <label style="margin-bottom: 10px;">🎯 敘述敘述與答案設定 (Rows Label & Answer)</label>
+    <div id="matrixContainer">
+        <div class="matrix-row">
+            <div class="matrix-statement">
+                <input type="text" class="row-label" value="On October 2, all participants experienced good quality audio during the conference call." placeholder="請輸入敘述（Statement）">
+            </div>
+            <div class="matrix-ans-group">
+                <label><input type="radio" name="ans_0" value="Yes"> Yes</label>
+                <label><input type="radio" name="ans_0" value="No" checked> No</label>
+            </div>
+        </div>
+
+        <div class="matrix-row">
+            <div class="matrix-statement">
+                <input type="text" class="row-label" value="On October 2, some participants on the conference call were external users." placeholder="請輸入敘述（Statement）">
+            </div>
+            <div class="matrix-ans-group">
+                <label><input type="radio" name="ans_1" value="Yes" checked> Yes</label>
+                <label><input type="radio" name="ans_1" value="No"> No</label>
+            </div>
+        </div>
+
+        <div class="matrix-row">
+            <div class="matrix-statement">
+                <input type="text" class="row-label" value="The organizer of the October 2 meeting is a user at the company." placeholder="請輸入敘述（Statement）">
+            </div>
+            <div class="matrix-ans-group">
+                <label><input type="radio" name="ans_2" value="Yes"> Yes</label>
+                <label><input type="radio" name="ans_2" value="No" checked> No</label>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-insert" style="width: auto;" onclick="addMatrixRow()">＋ 增加新敘述（Rows）</button>
+    <button type="button" class="btn btn-primary" onclick="generateCode()">⚡ 產生 Matrix 程式碼</button>
+
+    <div class="form-group" style="margin-top: 25px;">
+        <label>✨ 產出的程式碼：</label>
+        <pre id="outputCode">// 點擊上方按鈕產生程式碼...</pre>
+        <button type="button" class="btn btn-success" onclick="copyToClipboard()">📋 複製此段程式碼</button>
+    </div>
+</div>
+
+<script>
+    // 在題目文字游標處插入圖片標籤
+    function insertImgTag() {
+        const txtArea = document.getElementById('qText');
+        const imgNum = document.getElementById('imgNum').value;
+        const tag = `\\n<img src='images/${imgNum}.png' class='question-img'>\\n`;
+        
+        const startPos = txtArea.selectionStart;
+        const endPos = txtArea.selectionEnd;
+        const text = txtArea.value;
+        
+        txtArea.value = text.substring(0, startPos) + tag + text.substring(endPos, text.length);
+        txtArea.focus();
+        txtArea.selectionStart = txtArea.selectionEnd = startPos + tag.length;
+    }
+
+    // 動態增加一列是非題
+    function addMatrixRow() {
+        const container = document.getElementById('matrixContainer');
+        const currentCount = container.children.length;
+        
+        const div = document.createElement('div');
+        div.className = 'matrix-row';
+        div.innerHTML = `
+            <div class="matrix-statement">
+                <input type="text" class="row-label" placeholder="請輸入敘述（Statement）">
+            </div>
+            <div class="matrix-ans-group">
+                <label><input type="radio" name="ans_${currentCount}" value="Yes" checked> Yes</label>
+                <label><input type="radio" name="ans_${currentCount}" value="No"> No</label>
+            </div>
+        `;
+        container.appendChild(div);
+    }
+
+    // 核心生成邏輯
+    function generateCode() {
+        const qNum = document.getElementById('qNum').value;
+        // 把真實換行統一換成字面上的 \n
+        const qText = document.getElementById('qText').value.replace(/\n/g, '\\n');
+        
+        const rows = document.querySelectorAll('#matrixContainer .matrix-row');
+        let rowsArray = [];
+
+        rows.forEach((row, index) => {
+            const labelVal = row.querySelector('.row-label').value.trim();
+            // 抓取選中的單選按鈕值 (Yes 或 No)
+            const radioChecked = row.querySelector(`input[name="ans_${index}"]:checked`);
+            const ansVal = radioChecked ? radioChecked.value : "Yes";
+            
+            if (labelVal) {
+                rowsArray.push({
+                    label: labelVal,
+                    answer: ansVal
+                });
+            }
+        });
+
+        // 轉換 rows 陣列為與你範例一致的漂亮排版
+        let rowsStr = "[\n";
+        rowsArray.forEach((item, index) => {
+            rowsStr += `                    {\n`;
+            rowsStr += `                        label: "${item.label}",\n`;
+            rowsStr += `                        answer: "${item.answer}"\n`;
+            rowsStr += `                    }${index === rowsArray.length - 1 ? '' : ','}\n`;
+        });
+        rowsStr += "                ]";
+
+        // 組裝完整程式碼
+        const template = `// 題目編號：${qNum}
+            {
+                type: "matrix",
+                text: \`${qText}\`,
+                instruction: "Matrix: Select Yes or No for each statement.",
+                rows: ${rowsStr}
+            },`;
+
+        document.getElementById('outputCode').innerText = template;
+    }
+
+    function copyToClipboard() {
+        const codeText = document.getElementById('outputCode').innerText;
+        navigator.clipboard.writeText(codeText).then(() => {
+            alert('複製成功！');
+        }).catch(() => {
+            alert('請手動全選複製。');
+        });
+    }
+</script>
+
+</body>
+</html>

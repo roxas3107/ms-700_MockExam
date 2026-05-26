@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotspot 題目轉換產生器 (已修正版)</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            padding: 20px;
+        }
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="number"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .btn-insert { background-color: #e2e8f0; color: #2d3748; }
+        .btn-insert:hover { background-color: #cbd5e0; }
+        .btn-primary { background-color: #3182ce; color: white; width: 100%; margin-top: 20px; font-size: 16px;}
+        .btn-primary:hover { background-color: #2b6cb0; }
+        .btn-success { background-color: #38a169; color: white; width: 100%; margin-top: 10px; font-size: 16px;}
+        .btn-success:hover { background-color: #2f855a; }
+        
+        .row-block {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+        pre {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: "Consolas", monospace;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>📝 考題 JSON 產生器 (Hotspot 專用修正版)</h2>
+    
+    <div style="display: flex; gap: 15px; align-items: flex-end;">
+        <div class="form-group" style="flex: 1;">
+            <label for="qNum">題目編號：</label>
+            <input type="number" id="qNum" value="83">
+        </div>
+        <div class="form-group" style="flex: 2;">
+            <label>快速插入圖片（輸入編號並點擊）：</label>
+            <div style="display: flex; gap: 5px;">
+                <input type="number" id="imgNum" value="17" style="width: 80px;">
+                <button type="button" class="btn btn-insert" onclick="insertImgTag()">在純文字中插入圖片</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="qText">題目文字 (text)：</label>
+        <textarea id="qText" rows="7">Your company plans to migrate to Microsoft Teams from Microsoft Skype for Business Online. The orgwide coexistence mode for Microsoft Teams is set to Teams Only.
+The company has two named User1 and User2.
+You need to implement a migration solution that meets the following requirements:
+✑ User1 must be able to chat and create meetings by using Skype for Business only.
+✑ User1 must be able to read and post messages by using Microsoft Teams channels.
+✑ User2 must use Microsoft Teams only.
+How should you complete the PowerShell command? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one point.</textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="hotspotHtml">語法樣板結構 (hotspotHtml)：</label>
+        <div style="display: flex; gap: 5px; margin-bottom: 5px;">
+            <input type="text" id="hotspotHtml" value="{0} -PolicyName {1} -Identity {2}">
+            <button type="button" class="btn btn-insert" style="white-space:nowrap;" onclick="addHotspotToken()">＋ 新增填空代號</button>
+        </div>
+    </div>
+
+    <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+    <label style="margin-bottom: 10px;">🎯 各填空對應選單設定 (Rows Options & Answer)</label>
+    <div id="rowsContainer">
+        <div class="row-block">
+            <span style="font-weight: bold; color: #3182ce;">對應代號 {0}</span>
+            <div style="margin-top: 5px;">
+                <label style="font-size: 13px; color: #718096;">所有選項 (用半形逗號 `,` 分隔)：</label>
+                <input type="text" class="row-options" value="Grant-CsClientPolicy, Grant-CsTeamsUpgradePolicy, Move-CsLegacyUser">
+            </div>
+            <div style="margin-top: 5px;">
+                <label style="font-size: 13px; color: #718096;">正確答案 (需完全符合其中一個選項)：</label>
+                <input type="text" class="row-answer" value="Grant-CsTeamsUpgradePolicy">
+            </div>
+        </div>
+
+        <div class="row-block">
+            <span style="font-weight: bold; color: #3182ce;">對應代號 {1}</span>
+            <div style="margin-top: 5px;">
+                <label style="font-size: 13px; color: #718096;">所有選項 (用半形逗號 `,` 分隔)：</label>
+                <input type="text" class="row-options" value="Islands, SfBOnly, SfBWithTeamsCollab, SfBWithTeamsCollabAndMeetings, UpgradeToTeams">
+            </div>
+            <div style="margin-top: 5px;">
+                <label style="font-size: 13px; color: #718096;">正確答案：</label>
+                <input type="text" class="row-answer" value="SfBWithTeamsCollab">
+            </div>
+        </div>
+
+        <div class="row-block">
+            <span style="font-weight: bold; color: #3182ce;">對應代號 {2}</span>
+            <div style="margin-top: 5px;">
+                <label style="font-size: 13px; color: #718096;">所有選項 (用半形逗號 `,` 分隔)：</label>
+                <input type="text" class="row-options" value="User1, All">
+            </div>
+            <div style="margin-top: 5px;">
+                <label style="font-size: 13px; color: #718096;">正確答案：</label>
+                <input type="text" class="row-answer" value="User1">
+            </div>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-primary" onclick="generateCode()">⚡ 產生 Hotspot 程式碼</button>
+
+    <div class="form-group" style="margin-top: 25px;">
+        <label>✨ 產出的程式碼：</label>
+        <pre id="outputCode">// 點擊上方按鈕產生程式碼...</pre>
+        <button type="button" class="btn btn-success" onclick="copyToClipboard()">📋 複製此段程式碼</button>
+    </div>
+</div>
+
+<script>
+    // 在題目文字游標處插入圖片標籤
+    function insertImgTag() {
+        const txtArea = document.getElementById('qText');
+        const imgNum = document.getElementById('imgNum').value;
+        const tag = `\\n<img src='images/${imgNum}.png' class='question-img'>\\n`;
+        
+        const startPos = txtArea.selectionStart;
+        const endPos = txtArea.selectionEnd;
+        const text = txtArea.value;
+        
+        txtArea.value = text.substring(0, startPos) + tag + text.substring(endPos, text.length);
+        txtArea.focus();
+        txtArea.selectionStart = txtArea.selectionEnd = startPos + tag.length;
+    }
+
+    // 點擊自動追加填空區
+    function addHotspotToken() {
+        const hInput = document.getElementById('hotspotHtml');
+        const container = document.getElementById('rowsContainer');
+        const currentCount = container.children.length;
+        
+        hInput.value += ` {${currentCount}}`;
+        
+        const div = document.createElement('div');
+        div.className = 'row-block';
+        div.innerHTML = `
+            <span style="font-weight: bold; color: #3182ce;">對應代號 {${currentCount}}</span>
+            <div style="margin-top: 5px;">
+                <label style="font-size: 13px; color: #718096;">所有選項 (用半形逗號 `,` 分隔)：</label>
+                <input type="text" class="row-options" placeholder="選項1, 選項2">
+            </div>
+            <div style="margin-top: 5px;">
+                <label style="font-size: 13px; color: #718096;">正確答案：</label>
+                <input type="text" class="row-answer" placeholder="正確選項目錄">
+            </div>
+        `;
+        container.appendChild(div);
+    }
+
+    // 核心生成邏輯
+    function generateCode() {
+        const qNum = document.getElementById('qNum').value;
+        const qText = document.getElementById('qText').value.replace(/\n/g, '\\n');
+        const hotspotHtml = document.getElementById('hotspotHtml').value;
+        
+        const blocks = document.querySelectorAll('#rowsContainer .row-block');
+        let rowsArrayStr = [];
+
+        blocks.forEach((block, index) => {
+            const optionsRaw = block.querySelector('.row-options').value;
+            const answerVal = block.querySelector('.row-answer').value.trim();
+            const optionsArr = optionsRaw.split(',').map(item => item.trim()).filter(item => item !== "");
+            
+            // 處理陣列排版縮排，使其完美對齊
+            const formattedOptions = JSON.stringify(optionsArr, null, 20).replace(/\n/g, '\n                    ');
+            
+            // 判斷最後一筆不要加逗號逗點
+            const comma = (index === blocks.length - 1) ? "" : ",";
+            
+            let rowTemplate = `{\n                options: ${formattedOptions},\n                answer: "${answerVal}"\n            }${comma} // 對應 {${index}}`;
+            rowsArrayStr.push(rowTemplate);
+        });
+
+        // 組裝出與你要求100%一致的程式碼範例結構
+        const template = `// 題目編號：${qNum}
+    {
+        type: "hotspot",
+        hotspotType: "inline",
+        text: \`${qText}\`,
+        instruction: "Hotspot: Select the appropriate options in the answer area.",
+        hotspotHtml: \`${hotspotHtml}\`,
+        rows: [
+            ${rowsArrayStr.join('\n            ')}
+        ]
+    },`;
+
+        document.getElementById('outputCode').innerText = template;
+    }
+
+    function copyToClipboard() {
+        const codeText = document.getElementById('outputCode').innerText;
+        navigator.clipboard.writeText(codeText).then(() => {
+            alert('複製成功！');
+        }).catch(() => {
+            alert('請手動全選複製。');
+        });
+    }
+</script>
+
+</body>
+</html>

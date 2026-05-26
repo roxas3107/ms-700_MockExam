@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rank 步驟排序題轉換產生器</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            padding: 20px;
+        }
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="number"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .btn-insert { background-color: #e2e8f0; color: #2d3748; }
+        .btn-insert:hover { background-color: #cbd5e0; }
+        .btn-primary { background-color: #3182ce; color: white; width: 100%; margin-top: 20px; font-size: 16px;}
+        .btn-primary:hover { background-color: #2b6cb0; }
+        .btn-success { background-color: #38a169; color: white; width: 100%; margin-top: 10px; font-size: 16px;}
+        .btn-success:hover { background-color: #2f855a; }
+        
+        .interactive-box {
+            background-color: #f8fafc;
+            border: 1px solid #cbd5e0;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+        .click-option {
+            background: #fff;
+            border: 1px solid #b2c2d4;
+            padding: 8px 12px;
+            margin: 6px 0;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            text-align: left;
+            transition: all 0.2s;
+        }
+        .click-option:hover {
+            background: #ebf8ff;
+            border-color: #63b3ed;
+        }
+        .selected-badge {
+            background: #3182ce;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin-right: 8px;
+            display: inline-block;
+        }
+        pre {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: "Consolas", monospace;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>📝 考題 JSON 產生器 (Rank 步驟排序題專用版)</h2>
+    
+    <div style="display: flex; gap: 15px; align-items: flex-end;">
+        <div class="form-group" style="flex: 1;">
+            <label for="qNum">題目編號：</label>
+            <input type="number" id="qNum" value="103">
+        </div>
+        <div class="form-group" style="flex: 2;">
+            <label>快速插入圖片（輸入編號並點擊）：</label>
+            <div style="display: flex; gap: 5px;">
+                <input type="number" id="imgNum" value="17" style="width: 80px;">
+                <button type="button" class="btn btn-insert" onclick="insertImgTag()">在游標處插入圖片標籤</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="qText">題目文字 (text)：</label>
+        <textarea id="qText" rows="6">Your company has a custom Microsoft Teams app named App1.
+You need to deploy App1. The solution must ensure that App1 appears as the first item on the app bar of the Microsoft Teams client.
+Which four actions should you perform in sequence? To answer, move the actions from the list of actions to the answer area and arrange them in the correct order.</textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="qOptions">左側所有選項 (options，一行一個步驟)：</label>
+        <textarea id="qOptions" rows="7" oninput="syncOptionsToClicker()" placeholder="請輸入選項，一列輸入一個步驟...">From the Microsoft Teams client,upload App1.
+From the Microsoft Teams admin center,set Allow interaction with custom apps to On.
+From the Microsoft Teams admin center, modify the list of pinned apps.
+From the app setup policy in the Microsoft Teams admin center, add App1 as a pinned app.
+From the app permission policy in the Microsoft Teams admin center set, the Microsoft apps setting to Allow all apps.
+From the app permission policy in the Microsoft Teams admin center, set the Third-party apps setting to Allow all apps.</textarea>
+    </div>
+
+    <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+    <div class="form-group">
+        <label>🎯 答案選取區：請「依序點擊」正確的答案步驟</label>
+        <div style="font-size: 13px; color: #718096; margin-bottom: 5px;">（點擊按鈕可安排先後順序，再次點擊已選中的按鈕可取消選擇）</div>
+        <button type="button" class="btn btn-insert" style="font-size:12px; padding: 4px 10px;" onclick="resetAnswers()">重設答案順序</button>
+        <div id="optionClickerContainer" class="interactive-box">
+            </div>
+    </div>
+
+    <button type="button" class="btn btn-primary" onclick="generateCode()">⚡ 產生 Rank 程式碼</button>
+
+    <div class="form-group" style="margin-top: 25px;">
+        <label>✨ 產出的程式碼：</label>
+        <pre id="outputCode">// 點擊上方按鈕產生程式碼...</pre>
+        <button type="button" class="btn btn-success" onclick="copyToClipboard()">📋 複製此段程式碼</button>
+    </div>
+</div>
+
+<script>
+    let chosenAnswers = [];
+
+    // 在題目文字游標處插入圖片標籤
+    function insertImgTag() {
+        const txtArea = document.getElementById('qText');
+        const imgNum = document.getElementById('imgNum').value;
+        const tag = `\\n<img src='images/${imgNum}.png' class='question-img'>\\n`;
+        
+        const startPos = txtArea.selectionStart;
+        const endPos = txtArea.selectionEnd;
+        const text = txtArea.value;
+        
+        txtArea.value = text.substring(0, startPos) + tag + text.substring(endPos, text.length);
+        txtArea.focus();
+        txtArea.selectionStart = txtArea.selectionEnd = startPos + tag.length;
+    }
+
+    // 將輸入的 options 區塊逐行解析為可點選按鈕
+    function syncOptionsToClicker() {
+        const container = document.getElementById('optionClickerContainer');
+        const optionsRaw = document.getElementById('qOptions').value;
+        // 改用換行符號 \n 來切分選項
+        const optionsArr = optionsRaw.split('\n').map(item => item.trim()).filter(item => item !== "");
+        
+        container.innerHTML = "";
+        optionsArr.forEach((opt) => {
+            const btn = document.createElement('div');
+            btn.className = 'click-option';
+            
+            // 檢查是否已存在於選取的答案中
+            const matchedIdx = chosenAnswers.indexOf(opt);
+            if (matchedIdx !== -1) {
+                btn.innerHTML = `<span class="selected-badge">第 ${matchedIdx + 1} 步</span> ${opt}`;
+            } else {
+                btn.innerHTML = opt;
+            }
+            
+            btn.onclick = () => toggleAnswer(opt);
+            container.appendChild(btn);
+        });
+    }
+
+    // 切換選取與取消選取
+    function toggleAnswer(opt) {
+        const idx = chosenAnswers.indexOf(opt);
+        if (idx !== -1) {
+            chosenAnswers.splice(idx, 1);
+        } else {
+            chosenAnswers.push(opt);
+        }
+        syncOptionsToClicker();
+    }
+
+    function resetAnswers() {
+        chosenAnswers = [];
+        syncOptionsToClicker();
+    }
+
+    // 核心程式碼生成邏輯
+    function generateCode() {
+        const qNum = document.getElementById('qNum').value;
+        const qText = document.getElementById('qText').value.replace(/\n/g, '\\n');
+        
+        // 解析 options (逐行)
+        const optionsRaw = document.getElementById('qOptions').value;
+        const optionsArr = optionsRaw.split('\n').map(item => item.trim()).filter(item => item !== "");
+
+        // 排版格式化（完全對齊範例縮排風格）
+        let optionsStr = "[\n";
+        optionsArr.forEach((opt, index) => {
+            optionsStr += `            "${opt}"${index === optionsArr.length - 1 ? '' : ','}\n`;
+        });
+        optionsStr += "        ]";
+
+        let answerStr = "[\n";
+        chosenAnswers.forEach((ans, index) => {
+            answerStr += `            "${ans}"${index === chosenAnswers.length - 1 ? '' : ','}\n`;
+        });
+        answerStr += "        ]";
+
+        // 拼接成最外層結構
+        const template = `// 題目編號：${qNum}
+    {
+        type: "rank",
+        text: \`${qText}\`,
+        instruction: "拖選排名：請從左側選項中選擇正確的四個步驟，並按順序拖動到右側空格。",
+        options: ${optionsStr},
+        answer: ${answerStr}
+    },`;
+
+        document.getElementById('outputCode').innerText = template;
+    }
+
+    function copyToClipboard() {
+        const codeText = document.getElementById('outputCode').innerText;
+        navigator.clipboard.writeText(codeText).then(() => {
+            alert('複製成功！');
+        }).catch(() => {
+            alert('請手動全選複製。');
+        });
+    }
+
+    // 頁面初次載入時預設帶入題目圖片順序
+    window.onload = function() {
+        chosenAnswers = [
+            "From the Microsoft Teams admin center,set Allow interaction with custom apps to On.",
+            "From the Microsoft Teams client,upload App1.",
+            "From the app setup policy in the Microsoft Teams admin center, add App1 as a pinned app.",
+            "From the Microsoft Teams admin center, modify the list of pinned apps."
+        ];
+        syncOptionsToClicker();
+    }
+</script>
+
+</body>
+</html>

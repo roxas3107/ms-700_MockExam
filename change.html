@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>題型轉換程式碼工具</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            border-bottom: 2px solid #0078d4;
+            padding-bottom: 10px;
+            color: #0078d4;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="number"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        button:hover {
+            background-color: #005a9e;
+        }
+        .btn-img {
+            background-color: #e1dfdd;
+            color: #323130;
+            padding: 5px 10px;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        .btn-img:hover {
+            background-color: #c8c6c4;
+        }
+        .dynamic-section {
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #0078d4;
+            margin-top: 10px;
+            border-radius: 0 4px 4px 0;
+        }
+        .option-row, .hotspot-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 8px;
+            align-items: center;
+        }
+        .output-area {
+            margin-top: 20px;
+        }
+        pre {
+            background: #252526;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 13px;
+            max-height: 400px;
+        }
+        .copy-btn {
+            background-color: #107c41;
+        }
+        .copy-btn:hover {
+            background-color: #0b5930;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>題型轉換程式碼工具</h2>
+    
+    <div class="form-group">
+        <label for="qNum">題目編號：</label>
+        <input type="text" id="qNum" placeholder="例如：124">
+    </div>
+
+    <div class="form-group">
+        <label for="qType">選擇題型：</label>
+        <select id="qType" onchange="handleTypeChange()">
+            <option value="radio">單選題 (radio)</option>
+            <option value="checkbox">複選題 (checkbox)</option>
+            <option value="hotspot">圖片下拉題 (hotspot)</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="qText">題目內文（支援 Enter 換行）：</label>
+        <textarea id="qText" rows="6" placeholder="請貼上題目內文..."></textarea>
+        <button type="button" class="btn-img" onclick="insertImgTag('qText')">插入圖片標籤 (&lt;img...&gt;)</button>
+        <input type="text" id="imgNum" value="25" style="width: 50px; display: inline; text-align: center; padding: 3px;"> 號圖
+    </div>
+
+    <div id="dynamicContainer" class="dynamic-section">
+        </div>
+
+    <div style="margin-top: 20px;">
+        <button onclick="generateCode()">產生程式碼</button>
+        <button class="copy-btn" onclick="copyCode()">複製程式碼</button>
+    </div>
+
+    <div class="output-area">
+        <label>產生的 JavaScript 物件：</label>
+        <pre id="outputCode">// 程式碼將顯示在此處...</pre>
+    </div>
+</div>
+
+<script>
+    // 初始化頁面
+    window.onload = function() {
+        handleTypeChange();
+    };
+
+    // 在 textarea 的游標處插入圖片標籤
+    function insertImgTag(textareaId) {
+        const textarea = document.getElementById(textareaId);
+        const imgNum = document.getElementById('imgNum').value;
+        const imgTag = `<img src='images/${imgNum}.png' class='question-img'>`;
+        
+        const startPos = textarea.selectionStart;
+        const endPos = textarea.selectionEnd;
+        const text = textarea.value;
+        
+        textarea.value = text.substring(0, startPos) + imgTag + text.substring(endPos, text.length);
+        textarea.focus();
+        textarea.selectionStart = startPos + imgTag.length;
+        textarea.selectionEnd = startPos + imgTag.length;
+    }
+
+    // 當切換題型時，動態改變下方的表單填寫內容
+    function handleTypeChange() {
+        const type = document.getElementById('qType').value;
+        const container = document.getElementById('dynamicContainer');
+        container.innerHTML = ''; // 清空
+
+        if (type === 'radio' || type === 'checkbox') {
+            container.innerHTML = `
+                <label>選項設定：</label>
+                <div class="option-row"><span>A.</span><input type="text" class="opt-input" data-prefix="A. "></div>
+                <div class="option-row"><span>B.</span><input type="text" class="opt-input" data-prefix="B. "></div>
+                <div class="option-row"><span>C.</span><input type="text" class="opt-input" data-prefix="C. "></div>
+                <div class="option-row"><span>D.</span><input type="text" class="opt-input" data-prefix="D. "></div>
+                <div class="option-row"><span>E.</span><input type="text" class="opt-input" data-prefix="E. " placeholder="(選填)"></div>
+                <div class="option-row"><span>F.</span><input type="text" class="opt-input" data-prefix="F. " placeholder="(選填)"></div>
+                <div class="form-group" style="margin-top:15px;">
+                    <label for="normalAnswer">正確答案 (單選填寫如: A，複選填寫如: BC)：</label>
+                    <input type="text" id="normalAnswer" style="width: 200px;">
+                </div>
+            `;
+        } else if (type === 'hotspot') {
+            container.innerHTML = `
+                <label>下拉選單設定 (Row)：</label>
+                <div id="hotspotRowsContainer">
+                    ${renderHotspotRow(1)}
+                    ${renderHotspotRow(2)}
+                </div>
+                <button type="button" class="btn-img" style="background-color:#878481; color:white;" onclick="addHotspotRow()">+ 增加一列 Row</button>
+            `;
+        }
+    }
+
+    function renderHotspotRow(index) {
+        return `
+            <div class="hotspot-row" id="hRow_${index}" style="border-bottom: 1px dashed #ccc; padding-bottom: 10px; margin-bottom: 10px;">
+                <div>
+                    <label style="font-size:12px;">Label:</label>
+                    <input type="text" class="hs-label" placeholder="例如 User1:" style="width:100px;">
+                </div>
+                <div style="flex: 1;">
+                    <label style="font-size:12px;">選項 (用逗號 , 分隔)：</label>
+                    <input type="text" class="hs-options" placeholder="選項1, 選項2, 選項3" style="width:100px;">
+                </div>
+                <div>
+                    <label style="font-size:12px;">正確答案文字：</label>
+                    <input type="text" class="hs-answer" placeholder="必須與選項完全一致" style="width:180px;">
+                </div>
+            </div>
+        `;
+    }
+
+    let hRowIdx = 2;
+    function addHotspotRow() {
+        hRowIdx++;
+        const div = document.createElement('div');
+        div.innerHTML = renderHotspotRow(hRowIdx);
+        document.getElementById('hotspotRowsContainer').appendChild(div.firstElementChild);
+    }
+
+    // 核心：將填寫的內容組裝成 JavaScript 物件格式字串
+    function generateCode() {
+        const qNum = document.getElementById('qNum').value;
+        const type = document.getElementById('qType').value;
+        // 處理換行，將 textarea 的真實換行符號代換成 \n 轉義字元
+        let text = document.getElementById('qText').value;
+        text = text.replace(/\n/g, '\\n');
+
+        let result = `        // 題目編號：${qNum}\n        {\n`;
+        result += `            type: "${type}",\n`;
+        result += `            text: "${text}",\n`;
+
+        if (type === 'radio') {
+            result += `            instruction: "Select the correct answer.",\n`;
+            
+            // 抓取有填寫的選項
+            const optInputs = document.querySelectorAll('.opt-input');
+            let optionsArr = [];
+            optInputs.forEach(input => {
+                if(input.value.trim() !== "") {
+                    optionsArr.push(`"${input.getAttribute('data-prefix')}${input.value.trim()}"`);
+                }
+            });
+            result += `            options: [\n                ${optionsArr.join(',\n                ')}\n            ],\n`;
+            
+            // 處理答案
+            const ansLetter = document.getElementById('normalAnswer').value.trim().toUpperCase();
+            let matchedAns = "";
+            optInputs.forEach(input => {
+                if(input.getAttribute('data-prefix').startsWith(ansLetter)) {
+                    matchedAns = `${input.getAttribute('data-prefix')}${input.value.trim()}`;
+                }
+            });
+            result += `            answer: "${matchedAns}"\n`;
+
+        } else if (type === 'checkbox') {
+            // 計算選取幾項
+            const ansLetterStr = document.getElementById('normalAnswer').value.trim().toUpperCase();
+            const maxSelect = ansLetterStr.length || 2;
+            result += `            instruction: "Checkbox: Select ${maxSelect} items.",\n`;
+            result += `            max: ${maxSelect},\n`;
+
+            // 選項
+            const optInputs = document.querySelectorAll('.opt-input');
+            let optionsArr = [];
+            let answerArr = [];
+            optInputs.forEach(input => {
+                if(input.value.trim() !== "") {
+                    const fullOpt = `${input.getAttribute('data-prefix')}${input.value.trim()}`;
+                    optionsArr.push(`"${fullOpt}"`);
+                    
+                    // 檢查這個字母有沒有在答案字串中
+                    const currentLetter = input.getAttribute('data-prefix').replace('. ', '');
+                    if(ansLetterStr.includes(currentLetter)) {
+                        answerArr.push(`"${fullOpt}"`);
+                    }
+                }
+            });
+            result += `            options: [\n                ${optionsArr.join(',\n                ')}\n            ],\n`;
+            result += `            answer: [\n                ${answerArr.join(',\n                ')}\n            ]\n`;
+
+        } else if (type === 'hotspot') {
+            result += `            instruction: "Hotspot: Select the appropriate options in the answer area.",\n`;
+            result += `            rows: [\n`;
+            
+            const rows = document.querySelectorAll('.hotspot-row');
+            let rowsCodeArr = [];
+            rows.forEach(row => {
+                const label = row.querySelector('.hs-label').value.trim();
+                const rawOpts = row.querySelector('.hs-options').value.split(',');
+                const answer = row.querySelector('.hs-answer').value.trim();
+                
+                let optsArr = rawOpts.map(o => `"${o.trim()}"`).filter(o => o !== '""');
+                
+                let rowCode = `                {\n`;
+                rowCode += `                    label: "${label}",\n`;
+                rowCode += `                    options: [\n                        ${optsArr.join(',\n                        ')}\n                    ],\n`;
+                rowCode += `                    answer: "${answer}"\n`;
+                rowCode += `                }`;
+                rowsCodeArr.push(rowCode);
+            });
+            
+            result += rowsCodeArr.join(',\n');
+            result += `\n            ]\n`;
+        }
+
+        result += `        },`;
+
+        document.getElementById('outputCode').textContent = result;
+    }
+
+    // 複製功能
+    function copyCode() {
+        const codeText = document.getElementById('outputCode').textContent;
+        navigator.clipboard.writeText(codeText).then(() => {
+            alert('程式碼已成功複製到剪貼簿！');
+        }).catch(err => {
+            alert('複製失敗，請手動全選複製。');
+        });
+    }
+</script>
+
+</body>
+</html>
