@@ -2496,118 +2496,3371 @@ const questions = [
 //                 ]
 //             },
 
-// 題目編號：205
+// // 題目編號：205
+// {
+//     type: "checkbox",
+//     text: "You have a Microsoft 365 subscription that uses Microsoft Teams.\nYou plan to deploy Microsoft Teams voice.\nWhich two settings require a resource account? Each correct answer presents part of the solution.\nNOTE: Each correct selection worth one point.",
+//     instruction: "Select 2 items.",
+//     max: 2,
+//     options: [
+//         "A. Call park policies",
+//         "B. Auto attendant",
+//         "C. Call queues",
+//         "D. Emergency polices",
+//         "E. Guest access"
+//     ],
+//     answer: [
+//         "B. Auto attendant",
+//         "C. Call queues"
+//     ]
+// },
+
+// // 題目編號：206
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 subscription that uses Microsoft Teams and contains a user named User.\nYou need to ensure that User1 can investigate call-quality issues and identify the following types of\ninformation:\n✑ Caller and recipient names\n✑ Device names and IP addresses\n✑ The number and names of all meeting participants\nThe solution must use the principle of least privilege.\nWhich role should you assign to User1?\n\n\n\n\n206.You have a Microsoft 365 subscription that uses Microsoft Teams and contains a user named User.\nYou need to ensure that User1 can investigate call-quality issues and identify the following types of\ninformation:\n✑ Caller and recipient names\n✑ Device names and IP addresses\n✑ The number and names of all meeting participants\nThe solution must use the principle of least privilege.\nWhich role should you assign to User1?\n\n\n\nAnswer: B",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Teams Device Administrator",
+//         "B. Teams communication support engineer",
+//         "C. Teams Administrator",
+//         "D. Teams communication admin",
+//         "E. Teams Device Administrator",
+//         "F. Teams communication support engineer"
+//     ],
+//     answer: "B. Teams communication support engineer"
+// },
+
+// // 題目編號：207
+//             {
+//                 type: "matrix",
+//                 text: `HOTSPOT\nYou have a Microsoft 365 subscription that uses Microsoft Teams and contains the users shown in the\nfollowing table.\n\n<img src='images/52.png' class='question-img'>\n\nYou have the team shown in the following table.\nA new access review needs to be created for Project1.\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE:\nEach correct selection is worth one point.\n`,
+//                 instruction: "Matrix: Select Yes or No for each statement.",
+//                 rows: [
+//                     {
+//                         label: "User1 can create and manage the access review.",
+//                         answer: "Yes"
+//                     },
+//                     {
+//                         label: "User2 can be assigned as a reviewer of the access review.",
+//                         answer: "Yes"
+//                     },
+//                     {
+//                         label: "Guest1 can be assigned as a reviewer of the access review.",
+//                         answer: "No"
+//                     }
+//                 ]
+//             },
+
+//             // 題目編號：208
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 subscription that uses Microsoft Teams.\nYou plan to implement Microsoft Teams Rooms. The solution must meet the following requirements:\n- Support Microsoft Teams Rooms, Microsoft Surface Hub, and collaboration bars for Microsoft Teams.\n- Ensure that Microsoft manages firmware and application updates for room systems and peripherals.\n- Ensure that Microsoft monitors and troubleshoots room system and peripherals.\nWhich license should you purchase?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Advanced Communications",
+//         "B. Microsoft Teams Rooms Premium",
+//         "C. Microsoft Teams Rooms Standard",
+//         "D. Microsoft 365 Business Voice"
+//     ],
+//     answer: "B. Microsoft Teams Rooms Premium"
+// },
+
+// // 題目編號：209
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 subscription that uses Microsoft Teams.\nThe subscription contains 1,000 users in the groups shown in the following table.\n\n<img src='images/53.png' class='question-img'>\n\nYou need to configure Microsoft Teams to meet the requirements. The solution must minimize\nadministrative effort.\nWhat should you use?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. policy packages",
+//         "B. app setup policies",
+//         "C. Microsoft Teams policies",
+//         "D. Meetings policies"
+//     ],
+//     answer: "A. policy packages"
+// },
+
+//         // 題目編號：210
+//         {
+//             type: "hotspot",
+//             text: "HOTSPOT\nYour company has a Microsoft 365 E5 subscription.\nYou plan to create a team that will automatically include all new and existing users at the company.\nYou need to identify which role-based access control (RBAC) role is required to create the team, and\nwhich tool must be used to create the team. The solution must use the principle of least privilege.\nWhat should you identify? To answer, select the appropriate options in the answer area. NOTE: Each\ncorrect selection is worth one point.\n",
+//             instruction: "Hotspot: Select the appropriate options in the answer area.",
+//             rows: [
+//                 {
+//                     label: "Role:",
+//                     options: [
+//                         "Global Administrator",
+//                         "Groups administrator",
+//                         "Teams Administrator",
+//                         "User Administrator"
+//                     ],
+//                     answer: "Global Administrator"
+//                 },
+//                 {
+//                     label: "Tool:",
+//                     options: [
+//                         "Azure Active Directory admin center",
+//                         "Microsoft Teams admin center",
+//                         "Microsoft Teams client",
+//                         "Microsoft Teams PowerShell"
+//                     ],
+//                     answer: "Microsoft Teams client"
+//                 }
+//             ]
+//         },
+
+// // 題目編號：211
+//             {
+//                 type: "matrix",
+//                 text: `HOTSPOT\nYou have a Microsoft 365 subscription that uses Microsoft Teams and contains the users shown in the\nfollowing table.\n\n<img src='images/54.png' class='question-img'>\n\nYou have a team named Sales that is configured as shown in the following table.\n\n<img src='images/55.png' class='question-img'>\n\nThe Sales team contains the channels shown in the following table.\n\n<img src='images/56.png' class='question-img'>\n\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE:\nEach correct selection is worth one point.\n`,
+//                 instruction: "Matrix: Select Yes or No for each statement.",
+//                 rows: [
+//                     {
+//                         label: "User1 can see the membership list of the Budgets channel.",
+//                         answer: "No"
+//                     },
+//                     {
+//                         label: "User2 can add User5 as a member of the Budgets channel.",
+//                         answer: "Yes"
+//                     },
+//                     {
+//                         label: "Admin1 can convert Planning into a private channel.",
+//                         answer: "No"
+//                     }
+//                 ]
+//             },
+
+//             // 題目編號：212
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 E5 subscription.\nYou need to generate a report that provides the following information:\n✑ How many users post and reply to channel messages\n✑ The number of ad hoc meetings organized by a user\n✑ The number of meetings a user has participated in\n✑ The total video time of a user\nWhich report should you run?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Teams user activity",
+//         "B. Teams usage",
+//         "C. Teams live event usage",
+//         "D. Teams app usage"
+//     ],
+//     answer: "A. Teams user activity"
+// },
+
+//         // 題目編號：213
+//         {
+//             type: "hotspot",
+//             text: "HOTSPOT\nYou have a Microsoft 365 subscription that uses Microsoft Teams and contains the users shown in the\nfollowing table.\n<img src='images/57.png' class='question-img'>\nYou have a team named Project1 that contains the members shown in the following table.\nYou need to monitor Project1 for the following administrative actions:\n<img src='images/58.png' class='question-img'>\n✑ The creation and deletion of channels\n✑ Changing the role assignments of team members\nWhich users can monitor Project1, and which feature should the users use? To answer, select the\nappropriate options in the answer area. NOTE: Each correct selection is worth one point.\nHOTSPOT\nYou have a Microsoft 365 subscription that uses Microsoft Teams and contains the users shown in the\nfollowing table.\nYou have a team named Project1 that contains the members shown in the following table.\nYou need to monitor Project1 for the following administrative actions:\n✑ The creation and deletion of channels\n✑ Changing the role assignments of team members\nWhich users can monitor Project1, and which feature should the users use? To answer, select the\nappropriate options in the answer area. NOTE: Each correct selection is worth one point.\n",
+//             instruction: "Hotspot: Select the appropriate options in the answer area.",
+//             rows: [
+//                 {
+//                     label: "Feature:",
+//                     options: [
+//                         "Audit log",
+//                         "Usage reports",
+//                         "Teams advisor",
+//                         "Content search",
+//                         "Message center"
+//                     ],
+//                     answer: "Audit log"
+//                 },
+//                 {
+//                     label: "Users:",
+//                     options: [
+//                         "User1 only",
+//                         "Admin1 only",
+//                         "Admin2 only",
+//                         "Admin1 and Admin2 only",
+//                         "User1. Admin1. and Admin2"
+//                     ],
+//                     answer: "Admin1 only"
+//                 }
+//             ]
+//         },
+
+//         // 題目編號：214
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 subscription that uses Microsoft Teams.\nA user reports an error when he attempts to share his screen during meetings by using the Microsoft\nTeams Windows Desktop client.\nYou need to collect the Microsoft Teams client log files from the user’s device.\nWhat should you do?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. From the Microsoft Teams client settings, select Disable GPU hardware acceleration.",
+//         "B. Select Ctrl + Alt + Shift + 1.",
+//         "C. Select the Windows logo key + Alt + Shift +1",
+//         "D. From the Microsoft Teams client settings, select Enable logging for meeting diagnostics."
+//     ],
+//     answer: "B. Select Ctrl + Alt + Shift + 1."
+// },
+
+// // 題目編號：215
+// {
+//     type: "radio",
+//     text: "You have a Microsoft Office 365 subscription that contains a user named User1.\nYou need to ensure that User1 can view Analytics & reports in the Microsoft Teams admin center. The\nsolution must use the principle of least privilege.\nWhich role should you assign to User1?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Teams Communication support specialist",
+//         "B. Skype for Business administrator",
+//         "C. Global reader",
+//         "D. Global administrator"
+//     ],
+//     answer: "C. Global reader"
+// },
+
+// // 題目編號：216
+// {
+//     type: "radio",
+//     text: "You are a Microsoft Teams administrator for your company.\nAll the teams used by the company’s legal department must meet the following compliance\nrequirements:\n✑ Each team must expire 365 days after it is created.\n✑ All team content must be deleted when the team expires.\n✑ An administrator must be able to restore deleted team content for 30 days.\nWhat should you do?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. From the Microsoft 365 compliance center, create a retention policy.",
+//         "B. From the Azure Active Directory admin center, configure Microsoft 365 Groups expiration.",
+//         "C. From the Microsoft 365 admin center, modify the Office 365 group settings.",
+//         "D. From the Microsoft Teams admin center, modify the team's policy."
+//     ],
+//     answer: "B. From the Azure Active Directory admin center, configure Microsoft 365 Groups expiration."
+// },
+
+// // 題目編號：217
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 subscription that uses Microsoft Teams.\nYou need to ensure that only the following apps are available in the Microsoft Teams app store:\n✑ Lists\n✑ Project\n✑ Bulletins\n✑ OneNote\n✑ PowerApps\nThe solution must minimize administrative effort.\nWhat should you do?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Configure the Org-wide app settings",
+//         "B. From the Manage apps page, block unapproved apps",
+//         "C. Configure the global (Org-wide default) app permission policy",
+//         "D. Configure the global (Org-wide default) app setup policy"
+//     ],
+//     answer: "C. Configure the global (Org-wide default) app permission policy"
+// },
+
+// // 題目編號：218
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 subscription that uses Microsoft Teams and contains the groups shown in\nthe following table.\n\n<img src='images/59.png' class='question-img'>\n\nYou create a new team named Project1.\nWhich groups can be added to Project1?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Group1 only",
+//         "B. Group2 only",
+//         "C. Group3 only",
+//         "D. Group1 and Group3 only",
+//         "E. Group1. Group2. and Group3"
+//     ],
+//     answer: "C. Group3 only"
+// },
+
+// // 題目編號：219
+//     {
+//         type: "rank",
+//         text: `DRAG DROP\nYou have a Microsoft 365 subscription that uses Microsoft Teams and contains three users named\nUser1, User2, and User3.\nYou need to configure Microsoft Teams to meet the following requirements:\n✑ Prevent User1 and User2 from creating private channels.\n✑ Ensure that User3 can control who can create private channels.\n✑ Minimize administrative effort.\nWhich three actions should you perform in sequence? To answer, move all actions from the list of actions\nto the answer area and arrange them in the correct order. NOTE: More than one order of answer choices\nis correct. You will receive credit for any of the correct orders you select.\nDRAG DROP\nYou have a Microsoft 365 subscription that uses Microsoft Teams and contains three users named\nUser1, User2, and User3.\nYou need to configure Microsoft Teams to meet the following requirements:\n✑ Prevent User1 and User2 from creating private channels.\n✑ Ensure that User3 can control who can create private channels.\n✑ Minimize administrative effort.\nWhich three actions should you perform in sequence? To answer, move all actions from the list of actions\nto the answer area and arrange them in the correct order. NOTE: More than one order of answer choices\nis correct. You will receive credit for any of the correct orders you select.\n`,
+//         instruction: "拖選排名：請從左側選項中選擇正確的三個步驟，並按順序拖動到右側空格。",
+//         options: [
+//             "Create a distribution list named dist1. To dist1, add User1 and User2 as members and add User3 as the owner",
+//             "Create an update policy named Policy1 and set Show preview features to On",
+//             "Add a teams policy named Policy1 and set Create private channels to Off",
+//             "Edit the properties of User1 and User2 and set Teams policy to Policy1",
+//             "Create a Microsoft Teams group policy assignment and assign Policy1 to dist1"
+//         ],
+//         answer: [
+//             "Create a distribution list named dist1. To dist1, add User1 and User2 as members and add User3 as the owner",
+//             "Add a teams policy named Policy1 and set Create private channels to Off",
+//             "Create a Microsoft Teams group policy assignment and assign Policy1 to dist1"
+//         ]
+//     },
+
+//     // 題目編號：220
+// {
+//     type: "checkbox",
+//     text: "You have a Microsoft 365 E5 subscription that has Phone System enabled for all Microsoft Teams\nusers.\nYou need to configure the Phone System to meet the following requirements:\n✑ Provide a virtual receptionist that connects callers to either a specific user or the help desk.\n✑ Route calls to the help desk on a First in, First out (FIFO) order.\nWhich two resources should you create? Each correct answer presents part of the solution. NOTE: Each\ncorrect selection is worth one point.",
+//     instruction: "Select 2 items.",
+//     max: 2,
+//     options: [
+//         "A. a call park policy",
+//         "B. a call queue",
+//         "C. a voice routing policy",
+//         "D. a group call pickup",
+//         "E. an auto attendant",
+//         "F. a calling policy"
+//     ],
+//     answer: [
+//         "B. a call queue",
+//         "E. an auto attendant"
+//     ]
+// },
+
+//         // 題目編號：221
+//         {
+//             type: "hotspot",
+//             text: "HOTSPOT\nYou have a Microsoft 365 subscription that uses Microsoft Teams.\nYou need to configure phone settings to meet the following requirements:\n✑ Put a call on hold, and then transfer the call.\n✑ Hide the calling phone number of outgoing calls.\nWhat should you configure for each requirement? To answer, select the appropriate options in the\nanswer area. NOTE: Each correct selection is worth one point.\n",
+//             instruction: "Hotspot: Select the appropriate options in the answer area.",
+//             rows: [
+//                 {
+//                     label: "Put a call on hold, and then transfer the call:",
+//                     options: [
+//                         "Call queues",
+//                         "Call forwarding",
+//                         "Call park policies",
+//                         "Voice routing policies"
+//                     ],
+//                     answer: "Call park policies"
+//                 },
+//                 {
+//                     label: "Hide the calling phone number of outgoing calls:",
+//                     options: [
+//                         "Call forwarding",
+//                         "Caller ID policies",
+//                         "Voice routing policies",
+//                         "Microsoft Phone System Direct Routing"
+//                     ],
+//                     answer: "Caller ID policies"
+//                 }
+//             ]
+//         },
+
+//         // 題目編號：222
+//         {
+//             type: "hotspot",
+//             text: "HOTSPOT\nYou have a Microsoft 365 subscription that uses Microsoft Teams.\nYou need to meet the following requirements:\n✑ Users must be able to join meetings by dialing a phone number.\n✑ Users must be able to apply custom branded meeting lobbies.\n✑ Auto attendants and call queues must be implemented.\nWhich Microsoft Teams feature should you configure for each requirement? To answer, select the\nappropriate options in the answer area. NOTE: Each correct selection is worth one point.\nHOTSPOT\nYou have a Microsoft 365 subscription that uses Microsoft Teams.\nYou need to meet the following requirements:\n✑ Users must be able to join meetings by dialing a phone number.\n✑ Users must be able to apply custom branded meeting lobbies.\n✑ Auto attendants and call queues must be implemented.\nWhich Microsoft Teams feature should you configure for each requirement? To answer, select the\nappropriate options in the answer area. NOTE: Each correct selection is worth one point.\n",
+//             instruction: "Hotspot: Select the appropriate options in the answer area.",
+//             rows: [
+//                 {
+//                     label: "Join meetings by dialing a phone number:",
+//                     options: [
+//                         "Calling Plans",
+//                         "Audio Conferencing",
+//                         "Microsoft Teams Rooms",
+//                         "Advanced Communications"
+//                     ],
+//                     answer: "Audio Conferencing"
+//                 },
+//                 {
+//                     label: "Implement auto attendants and call queues:",
+//                     options: [
+//                         "Calling Plans",
+//                         "Audio Conferencing",
+//                         "Microsoft Teams Rooms",
+//                         "Advanced Communications"
+//                     ],
+//                     answer: "Calling Plans"
+//                 },
+//                 {
+//                     label: "Apply custom branded meeting lobbies:",
+//                     options: [
+//                         "Communication credits",
+//                         "Microsoft Teams Rooms",
+//                         "Advanced Communications",
+//                         "Microsoft 365 Audio Conferencing"
+//                     ],
+//                     answer: "Advanced Communications"
+//                 }
+//             ]
+//         },
+
+//         // 題目編號：223
+//             {
+//                 type: "fill",
+//                 text: `DRAG DROP\nYour company has a Microsoft 365 subscription that uses Microsoft Teams.\nThe company has a team named Customer Support.\nGuest users from outside the company regularly access the Customer Support team.\nYou need to configure the Guest access settings to meet the following requirements:\n✑ Guest users must be able to view only a single application during screen sharing sessions.\n✑ Guest users must be prevented from creating channels in Customer Support.\n✑ Guest users must be admitted to meetings manually.\nWhich settings should you configure for each requirement? To answer, drag the appropriate settings to\nthe correct requirements. Each setting may be used once, more than once, or not at all. You may need to\ndrag the split bar between panes or scroll to view content.\n`,
+//                 instruction: "拖選填空：將選項拖入空格。",
+//                 options: [
+//               "Guest access to Org- wide settings",
+//               "Meeting policies",
+//               "Meeting settings",
+//               "Settings for the Customer Support team"
+//     ],
+//                 fillHtml: `
+//                     <div class='question-content-scroll'><div><div>Guests must only be able to view a single application in screen sharing sessions：<div class='drop-zone-fill' data-idx='0' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div>
+//                     <div>Guests must be prevented from creating channels in Customer SupportGuests must be prevented from creating channels in Customer Support：<div class='drop-zone-fill' data-idx='1' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div>
+//                     <div>Guest users must be admitted to meetings manually：<div class='drop-zone-fill' data-idx='2' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div></div></div>
+//                 `,
+//                 answer: ["Guest access to Org- wide settings","Settings for the Customer Support team","Meeting policies"]
+//             },
+
+//             // 題目編號：224
+// {
+//     type: "radio",
+//     text: "You work as a Microsoft 365 Administrator for your company. All users have Microsoft 365 licenses.\nUsers frequently collaborate by using private chats in Microsoft Teams.\nYou need to ensure that a single user is unable to permanently delete private chats.\nWhich of the following should you configure?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. The user's Microsoft 365 license options in the Microsoft 365 Admin Center.",
+//         "B. A meeting policy in Microsoft Teams.",
+//         "C. A litigation hold on the user's mailbox.",
+//         "D. A Sensitivity Label in the Security & Compliance Admin Center."
+//     ],
+//     answer: "C. A litigation hold on the user's mailbox."
+// },
+
+// // 題目編號：225
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 E3 subscription that uses Microsoft Teams.\nYou plan to deploy 20 conference phones that win support Direct Routing and one-touch join for Teams\ncalendar meetings.\nWhich type of license do you require for each phone?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Microsoft 365 Business Standard",
+//         "B. Microsoft Teams Rooms Standard",
+//         "C. Common Area Phone",
+//         "D. Microsoft 365 E3"
+//     ],
+//     answer: "C. Common Area Phone"
+// },
+
+// // 題目編號：226
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 subscription that uses Microsoft Teams.\nYou need to ensure that Microsoft Teams audio, video, and screen sharing data is prioritized over other\ndata types across the network.\nWhat should you do from the Microsoft Teams admin center?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Modify the global (Org-wide default) meeting policy and configure the Media bit rate (Kbs) setting.",
+//         "B. Modify the global (Org-wide default) meeting policy and configure the Mode for IP video setting.",
+//         "C. From the Meeting settings, select automatically use any available ports",
+//         "D. From the Meeting settings, set Insert Quality of Service (QoS) markers for real-time media traffic to On."
+//     ],
+//     answer: "D. From the Meeting settings, set Insert Quality of Service (QoS) markers for real-time media traffic to On."
+// },
+
+// // 題目編號：227
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 subscription that uses Microsoft Teams and contains a user named User1.\nUser1 reports that the Meeting recording button is missing from the Microsoft Teams client. The user\ncannot record meetings.\nYou need to ensure that User1 meets the prerequisites to record Microsoft Teams meetings.\nWhat should you do?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. From the Microsoft 365 admin center, enter Diag: Meeting Recording in the Need help? search box.",
+//         "B. From the Microsoft Teams admin center, use the Call Quality Dashboard (CQD).",
+//         "C. From the Microsoft 365 admin center, enter Diag: Missing Recording in the Need help? search box.",
+//         "D. From the Microsoft Teams admin center, use Teams advisor."
+//     ],
+//     answer: "A. From the Microsoft 365 admin center, enter Diag: Meeting Recording in the Need help? search box."
+// },
+
+// // 題目編號：228
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 subscription that contains several Microsoft SharePoint Online sites. You\nneed to ensure that the content stored m a SharePoint modern team site named Sales is available from\nMicrosoft Teams. The solution must ensure that when a new channel is added to a team, a folder for the\nchannel is created in the Sales site.\nSolution: From the Microsoft Teams client you create a new team and select From a group or team.\nDoes this meet the goal?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Yes",
+//         "B. No"
+//     ],
+//     answer: "B. No"
+// },
+
+// // 題目編號：229
+// {
+//     type: "radio",
+//     text: "Note: This question is part of a series of questions that present the same scenario. Each question in\nthe series contains a unique solution that might meet the stated goals. Some question sets might have\nmore than one correct solution, while others might not have a correct solution.\nAfter you answer a question in this section, you will NOT be able to return to it. As a result, these\nquestions will not appear in the review screen.\nYour company has a Microsoft 365 subscription.\nYou plan to configure the environment to allow external users to collaborate in Microsoft Teams by using\nguest access.\nThe company implements a new security policy that has the following requirements:\n✑ Only guest users from specific domains must be allowed to connect to collaborate by using Microsoft\nTeams.\n✑ Guest users must be prevented from inviting other guests.\nYou need to recommend a solution to meet the security policy requirements.\nSolution: From PowerShell, you run the New-CSExternalAccessPolicy and Set-CSExternalAccessPolicy\ncmdlets.\nDoes this meet the goal?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Yes",
+//         "B. No"
+//     ],
+//     answer: "B. No"
+// },
+
+// // 題目編號：230
+//     {
+//         type: "hotspot",
+//         hotspotType: "inline",
+//         text: `HOTSPOT\nYou have a Microsoft 365 E5 subscription that uses Microsoft Teams. The subscription contains a group\nnamed Group 1.\nYou need to prevent the members of Group1 from recording meetings.\nHow should you complete the PowerShell script? To answer, select the appropriate options in the answer\narea. Each correct selection is worth one point.\n`,
+//         instruction: "Hotspot: Select the appropriate options in the answer area.",
+//         hotspotHtml: `{0} -Identity Group1 {1} $false`,
+//         rows: [
+//             {
+//                 options: [
+//                               "Grant-CsTeamsAppPermissionPolicy",
+//                               "Set-CsTeamsMeetingConfiguration",
+//                               "Set-CsTeamsMeetingPolicy",
+//                               "Set-CsTeamsMessagingPolicy"
+//                     ],
+//                 answer: "Set-CsTeamsMeetingConfiguration"
+//             }, // 對應 {0}
+//             {
+//                 options: [
+//                               "AllowCloudRecording",
+//                               "AllowCloudRecordingForCalls",
+//                               "AllowIPVideo",
+//                               "ChannelRecording Download"
+//                     ],
+//                 answer: "AllowCloudRecordingForCalls"
+//             }, // 對應 {1}
+//         ]
+//     },
+
+//     // 題目編號：231
+// {
+//     type: "checkbox",
+//     text: "Your company has a Microsoft 365 subscription. All users are assigned a Microsoft 365 E3 license.\nYou need to implement information barriers between two groups of users.\nWhich two licensing add-ons provide the required functionality? Each correct answer presents a\ncomplete solution. Each correct selection is worth one point.",
+//     instruction: "Select 2 items.",
+//     max: 2,
+//     options: [
+//         "A. Microsoft Defender for Office 365",
+//         "B. Insider Risk Management",
+//         "C. Compliance",
+//         "D. Communications Credits"
+//     ],
+//     answer: [
+//         "B. Insider Risk Management",
+//         "C. Compliance"
+//     ]
+// },
+
+// // 題目編號：232
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 E5 subscription that uses Teams.\nYou need to ensure that all the files in Teams channels are stored for at least one year after the files are\ndeleted.\nWhat should you do?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Create an Audit retention policy.",
+//         "B. Enable Customer Lockbox.",
+//         "C. Create a data loss prevention (DIP) policy for Teams chat and channel messages.",
+//         "D. Create a retention policy for Microsoft SharePoint sites."
+//     ],
+//     answer: "D. Create a retention policy for Microsoft SharePoint sites."
+// },
+
+// // 題目編號：233
+// {
+//     type: "checkbox",
+//     text: "You have a Microsoft 365 subscription that uses Microsoft Teams. All users are assigned a Microsoft\nOffice 365 Enterprise E3 license.\nYou need to ensure that the users can join scheduled meetings by dialing a toll-free phone number.\nWhich two add-on licenses should you assign to the users? Each correct answer presents part of the\nsolution. Each correct selection is worth one point.",
+//     instruction: "Select 2 items.",
+//     max: 2,
+//     options: [
+//         "A. Communication Credits",
+//         "B. Microsoft 365 Audio Conferencing",
+//         "C. Microsoft 365 Domestic Calling Plan",
+//         "D. Microsoft Teams Phone Standard — Virtual User",
+//         "E. Common Area Phone"
+//     ],
+//     answer: [
+//         "A. Communication Credits",
+//         "B. Microsoft 365 Audio Conferencing"
+//     ]
+// },
+
+// // 題目編號：234
+//             {
+//                 type: "matrix",
+//                 text: `HOTSPOT\nYou have a Microsoft 365 subscription that uses Microsoft Teams and contains a user named User1 and\nthree groups named Group1 , Group2 and Group3. User1 is a member of Group1, Group2, and Group3.\nThe subscription has the meeting policies shown in the following table.\n\n<img src='images/60.png' class='question-img'>\n`,
+//                 instruction: "Matrix: Select Yes or No for each statement.",
+//                 rows: [
+//                     {
+//                         label: "Meet now in channels is turned off for User1.",
+//                         answer: "Yes"
+//                     },
+//                     {
+//                         label: "Transcription is turned off for User1.",
+//                         answer: "Yes"
+//                     },
+//                     {
+//                         label: "The Global (Org-wide default) policy applies to User1.",
+//                         answer: "No"
+//                     }
+//                 ]
+//             },
+
+//             // 題目編號：235
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 36S E5 subscription that uses Microsoft Teams.\nYou need to enforce multi-factor authentication (MFA) for all users that access Microsoft Teams outside\nthe corporate network.\nWhat should you configure?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. a compliance policy",
+//         "B. a Teams policy",
+//         "C. a sign-in risk policy",
+//         "D. a Conditional Access policy"
+//     ],
+//     answer: "D. a Conditional Access policy"
+// },
+
+// // 題目編號：236
+// {
+//     type: "radio",
+//     text: "Your company uses Microsoft Teams.\nThe company has 10 corporate images.\nYou want to provide the images to users as custom backgrounds for Teams meetings.\nYou need to make the backgrounds available to Teams users.\nWhat should you configure?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Meeting policies",
+//         "B. Team templates",
+//         "C. Meeting settings",
+//         "D. Teams settings"
+//     ],
+//     answer: "A. Meeting policies"
+// },
+
+        // // 題目編號：237
+        // {
+        //     type: "hotspot",
+        //     text: "HOTSPOT\nYour company uses Microsoft Teams.\nAll users are assigned a Microsoft 365 E3 license.\nYou need to purchase add-on licenses that provide the following:\n- The ability to add a logo to the meeting lobby\n- Automatic protection against malicious links in chats\nWhich add-on license should you obtain for each requirement? To answer, select the appropriate options\nin the answer area.\n",
+        //     instruction: "Hotspot: Select the appropriate options in the answer area.",
+        //     rows: [
+        //         {
+        //             label: "The ability to add a logo to the meeting lobby:",
+        //             options: [
+        //                 "Advanced Communications",
+        //                 "Audio Conferencing",
+        //                 "Communications Credits",
+        //                 "Microsoft Teams Rooms"
+        //             ],
+        //             answer: "Advanced Communications"
+        //         },
+        //         {
+        //             label: "Automatic protection against malicious links posted in chats:",
+        //             options: [
+        //                 "Advanced Communications",
+        //                 "Compliance",
+        //                 "Insider Risk Management",
+        //                 "Microsoft Defender for Office 365"
+        //             ],
+        //             answer: "Microsoft Defender for Office 365"
+        //         }
+        //     ]
+        // },
+
+//         // 題目編號：238
+//             {
+//                 type: "fill",
+//                 text: `Your company has a Microsoft Office 365 subscription.\nThe company has the administrators and the security requirements shown in the following table.\nYou need to assign a role to each administrator to ensure that the administrators can meet the security requirements by using the Microsoft Teams admin center. The solution must use the principle of least privilege.\nWhich role should you assign to each administrator? To answer, drag the appropriate roles to the correct users. Each role may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content. NOTE: Each correct selection is worth one point.`,
+//                 instruction: "拖選填空：將選項拖入空格。",
+//                 options: [
+//               "Apps usage",
+//               "Information protection licence",
+//               "Teams device usage",
+//               "Teams live event usage"
+//     ],
+//                 fillHtml: `
+//                     <div class='question-content-scroll'><div><div>Users that use the Teams mobile app for iOS:：<div class='drop-zone-fill' data-idx='0' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div>
+//                     <div>Number of guest users on the Customer Support team:：<div class='drop-zone-fill' data-idx='1' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div></div></div>
+//                 `,
+//                 answer: ["Apps usage","Teams device usage"]
+//             },
+
+//             // 題目編號：239
+// {
+//     type: "radio",
+//     text: "The Subscription has the Teams policy shown in the following exhibit:\n\n<img src='images/61.png' class='question-img'>\n\nYou need to ensure that the members of Group1 can create private channels. The solution must use the\nprinciple of least privilege.\nWhat should you do first?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Create a team template.",
+//         "B. Modify the Teams settings for the subscription.",
+//         "C. Modify the Global (Org-wide default) policy and set Create private channels to On.",
+//         "D. Create a Teams policy that has Create private channels set to On."
+//     ],
+//     answer: "D. Create a Teams policy that has Create private channels set to On."
+// },
+
+// // 題目編號：240
+//             {
+//                 type: "fill",
+//                 text: `DRAG DROP\nYour company uses Teams.\nAll users are assigned a Microsoft 365 E? license.\nYou need to purchase add-on licenses that will enable the following features for the Teams environment\n✑ Microsoft Purview Information Barriers\n✑ Data loss prevention (DIP) for Teams chat and channel messages\n✑ Safe attachments for Microsoft SharePoint OneDrive and Teams\nTo answer, drag the appropriate reports to the correct requirements. Each report may be used once,\nmore than once, or not at all.\n`,
+//                 instruction: "拖選填空：將選項拖入空格。",
+//                 options: [
+//               "Microsoft 365 E5 Compliance",
+//               "Microsoft 365 E5 eDiscovery and Audit",
+//               "Microsoft Defender for Cloud Apps",
+//               "Microsoft Defender for Office 365 Plan 1"
+//     ],
+//                 fillHtml: `
+//                     <div class='question-content-scroll'><div><div>DLP for Teams chat and channel messages:：<div class='drop-zone-fill' data-idx='0' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div>
+//                     <div>Safe attachments for SharePoint, OneDrive, and Teams:：<div class='drop-zone-fill' data-idx='1' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div>
+//                     <div>Microsoft Purview Information Barriers:：<div class='drop-zone-fill' data-idx='2' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div></div></div>
+//                 `,
+//                 answer: ["Microsoft Defender for Office 365 Plan 1","Microsoft 365 E5 eDiscovery and Audit","Microsoft 365 E5 Compliance"]
+//             },
+
+
+// // 題目編號：241
+//     {
+//         type: "rank",
+//         text: `DRAG DROP\nYour company uses Teams and deploys the Yammer Communities app to all users.\nThe communications department at the company needs you to replace the image on the Teams app bar\nfor the Communities app.\nWhich three actions should you perform in sequence? To answer, drag the appropriate reports to the\ncorrect requirements. Each report may be used once, more than once, or not at all.\n`,
+//         instruction: "拖選排名：請從左側選項中選擇正確的四個步驟，並按順序拖動到右側空格。",
+//         options: [
+//             "From Customize store in the Microsoft Teams admin center, choose an image.",
+//             "Publish the app.",
+//             "From Manage apps in the Microsoft Teams admin center, select Customize.",
+//             "From Org-wide app settings, set Show tailored apps to On.",
+//             "Modify the Color icon and Outline icon settings."
+//         ],
+//         answer: [
+//             "From Manage apps in the Microsoft Teams admin center, select Customize.",
+//             "From Org-wide app settings, set Show tailored apps to On.",
+//             "Publish the app."
+//         ]
+//     },
+
+//     // 題目編號：242
+// {
+//     type: "radio",
+//     text: "Exhibit:\n\n<img src='images/62.png' class='question-img'>\n\nYou need to ensure that the user sees only the Manage a Project template.\nWhat should you do?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. From PowerShell, modify the Teams policies.",
+//         "B. From the Microsoft Teams admin center. modify the team templates.",
+//         "C. From the Microsoft Teams admin center, modify the templates policies.",
+//         "D. From PowerShell, modify the team templates."
+//     ],
+//     answer: "C. From the Microsoft Teams admin center, modify the templates policies."
+// },
+
+// // 題目編號：243
+// {
+//     type: "radio",
+//     text: "You have a Microsoft Office 365 subscription that contains a user named User1.\nYou need to ensure that User1 can view Usage reports in the Microsoft Teams admin center; The\nsolution must use the principle of least privilege.\nWhich role should you assign to User'?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Teams Communication support specialist",
+//         "B. Global administrator",
+//         "C. Global reader",
+//         "D. Teams Administrator"
+//     ],
+//     answer: "C. Global reader"
+// },
+
+//         // 題目編號：244
+//         {
+//             type: "hotspot",
+//             text: "HOTSPOT\nYour company uses Teams.\nYou have the following teams:\n• Accounting\n• Project Management\n• Information Technology\nYou plan to create new channels.\n",
+//             instruction: "Hotspot: Select the appropriate options in the answer area.",
+//             rows: [
+//                 {
+//                     label: "Accounting:",
+//                     options: [
+//                         "Private",
+//                         "Shared",
+//                         "Standard"
+//                     ],
+//                     answer: "Private"
+//                 },
+//                 {
+//                     label: "Project Management:",
+//                     options: [
+//                         "Private",
+//                         "Shared",
+//                         "Standard"
+//                     ],
+//                     answer: "Shared"
+//                 }
+//             ]
+//         },
+
+//         // 題目編號：245
+//             {
+//                 type: "fill",
+//                 text: `DRAG DROP\nYou have a Microsoft Office 365 subscription named contoso.com.\nYou need to create the Microsoft teams shown in the following table.\n\n<img src='images/63.png' class='question-img'>\n\nWhat should you configure each team? To answer, drag the appropriate team types to the correct teams.\nEach team type may be used once, more than once, or not at all. You may need to drag the split bar\nbetween panes or scroll to view content. NOTE: Each correct selection is worth one point.\n`,
+//                 instruction: "拖選填空：將選項拖入空格。",
+//                 options: [
+//               "Org-wide",
+//               "Private",
+//               "Public"
+//     ],
+//                 fillHtml: `
+//                     <div class='question-content-scroll'><div><div>Sales:：<div class='drop-zone-fill' data-idx='0' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div>
+//                     <div>General:：<div class='drop-zone-fill' data-idx='1' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div>
+//                     <div>Project:：<div class='drop-zone-fill' data-idx='2' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div></div></div>
+//                 `,
+//                 answer: ["Private","Org-wide","Public"]
+//             },
+
+// // 題目編號：246
+//             {
+//                 type: "matrix",
+//                 text: `HOTSPOT\nYou have a Microsoft 365 subscription that contains the users shown in the following table.\nin Microsoft Teams, User3 creates a new team named Team1.\n\n<img src='images/64.png' class='question-img'>\n\nUser1 configures the Groups Expiration settings as shown in the following exhibit.\n\n<img src='images/65.png' class='question-img'>\n\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE:\nEach correct selection is worth one point.\n`,
+//                 instruction: "Matrix: Select Yes or No for each statement.",
+//                 rows: [
+//                     {
+//                         label: "User1 will receive a renewal notification 180 days before Team1 is due to expire.",
+//                         answer: "No"
+//                     },
+//                     {
+//                         label: "User2 can renew Team1 before the team expires.",
+//                         answer: "No"
+//                     },
+//                     {
+//                         label: "User3 will receive a renewal notification 30 days before Team1 is due to expire.",
+//                         answer: "Yes"
+//                     }
+//                 ]
+//             },
+
+// // 題目編號：247
+//     {
+//         type: "hotspot",
+//         hotspotType: "inline",
+//         text: `DRAG DROP\nYou have a Microsoft 365 E5 subscription that contains a Microsoft Teams team named Confidential.\nYou need to ensure that guest users cannot be added to the Confidential team.\nHow should you complete the PowerShell script? To answer, drag the appropriate values to the correct\ntargets. Each value may be used once, more than once, or not at all. You may need to drag the split bar\nbetween panes or scroll to view content.\n`,
+//         instruction: "Hotspot: Select the appropriate options in the answer area.",
+//         hotspotHtml: `$GroupName = "&lt;GroupName&gt;" \n Connect-AzureAD \n $templat = {0} | ? {$_.displayname -eq "group.unified.guest"} \n $settingsCopy = $template.CreateDirectorySetting() \n $settingsCopy["AllowToAddGuests"]=$False \n $groupID= ({1} -SearchString $GroupName).ObjectId  \n New-AzureADObjectSetting -TargetType Groups -TargetObjectId $groupID -DirectorySetting $settingsCopy`,
+//         rows: [
+//             {
+//                 options: [
+//                               "Get-AzureADDirectorySetting",
+//                               "Get-AzureADDirectorySetting Template",
+//                               "Get-AzureADGroup",
+//                               "Get-AzureADMSGroup",
+//                               "Set-AzureADGroup",
+//                               "Set-AzureADMSGroup"
+//                     ],
+//                 answer: "Get-AzureADDirectorySetting Template"
+//             }, // 對應 {0}
+//             {
+//                 options: [
+//                               "Get-AzureADDirectorySetting",
+//                               "Get-AzureADDirectorySetting Template",
+//                               "Get-AzureADGroup",
+//                               "Get-AzureADMSGroup",
+//                               "Set-AzureADGroup",
+//                               "Set-AzureADMSGroup"
+//                     ],
+//                 answer: "Get-AzureADDirectorySetting"
+//             }, // 對應 {1}
+//         ]
+//     },
+
+//     // 題目編號：248
+//     {
+//         type: "hotspot",
+//         hotspotType: "inline",
+//         text: `DRAG DROP\nYou have a Microsoft 365 E5 subscription that uses Microsoft Teams.\nYou need to ensure that the users in your organization can communicate with external users who use\nTeams for personal use.\nHow should you complete the PowerShell cmdlets? To answer, drag the appropriate values to the correct\ntargets. Each value may be used once, more than once, or not at all. You may need to drag the split bar\nbetween panes or scroll to view content. NOTE: Each correct selection is worth one point.\n`,
+//         instruction: "Hotspot: Select the appropriate options in the answer area.",
+//         hotspotHtml: `Set-CsTenant FederationConfiguration {0} $true {1} $true`,
+//         rows: [
+//             {
+//                 options: [
+//                               "-AllowFederatedUsers",
+//                               "-AllowTeamsConsumer",
+//                               "-AllowedDomains",
+//                               "-AllowPublicUsers"
+//                     ],
+//                 answer: "-AllowFederatedUsers"
+//             }, // 對應 {0}
+//             {
+//                 options: [
+//                               "-AllowFederatedUsers",
+//                               "-AllowTeamsConsumer",
+//                               "-AllowedDomains",
+//                               "-AllowPublicUsers"
+//                     ],
+//                 answer: "-AllowTeamsConsumer"
+//             }, // 對應 {1}
+            
+//         ]
+//     },
+
+//     // 題目編號：249
+// {
+//     type: "checkbox",
+//     text: "You plan to deploy Microsoft Teams to a remote location.\nYou perform a network readiness assessment for Microsoft Teams by using the Network Testing\nCompanion.\nWhich two tests are included in the assessment? Each correct answer presents part of the solution.\nNOTE: Each correct selection is worth one point.",
+//     instruction: "Select 2 items.",
+//     max: 2,
+//     options: [
+//         "A. video quality tests",
+//         "B. trace route information",
+//         "C. Quality of Service (QoS) validation",
+//         "D. open and blocked ports",
+//         "E. audio quality tests"
+//     ],
+//     answer: [
+//         "B. trace route information",
+//         "D. open and blocked ports"
+//     ]
+// },
+
+// // 題目編號：250
+//     {
+//         type: "rank",
+//         text: `DRAG DROP\nYour company has a trading department and a research department.\nThe company purchases a Microsoft 365 E5 subscription.\nYou plan to deploy Microsoft 365 E5 licenses to all users.\nYou need to block communication between the users in the trading department and the users in the\nresearch department.\nWhich four actions should you perform in sequence? To answer, move the appropriate actions from the\nlist of actions to the answer area and arrange them in the correct order.\n`,
+//         instruction: "拖選排名：請從左側選項中選擇正確的四個步驟，並按順序拖動到右側空格。",
+//         options: [
+//             "Create administrative units in Azure AD.",
+//             "Create app permissions policies.",
+//             "From the Microsoft Teams admin center, enable scoped directory search.",
+//             "Provide admin consent for the Information Barrier Processor.",
+//             "Make a list of segments to define.",
+//             "Create information barrier policies."
+//         ],
+//         answer: [
+//             "Make a list of segments to define.",
+//             "Provide admin consent for the Information Barrier Processor.",
+//             "Create information barrier policies.",
+//             "From the Microsoft Teams admin center, enable scoped directory search."
+//         ]
+//     },
+
+//     // 題目編號：251
+// {
+//     type: "radio",
+//     text: "Your company has a Microsoft 365 E5 subscription.\nYou enable guest access for Microsoft Teams.\nYou need to prevent all users from downloading and opening files that contain malware by using\nMicrosoft Teams channels.\nWhat should you do first?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. From the Microsoft Purview compliance portal, create a data loss prevention (DLP) policy.",
+//         "B. From the Microsoft 365 Defender portal, select Turn on Defender for Office 365 for SharePoint, OneDrive, and Microsoft Teams",
+//         "C. From the Azure Active Directory admin center, add an identity provider.",
+//         "D. From the Azure Active Directory admin center, enable the End user protection baseline policy."
+//     ],
+//     answer: "B. From the Microsoft 365 Defender portal, select Turn on Defender for Office 365 for SharePoint, OneDrive, and Microsoft Teams"
+// },
+
+//         // 題目編號：252
+//         {
+//             type: "hotspot",
+//             text: "HOTSPOT\nYou have a Microsoft 365 subscription that uses Microsoft Teams.\nYou need to create the resource accounts shown in the following table.\n<img src='images/66.png' class='question-img'>\nWhich resource accounts require licenses, and which type of license is required? To answer, select the\nappropriate options in the answer area. NOTE: Each correct selection is worth one point.\n",
+//             instruction: "Hotspot: Select the appropriate options in the answer area.",
+//             rows: [
+//                 {
+//                     label: "Resource accounts:",
+//                     options: [
+//                         "Resource1 only",
+//                         "Resource2 only",
+//                         "Resource3 only",
+//                         "Resource1 and Resource2 only",
+//                         "Resource2 and Resource3 only",
+//                         "Resource1 and Resource3 only",
+//                         "Resource1. Resource2. and Resource3"
+//                     ],
+//                     answer: "Resource3 only"
+//                 },
+//                 {
+//                     label: "License type:",
+//                     options: [
+//                         "Common Area Phone",
+//                         "Microsoft 365 Audio Conferencing",
+//                         "Microsoft 365 Domestic Calling Plan",
+//                         "Microsoft 365 Phone System - Virtual User"
+//                     ],
+//                     answer: "Microsoft 365 Audio Conferencing"
+//                 }
+//             ]
+//         },
+
+// // 題目編號：246
+//             {
+//                 type: "matrix",
+//                 text: `HOTSPOT\nYou have a Microsoft 365 subscription that uses Teams.\nYou have a meeting room that contains a Teams Rooms device and a Surface Hub.\nYou have the following configuration file for the Teams Rooms device.\n\n<img src='images/67.png' class='question-img'>\n\nFor each of the following statements, select Yes if True. Otherwise select No. NOTE: Each correct\nselection is worth one point.\n`,
+//                 instruction: "Matrix: Select Yes or No for each statement.",
+//                 rows: [
+//                     {
+//                         label: "Audio and video are enabled automatically on the Teams Rooms device when a meeting starts.",
+//                         answer: "Yes"
+//                     },
+//                     {
+//                         label: "Participants can enable or disable audio on the Teams Rooms device.",
+//                         answer: "Yes"
+//                     },
+//                     {
+//                         label: "The Surface Hub displays a shared whiteboard.",
+//                         answer: "No"
+//                     }
+//                 ]
+//             },
+
+//             // 題目編號：254
+// {
+//     type: "radio",
+//     text: "You have a team in Microsoft Teams named Team1 that has the channels shown in the following\ntable.\n\n<img src='images/68.png' class='question-img'>\n\nWhich channels support moderation?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Channel2only",
+//         "B. General and Channel1 only",
+//         "C. General only",
+//         "D. Channel1 and Channel2 only",
+//         "E. Channel1 only"
+//     ],
+//     answer: "B. General and Channel1 only"
+// },
+
+// // 題目編號：255
+// {
+//     type: "checkbox",
+//     text: "You have a Microsoft 365 subscription named contoso.com that uses Microsoft Teams.\nYou need to ensure that Microsoft Teams users can perform the following tasks:\n• Search for customers that use Skype (Consumer).\n• Start a Skype chat with the customers.\nWhich two actions should you perform? Each correct answer presents part of the solution. NOTE: Each\ncorrect selection is worth one point.",
+//     instruction: "Select 2 items.",
+//     max: 2,
+//     options: [
+//         "A. From the Microsoft Teams admin center, turn on external access.",
+//         "B. From the Azure portal, configure Azure AD B2C.",
+//         "C. Add a _sipinternaltls SRV record to the contoso.com DNS domain.",
+//         "D. From the Microsoft Teams admin center, turn on guest access.",
+//         "E. Add a _sipfederationtls SRV record to the contoso.com DNS domain."
+//     ],
+//     answer: [
+//         "A. From the Microsoft Teams admin center, turn on external access.",
+//         "E. Add a _sipfederationtls SRV record to the contoso.com DNS domain."
+//     ]
+// },
+
+//         // 題目編號：256
+//         {
+//             type: "hotspot",
+//             text: "HOTSPOT\nYou have a Microsoft 365 subscription that uses Microsoft Teams.\nYou need to configure Microsoft Teams to meet the following requirements:\n• Enable live transcription for meetings.\n• Require that users record their name when they connect to a meeting by using a conferencing phone\nnumber.\nWhat should you configure for each requirement? To answer, select the appropriate options in the\nanswer area. NOTE: Each correct selection is worth one point.\n",
+//             instruction: "Hotspot: Select the appropriate options in the answer area.",
+//             rows: [
+//                 {
+//                     label: "Enable live transcription for meetings:",
+//                     options: [
+//                         "Teams policies",
+//                         "Meeting policies",
+//                         "Meeting settings",
+//                         "Conference bridges"
+//                     ],
+//                     answer: "Meeting policies"
+//                 },
+//                 {
+//                     label: "Require that users record their name when they connect to a meeting by using a conferencing phone number:",
+//                     options: [
+//                         "Teams policies",
+//                         "Meeting policies",
+//                         "Meeting settings",
+//                         "Conference bridges"
+//                     ],
+//                     answer: "Conference bridges"
+//                 }
+//             ]
+//         },
+
+//         // 題目編號：257
+// {
+//     type: "radio",
+//     text: "You plan to implement Microsoft Teams for 300 users.\nFor the first stage of the deployment, you will enable the following features:\n• Audio\n• Video\n• Screen sharing\nUsers will be prevented from using the following features:\n• File sharing\n• PSTN calling\n• Conference audio\n• Conference video\n• Conference screen sharing\nYou need to calculate how much network bandwidth is required for the first-stage deployment.\nWhat should you use?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Network Assessment Tool",
+//         "B. Advisor for Team e Network Planner to: Input your s",
+//         "C. Bandwidth Utilization Analyzer",
+//         "D. Network Planner"
+//     ],
+//     answer: "D. Network Planner"
+// },
+
+// // 題目編號：258
+// {
+//     type: "radio",
+//     text: "Your company uses Microsoft Teams and a Microsoft calling plan.\nThe company has a main office in Chicago.\nThe company opens a new office in Toronto that has 500 users.\nYou need to ensure that the correct address is available to emergency responders.\nWhat should you do?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Create a calling policy and assign the policy to each user.",
+//         "B. Create a configuration profile and assign the profile to the device of each user.",
+//         "C. Add an emergency address, and then modify the outbound calling setting for each user.",
+//         "D. Add an emergency address, and then modify the location for each phone number."
+//     ],
+//     answer: "D. Add an emergency address, and then modify the location for each phone number."
+// },
+
+// // 題目編號：259
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 subscription that uses Microsoft Teams.\nUsers report poor call quality.\nYou need to identify whether Teams calls use TCP or UDP.\nWhat should you review in the Microsoft Call Quality Dashboard?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Quality of Experience Reports",
+//         "B. Quality Drill Down Reports",
+//         "C. Endpoint Reports",
+//         "D. Reliability Reports"
+//     ],
+//     answer: "D. Reliability Reports"
+// },
+
+// // 題目編號：260
+// {
+//     type: "radio",
+//     text: "Your company has a Microsoft 365 subscription that uses an Azure AD tenant named contoso.com.\nYou need to prevent guest users in the tenant from using cameras during Microsoft Teams meetings.\nSolution: From the Microsoft Teams admin center, you modify the External access settings.\nDoes this meet the goal?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Yes",
+//         "B. No"
+//     ],
+//     answer: "B. No"
+// },
+
+// // 題目編號：261
+// {
+//     type: "radio",
+//     text: "Your company uses Teams Calling Plans.\nWhen a user places a Teams call to an ambulance service, you need to ensure that a notification is also\nsent to the main receptionist of the company.\nWhat should you configure?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. a voice routing policy",
+//         "B. an emergency calling policy",
+//         "C. a calling policy",
+//         "D. a caller ID policy"
+//     ],
+//     answer: "B. an emergency calling policy"
+// },
+
+// // 題目編號：262
+// {
+//     type: "radio",
+//     text: "You have a Microsoft Office 365 subscription that contains a user named User1.\nYou need to ensure that User1 can view Usage reports in the Microsoft Teams admin center. The\nsolution must use the principle of least privilege.\nWhich role should you assign to User1?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Global Administrator",
+//         "B. Usage Summary Reports Reader",
+//         "C. Helpdesk Administrator",
+//         "D. Skype for Business administrator"
+//     ],
+//     answer: "B. Usage Summary Reports Reader"
+// },
+
+// // 題目編號：263
+// {
+//     type: "radio",
+//     text: "You are assigned the Groups Administrator role.\nYou discover that you cannot create an expiration policy in Microsoft 365.\nYou need to create the expiration policy. The solution must use the principle of least privilege.\nWhat should you do first?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Modify the global (Org-wide default) app permission policy.",
+//         "B. Request the Global Administrator role.",
+//         "C. Upgrade the Azure AD license.",
+//         "D. Purchase a Microsoft Defender for Identity license."
+//     ],
+//     answer: "C. Upgrade the Azure AD license."
+// },
+
+// // 題目編號：264
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 E3 subscription that contains 500 users. All the users have computers that\nrun Windows 10 and are joined to Azure A",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Vou need to generate a report that identifies which documents the users copied from Microsoft Teams to USB devices. What should you do first?",
+//         "B. Onboard the Windows 10 computers to Endpoint data loss prevention (Endpoint DLP).",
+//         "C. Assign the Microsoft 365 ES compliance add-on to each user.",
+//         "D. Create a custom data loss prevention (DLP) policy.",
+//         "E. Assign the Enterprise Mobility + Security ES add-on to each user."
+//     ],
+//     answer: "A. Vou need to generate a report that identifies which documents the users copied from Microsoft Teams to USB devices. What should you do first?"
+// },
+
+// // 題目編號：265
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 subscription that uses Microsoft Teams.\nYou feed 10 identify which teams were inactive during the past 90 days.\nWhat should you use?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Teams advisor",
+//         "B. the Office 365 Groups activity report",
+//         "C. the Teams user activity report",
+//         "D. the Teams usage report"
+//     ],
+//     answer: "D. the Teams usage report"
+// },
+
+// // 題目編號：266
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 subscription.\nYou plan to implement Microsoft Teams.\nYou need to perform network quality and connectivity tests from an on-premises network to Microsoft\n365 Online services by using the Network Testing Companion\nYou install the Network Testing Companion module on a local Windows 10 device.\nWhich additional software should you install to perform the tests?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. the Microsoft Teams desktop client",
+//         "B. Network Assessment Tool",
+//         "C. Windows Assessment Toolkit",
+//         "D. Windows Performance Analyzer (WPA)"
+//     ],
+//     answer: "B. Network Assessment Tool"
+// },
+
+// // 題目編號：267
+//     {
+//         type: "rank",
+//         text: `DRAG DROP\nYou have a Microsoft 365 ES subscription that uses Teams.\nThe sales department at your company requires that a toll-free number appear at the top of a list of\nnumbers on Microsoft Outlook invites to Teams meetings.\nWhich four actions should you perform in sequence? To answer, move the appropriate actions from the\nlist of actions to the answer area and arrange them in the correct order.\n`,
+//         instruction: "拖選排名：請從左側選項中選擇正確的四個步驟，並按順序拖動到右側空格。",
+//         options: [
+//             "Assign a number to a resource account.",
+//             "Request a user number.",
+//             "Assign the Microsoft Teams Phone Standard - Virtual User license.",
+//             "Purchase Communication Credits.",
+//             "Request a service number.",
+//             "Assign a number to a conference bridge.",
+//             "Create and assign an Audio Conferencing policy."
+//         ],
+//         answer: [
+//             "Purchase Communication Credits.",
+//             "Request a service number.",
+//             "Assign a number to a conference bridge.",
+//             "Create and assign an Audio Conferencing policy."
+//         ]
+//     },
+
+
+//                     // 題目編號：268
+//         {
+//             type: "hotspot",
+//             text: "HOTSPOT\nYou have a Microsoft 365 subscription that uses Microsoft Teams.\nYou have a team named Project1 that contains the members shown in the following table.\n<img src='images/69.png' class='question-img'>\nProject1 contains the channels shown in the following table.\n<img src='images/70.png' class='question-img'>\nYou need to identify which users can be added as a channel moderator, and which channels support\nmoderation.\nWhat should you identify? To answer, select the appropriate options in the answer area. NOTE: Each\ncorrect selection is worth one point.\n",
+//             instruction: "Hotspot: Select the appropriate options in the answer area.",
+//             rows: [
+//                 {
+//                     label: "Users that can be added as a channel moderator:",
+//                     options: [
+//                         "User1 only",
+//                         "User2 only",
+//                         "User1 and User2 only",
+//                         "User1. User2. and Guest1"
+//                     ],
+//                     answer: "User1 and User2 only"
+//                 },
+//                 {
+//                     label: "Channels that support moderation:",
+//                     options: [
+//                         "General only",
+//                         "Budgets only",
+//                         "Planning only",
+//                         "General and Planning only",
+//                         "General. Budgets. and Planning"
+//                     ],
+//                     answer: "General and Planning only"
+//                 }
+//             ]
+//         },
+
+//         // 題目編號：269
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 subscription that uses Microsoft Teams.\nWhen a user creates a new team, the user sees the templates shown in the following exhibit.\n\n<img src='images/71.png' class='question-img'>\n",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. From the Microsoft Teams admin center, modify the team templates.",
+//         "B. From PowerShell, modify the team templates.",
+//         "C. From the Microsoft Teams admin center, modify the templates policies.",
+//         "D. From PowerShell, modify the Teams policies."
+//     ],
+//     answer: "C. From the Microsoft Teams admin center, modify the templates policies."
+// },
+
+        //       // 題目編號：270
+        // {
+        //     type: "hotspot",
+        //     text: "HOTSPOT\nYou have a Microsoft 365 subscription that uses Microsoft Teams.\nYou plan to deploy a Microsoft Teams display device.\nYou need to enable automatic provisioning.\nWhich type of resource account should you create, and what should you use to identify the device? To\nanswer, select the appropriate options in the answer area. NOTE: Each correct selection is worth one\npoint.\n",
+        //     instruction: "Hotspot: Select the appropriate options in the answer area.",
+        //     rows: [
+        //         {
+        //             label: "To identify the device, use:",
+        //             options: [
+        //                 "The IP address",
+        //                 "The device hash",
+        //                 "The hardware ID",
+        //                 "The device serial number",
+        //                 "The device MAC address"
+        //             ],
+        //             answer: "The device MAC address"
+        //         },
+        //         {
+        //             label: "Create resource account type:",
+        //             options: [
+        //                 "Microsoft Teams resource account",
+        //                 "Microsoft 365 room resource account",
+        //                 "Microsoft Exchange Server equipment resource account"
+        //             ],
+        //             answer: "Microsoft 365 room resource account"
+        //         }
+        //     ]
+        // },
+
+//                 // 題目編號：271
+//         {
+//             type: "hotspot",
+//             text: "HOTSPOT\nYou have a Microsoft 365 subscription that uses Microsoft Teams.\nYou have a team named Project1 that contains the users shown in the following table.\n<img src='images/72.png' class='question-img'>\nYou create a Microsoft 365 groups expiration policy that has the following configurations:\n• Group lifetime (in days): 180\n• Email contact for groups with no owners: Ad mini\n• Enable expiration for these Microsoft 365 groups: Project1\nThe group expiration for Project1 is May 31, 2022.\nWhich users will be notified to renew Project1, and when will the users receive their first renewal\nnotification? To answer, select the appropriate options in the answer area. NOTE: Each correct selection\nis worth one point.\n",
+//             instruction: "Hotspot: Select the appropriate options in the answer area.",
+//             rows: [
+//                 {
+//                     label: "Notified users:",
+//                     options: [
+//                         "User1 only",
+//                         "Admin1 only",
+//                         "User1 and User2 only",
+//                         "User1 and Admin1 only",
+//                         "User1. User2. and Admin1"
+//                     ],
+//                     answer: "User1 only"
+//                 },
+//                 {
+//                     label: "First renewal notification:",
+//                     options: [
+//                         "May 1. 2022",
+//                         "May 16. 2022",
+//                         "March 31. 2022"
+//                     ],
+//                     answer: "May 1. 2022"
+//                 }
+//             ]
+//         },
+
+//         // 題目編號：272
+// {
+//     type: "radio",
+//     text: "Your company uses Teams.\nYou plan to assign an enhanced encryption policy to enable end-to-end encryption for Teams calls.\nWhich features support end-to-end encryption for one-to-one Teams calls?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. audio only",
+//         "B. video only",
+//         "C. chat only",
+//         "D. audio and video only",
+//         "E. audio, video, and chat"
+//     ],
+//     answer: "D. audio and video only"
+// },
+
+// // 題目編號：273
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 E5 subscription that uses Microsoft Teams Users report poor call quality.\nYou need to identify the source of the call quality issues and which locations are affected.\nWhat should you do first?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Run the Teams device usage report.",
+//         "B. Run the Teams user activity report.",
+//         "C. Upload building data to the Call quality dashboard.",
+//         "D. Upload reporting labels for each location."
+//     ],
+//     answer: "C. Upload building data to the Call quality dashboard."
+// },
+
+// // 題目編號：274
+// {
+//     type: "radio",
+//     text: "Your company has 10 offices in North America and Europe.\nThe company has 5,000 users.\nYou plan to deploy Microsoft Teams for all the users.\nYou run a pilot project for the planned deployment.\nYou need to identify the network packet loss from the pilot computers to Microsoft Teams during calls.\nSolution: From the Microsoft Teams admin center, you review Usage reports.\nDoes this meet the goal?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Yes",
+//         "B. No"
+//     ],
+//     answer: "B. No"
+// },
+
+        // // 題目編號：275
+        // {
+        //     type: "hotspot",
+        //     text: "HOTSPOT\nYou have a Microsoft 36S subscription that uses Teams.\nYou have two teams named Department! and Department.\nYou need to implement a security and compliance solution that meets the following requirements:\n• Prevents the members of Department! and Department from communicating with each other in Teams\n• Provides an alert if offensive language is used during a Teams chat\nWhich Microsoft Purview feature should you use for each requirement? To answer, select the appropriate\noptions in the answer area. NOTE: Each correct selection is worth one point.\n",
+        //     instruction: "Hotspot: Select the appropriate options in the answer area.",
+        //     rows: [
+        //         {
+        //             label: "Prevents the members of Department1 and Department2 from communicating in Teams:",
+        //             options: [
+        //                 "Information barriers",
+        //                 "Information protection",
+        //                 "Insider risk management",
+        //                 "Privacy risk management",
+        //                 "Communication compliance"
+        //             ],
+        //             answer: "Information barriers"
+        //         },
+        //         {
+        //             label: "Provides an alert if offensive language is used during a Teams chat:",
+        //             options: [
+        //                 "Information barriers",
+        //                 "Information protection",
+        //                 "Insider risk management",
+        //                 "Privacy risk management",
+        //                 "Communication compliance"
+        //             ],
+        //             answer: "Communication compliance"
+        //         }
+        //     ]
+        // },
+
+        //         // 題目編號：276
+        // {
+        //     type: "hotspot",
+        //     text: "HOTSPOT\nYou have a Microsoft 365 subscription that uses Microsoft Teams.\nYou have the users shown in the following table.\n<img src='images/73.png' class='question-img'>\nYou have a team named Project1 that contains the users shown in the following table.\n<img src='images/74.png' class='question-img'>\nWhich user can archive Project 1, and which tool should be used to perform the task? To answer, select\nthe appropriate options in the answer area. NOTE: Each correct selection is worth one point.\n",
+        //     instruction: "Hotspot: Select the appropriate options in the answer area.",
+        //     rows: [
+        //         {
+        //             label: "Can archive Project1:",
+        //             options: [
+        //                 "User1",
+        //                 "User2",
+        //                 "User3",
+        //                 "User4",
+        //                 "User5"
+        //             ],
+        //             answer: "User4"
+        //         },
+        //         {
+        //             label: "Tool:",
+        //             options: [
+        //                 "Microsoft Teams client",
+        //                 "Microsoft 365 admin center",
+        //                 "Microsoft 365 compliance center",
+        //                 "Microsoft Teams admin center"
+        //             ],
+        //             answer: "Microsoft Teams admin center"
+        //         }
+        //     ]
+        // },
+
+//         // 題目編號：277
+//             {
+//                 type: "matrix",
+//                 text: `HOTSPOT\nYou have a Microsoft 365 subscription that uses Microsoft Teams and contains the users shown in the\nfollowing table.\n\n<img src='images/75.png' class='question-img'>\n\nThe users are assigned role-based access control {RBAQ roles as shown in the following table.\n\n<img src='images/76.png' class='question-img'>\n\nYou configure a Microsoft 365 group naming policy as shown in the following exhibit.\n\n<img src='images/77.png' class='question-img'>\n\nFor each of the following statements, select Yes if the statement is true. Otherwise, select N: NOTE:\nEach correct selection is worth one point.\n`,
+//                 instruction: "Matrix: Select Yes or No for each statement.",
+//                 rows: [
+//                     {
+//                         label: "User1 is exempt from the Microsoft 365 group naming policy.",
+//                         answer: "Yes"
+//                     },
+//                     {
+//                         label: "Before User2 can create a team, the State OrProvince attribute for User2 must be configured.",
+//                         answer: "No"
+//                     },
+//                     {
+//                         label: "If User3 attempts to create a team named Projects, the team will be named GRPSupportProjectsCA",
+//                         answer: "Yes"
+//                     }
+//                 ]
+//             },
+
+//             // 題目編號：278
+// {
+//     type: "radio",
+//     text: "Your company uses Microsoft Teams.\nYou need to configure an auto attendant that will use a Direct Routing phone number to receive incoming\ncalls.\nWhich type of license do you require?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Microsoft 365 E3",
+//         "B. Microsoft 365 Phone System - Virtual User",
+//         "C. the Advanced Communications add-on for Teams",
+//         "D. Microsoft 365 Business Standard"
+//     ],
+//     answer: "B. Microsoft 365 Phone System - Virtual User"
+// },
+
+// // 題目編號：279
+// {
+//     type: "checkbox",
+//     text: "You have a Microsoft 365 subscription that uses Microsoft Teams.\nYou have a team named R&D_Projects.\nYou need to prevent guest users from being invited to R&D_Projects. The guest users must be able to\nbe invited to other teams.\nWhat are two ways to block guest access to the R&D_Projects team? Each correct answer presents a\ncomplete solution. NOTE: Each correct selection is worth one point.",
+//     instruction: "Select 2 items.",
+//     max: 2,
+//     options: [
+//         "A. From the Microsoft 365 admin center, disable guest access.",
+//         "B. Apply a sensitivity label to the R&D_Projects team.",
+//         "C. From the Microsoft Teams admin center, disable guest access.",
+//         "D. From Azure PowerShell, run the New-AzureADObjectSetting cmdlet.",
+//         "E. Configure a Microsoft 365 group expiration policy."
+//     ],
+//     answer: [
+//         "B. Apply a sensitivity label to the R&D_Projects team.",
+//         "D. From Azure PowerShell, run the New-AzureADObjectSetting cmdlet."
+//     ]
+// },
+
+// // 題目編號：280
+// {
+//     type: "radio",
+//     text: "Your on-premises network contains a main site and a branch site.\nYou have a Microsoft 365 subscription that uses Teams.\nYou need to use Network planner to identify the networking requirements between the sites.\nFrom Network planner, you create a new network plan.\nWhat should you do next?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Configure the Network settings.",
+//         "B. Start a report.",
+//         "C. Add a network site.",
+//         "D. Add personas"
+//     ],
+//     answer: "C. Add a network site."
+// },
+
+// // 題目編號：281
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 E5 subscription that uses Microsoft Teams.\nUsers report that their presence information is available to external partners.\nYou need to ensure that the presence information is available only to the external partners on the\nusers' contact lists.\nWhat should you do?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. From PowerShell, run Set-CsPrivacyConfiguration -EnablePrivacyMode Strue.",
+//         "B. From External collaboration settings in the Azure Active Directory admin center, configure Guest user access restrictions.",
+//         "C. From PowerShell, run Set-CsTenantFederationConfiguration AllowFederatedUsers $false.",
+//         "D. From the Microsoft Teams admin center, add the external partners to the Allow only specific external domains list."
+//     ],
+//     answer: "A. From PowerShell, run Set-CsPrivacyConfiguration -EnablePrivacyMode Strue."
+// },
+
+// // 題目編號：282
+// {
+//     type: "radio",
+//     text: "Your company uses Teams.\nUsers often use Teams mobile apps to make and receive calls.\nYou change the display name for a user named User1.\nUser! reports that their previous name still appears when they receive incoming calls in the Teams\nmobile app.\nYou need to ensure that the updated display name for User1 appears.\nWhat should you do?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Run the Sync-CsOnlineApplicationlnstance Cmdlet.",
+//         "B. Collect and review the Debug logs.",
+//         "C. From the Microsoft 365 admin center, run self-help diagnostics.",
+//         "D. Clear the Microsoft Teams client cache on the mobile phone."
+//     ],
+//     answer: "D. Clear the Microsoft Teams client cache on the mobile phone."
+// },
+
+// // 題目編號：283
+// {
+//     type: "radio",
+//     text: "Your company uses Teams.\nA user reports that when they manually decline a Teams call, the call is NOT sent to their Teams\nvoicemail.\nWhich setting should you configure?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Manage delegates",
+//         "B. Forward my calls",
+//         "C. Busy on busy when in a call",
+//         "D. Calls ring me"
+//     ],
+//     answer: "B. Forward my calls"
+// },
+
+// // 題目編號：284
+// {
+//     type: "radio",
+//     text: "Your company uses Teams.\nYou successfully port and assign an audio conferencing toll-free number to Microsoft.\nYou test the toll-free number and ensure that meetings are successful.\nThe next day, you receive reports that the toll-free number is no longer working, but local toll numbers\nstill work.\nYou need to ensure that the toll-free number works.\nWhat should you do?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Add the toll-free number to an Audio Conferencing policy.",
+//         "B. Set Anonymous users and dial-in callers can start a meeting to On",
+//         "C. Add Communication Credits.",
+//         "D. Set the toll-free number as the default conference bridge."
+//     ],
+//     answer: "C. Add Communication Credits."
+// },
+
+// // 題目編號：285
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 E5 subscription that uses Microsoft Teams. You need to identify which\npercentage of meetings include video.\nWhat should you use?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. the Teams usage report",
+//         "B. the Teams device usage report",
+//         "C. Productivity Score Meetings insights",
+//         "D. the Teams user activity report"
+//     ],
+//     answer: "C. Productivity Score Meetings insights"
+// },
+
+// // 題目編號：286
+// {
+//     type: "radio",
+//     text: "Your company uses Teams.\nYou have a team named Team1.\nYou need to prevent guest users from accessing files in Team1. The solution must NOT affect external\ncollaboration with any other teams.\nWhat should you do?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. From the SharePoint admin center, edit the External sharing settings for the associated site.",
+//         "B. From the Microsoft Entra admin center, configure the External collaboration settings for guest users.",
+//         "C. From the Microsoft Entra admin center, create a Conditional Access policy.",
+//         "D. From the Microsoft Teams admin center, set external access to Block all external domains.",
+//         "E. From the Microsoft Teams admin center, set Allow guest access in Teams to Off."
+//     ],
+//     answer: "A. From the SharePoint admin center, edit the External sharing settings for the associated site."
+// },
+
+        // // 題目編號：287
+        // {
+        //     type: "hotspot",
+        //     text: "HOTSPOT\nYou have a Microsoft 365 subscription that uses Microsoft Teams.\nYou plan to deploy collaboration bars for Microsoft Teams.\nYou need to manage built-in software and firmware updates for the collaboration bars. The solution must\nuse the principle of least privilege.\nWhich updates can be applied automatically, and which role is required to perform manual updates for\nthe collaboration bars? To answer, select the appropriate options in the answer area. NOTE: Each\ncorrect selection is worth one point.\n",
+        //     instruction: "Hotspot: Select the appropriate options in the answer area.",
+        //     rows: [
+        //         {
+        //             label: "Updates that can be applied automatically:",
+        //             options: [
+        //                 "Firmware only",
+        //                 "Oem agent app only",
+        //                 "Company portal app only",
+        //                 "Teams app and Teams admin agent"
+        //             ],
+        //             answer: "Teams app and Teams admin agent"
+        //         },
+        //         {
+        //             label: "Role required to perform manual updates:",
+        //             options: [
+        //                 "Teams Administrator",
+        //                 "Teams communication admin",
+        //                 "Teams communication support engineer",
+        //                 "Teams communication support specialist"
+        //             ],
+        //             answer: "Teams Administrator"
+        //         }
+        //     ]
+        // },
+
+        // // 題目編號：288
+        // {
+        //     type: "hotspot",
+        //     text: "HOTSPOT\nYou have a Microsoft 365 subscription that uses Microsoft Teams to collaborate with guest users. You\nneed to use monthly active users (MAU) billing and access reviews to monitor the team membership of\nthe guest users.\nWhich additional licenses should you assign, and what should you do to enable MAU billing? To answer,\nselect the appropriate options in the answer area. NOTE: Each correct selection is worth one point.\n",
+        //     instruction: "Hotspot: Select the appropriate options in the answer area.",
+        //     rows: [
+        //         {
+        //             label: "Additional licenses:",
+        //             options: [
+        //                 "Office 365 Enterprise E5",
+        //                 "Advanced Communications",
+        //                 "Azure Active Directory Premium Plan 1",
+        //                 "Azure Active Directory Premium Plan 2",
+        //                 "Office 365 Enterprise E5"
+        //             ],
+        //             answer: "Azure Active Directory Premium Plan 2"
+        //         },
+        //         {
+        //             label: "To enable MAU billing:",
+        //             options: [
+        //                 "Link an Azure subscription to the Azure AD tenant.",
+        //                 "Enable external access in Microsoft Teams.",
+        //                 "Link an Azure subscription to the Azure AD tenant.",
+        //                 "Modify the External collaboration settings for the Azure AD tenant.",
+        //                 "Modify the Configure identity provider settings for the Azure AD tenant."
+        //             ],
+        //             answer: "Link an Azure subscription to the Azure AD tenant"
+        //         }
+        //     ]
+        // },
+
+//         // 題目編號：277
+//             {
+//                 type: "matrix",
+//                 text: `HOTSPOT\nYou have a Microsoft 365 subscription that uses Microsoft Teams.\nYou have the users shown in the following table.\n\n<img src='images/78.png' class='question-img'>\n\nYou have the team shown in the following table.\n\n<img src='images/79.png' class='question-img'>\n\nYou create a new group naming policy as shown in the following exhibit.\nGroup naming policy\nThe Microsoft 365 groups naming policy allows you to add a specific prefix and/or suffix to the group\nname and alias of any Microsoft 365 group created by users.\nFor example:\n<Finance> <group>\n<Seattle>\nCurrent policy\n\n<img src='images/80.png' class='question-img'>\n\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE:\nEach correct selection is worth one point.\n`,
+//                 instruction: "Matrix: Select Yes or No for each statement.",
+//                 rows: [
+//                     {
+//                         label: "User1 must rename the Sales Projects team as Sales Projects Sales the next time a user is O added to the team.",
+//                         answer: "No"
+//                     },
+//                     {
+//                         label: "User2 can create a new team named Engineering_Projects.",
+//                         answer: "No"
+//                     },
+//                     {
+//                         label: "User3 can create a new channel named Proposals in the Sales Projects team.",
+//                         answer: "Yes"
+//                     }
+//                 ]
+//             },
+
+//             // 題目編號：290
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 subscription that uses Microsoft Teams and contains a distribution group\nnamed Group1 and a team named Project 1.\nYou add Group1 to Project 1.\n100 new members are added to Group1.\nWhen will the membership of Project1 will be updated to reflect the changes to the group membership?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Automatically and immediately",
+//         "B. Automatically after 24 hours",
+//         "C. Only when the group is re-added manually to Project1"
+//     ],
+//     answer: "C. Only when the group is re-added manually to Project1"
+// },
+
+// // 題目編號：291
+//     {
+//         type: "hotspot",
+//         hotspotType: "inline",
+//         text: `HOTSPOT\nYou need to install the Microsoft Viva Connections application in Microsoft Teams for a specific group.\nHow should you complete the PowerShell cmdlets? To answer, select the appropriate options in the\nanswer area. NOTE: Each correct selection is worth one point.\n`,
+//         instruction: "Hotspot: Select the appropriate options in the answer area.",
+//         hotspotHtml: `{0} -GroupId 2b242920-86ce-4e7c-bcb8-a17c0ba0bb94 -Policy Types \n{1} -PolicyName "Viva Connections" -Rank 1`,
+//         rows: [
+//             {
+//                 options: [
+//                               "New-CsApplicationAccessPolicy",
+//                               "New-CsGroupPolicyAssignment",
+//                               "New-CsTeamsAppPermissionPolicy",
+//                               "New-CsTeamsAppSetupPolicy"
+//                     ],
+//                 answer: "New-CsGroupPolicyAssignment"
+//             }, // 對應 {0}
+//             {
+//                 options: [
+//                               "TeamsAppSetupPolicy",
+//                               "TeamsChannelsPolicy",
+//                               "TeamsEducationAssignmentsAppPolicy",
+//                               "TeamsUpdateManagementPolicy"
+//                     ],
+//                 answer: "TeamsAppSetupPolicy"
+//             }, // 對應 {1}
+//         ]
+//     },
+
+//     // 題目編號：292
+//             {
+//                 type: "matrix",
+//                 text: `HOTSPOT\nYour company has the users shown in the following table.\n\n<img src='images/81.png' class='question-img'>\n\nThe company uses Teams.\nYou have Teams update policies configured as shown in the following table.\n\n<img src='images/82.png' class='question-img'>\n\nThe Teams update policies are assigned to departments as shown in the following table.\n\n<img src='images/83.png' class='question-img'>\n\nFor each of the following statements, select Yes if True. Otherwise select No. NOTE: Each correct\nselection is worth one point.\n`,
+//                 instruction: "Matrix: Select Yes or No for each statement.",
+//                 rows: [
+//                     {
+//                         label: "User1 can switch to the public preview features by using the Teams client.",
+//                         answer: "No"
+//                     },
+//                     {
+//                         label: "User2 can switch to the public preview features by using the Teams client.",
+//                         answer: "Yes"
+//                     },
+//                     {
+//                         label: "User3 can switch to the public preview features by using the Teams client.",
+//                         answer: "No"
+//                     }
+//                 ]
+//             },
+
+// // 題目編號：293
+//             {
+//                 type: "fill",
+//                 text: `DRAG DROP\nYou have a Microsoft 365 subscription that uses Microsoft Teams.\nYou need to identify the following information:\n• The number of chat messages sent during the past 30 days\n• The number of messages posted in specific channels during the past 90 days\nWhich reports should use? To answer, drag the appropriate reports to the correct pieces of information.\nEach report may be used once, more than once, or not at all. You may need to drag the split bar\nbetween panes or scroll to view content. NOTE: Each correct selection is worth one point.\n`,
+//                 instruction: "拖選填空：將選項拖入空格。",
+//                 options: [
+//               "Apps usage",
+//               "Teams device usage",
+//               "Teams live event usage",
+//               "Teams user activity report",
+//               "Teams usage report"
+//     ],
+//                 fillHtml: `
+//                     <div class='question-content-scroll'><div><div>The number of chat messages sent during the past 30 days:：<div class='drop-zone-fill' data-idx='0' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div>
+//                     <div>The number of messages posted in specific channels during the past 90 days:：<div class='drop-zone-fill' data-idx='1' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div></div></div>
+//                 `,
+//                 answer: ["Teams user activity report","Teams usage report"]
+//             },
+
+// // 題目編號：294
+// {
+//     type: "radio",
+//     text: "Note: This question is part of a series of questions that present the same scenario. Each question in\nthe series contains a unique solution that might meet the stated goals. Some question sets might have\nmore than one correct solution, while others might not have a correct solution.\nAfter you answer a question in this section, you will NOT be able to return to it As a result, these\nquestions will not appear in the review screen.\nYou have a Microsoft 365 subscription that contains several Microsoft SharePoint Online sites. You need\nto ensure that the content stored in a SharePoint modern team site named Sales is available from\nMicrosoft Teams. The solution must ensure that when a new channel is added to a team, a folder for the\nchannel is created in the Sales site.\nSolution: From the Sales site, you use the Add Microsoft Teams link.\nDoes this meet the goal?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Yes",
+//         "B. No"
+//     ],
+//     answer: "A. Yes"
+// },
+
+// // 題目編號：295
+//     {
+//         type: "rank",
+//         text: `DRAG DROP\nYour company uses Microsoft Teams and has an auto attendant named AA1.\nA user named User1 has a phone number of 613-555-1234. You need to assign the phone number to\nAA1.\nWhich three actions should you perform in sequence in the Microsoft Teams admin center? To answer,\nmove the appropriate actions from the list of actions to the answer area and arrange them in the correct\norder.`,
+//         instruction: "拖選排名：請從左側選項中選擇正確的三個步驟，並按順序拖動到右側空格。",
+//         options: [
+//             "Order a new phone number.",
+//             "Release the phone number.",
+//             "Unassign the phone number from User1.",
+//             "Create a new case and set Case type to Inventory type change-change inventory type of my phone number(s).",
+//             "Assign the phone number to AA1."
+//         ],
+//         answer: [
+//             "Unassign the phone number from User1.",
+//             "Create a new case and set Case type to Inventory type change-change inventory type of my phone number(s).",
+//             "Assign the phone number to AA1."
+//         ]
+//     },
+
+//     // 題目編號：296
+// {
+//     type: "radio",
+//     text: "Your company uses Teams.\nYou are assigned the Teams Communications Support Specialist role.\nYou need to be assigned a role that will enable you to publish a new app to the Teams apps page. The\nsolution must follow the principle of least privilege.\nWhich role should be assigned to you?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Office Apps Administrator",
+//         "B. Teams Administrator",
+//         "C. Application Administrator",
+//         "D. Cloud Application Administrator"
+//     ],
+//     answer: "B. Teams Administrator"
+// },
+
+// // 題目編號：297
+//             {
+//                 type: "fill",
+//                 text: `DRAG DROP\nYour company uses Teams.\nTwo users named User 1 and User2 use the Teams client few Windows.\nThe users report the following issues:\n• User1 reports that when attempting to sign in, the Teams client remains on the sign-in page.\n• User2 reports receiving an error when attempting to screen share during a Teams meeting.\nYou need to troubleshoot the issues.\nWhich client-side log should you review for each user? To answer, drag the appropriate logs to the\ncorrect users. Each log may be used once more than once, or not at all. You may need to drag the split\nbar between panes or scroll to view content. NOTE: Each correct selection is worth one point.\n`,
+//                 instruction: "拖選填空：將選項拖入空格。",
+//                 options: [
+//               "Debug log",
+//               "Desktop log",
+//               "Media log",
+//               "WebRTC log",
+//               "Windows event"
+//     ],
+//                 fillHtml: `
+//                     <div class='question-content-scroll'><div><div>User1:：<div class='drop-zone-fill' data-idx='0' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div>
+//                     <div>User2:：<div class='drop-zone-fill' data-idx='1' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div></div></div>
+//                 `,
+//                 answer: ["Debug log","Media log"]
+//             },
+
+// // 題目編號：298
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 E5 subscription that uses Microsoft Teams and contains the resources\nshown in the following table\n\n<img src='images/84.png' class='question-img'>\n\nYou need to configure the subscription to meet the following requirements:\n• App1 must be pinned only to the Teams desktop client of the users in Group1.\n• App2 must be pinned only to the learns desktop client of the users in Groups.\nWhat should you do in the Microsoft Teams admin center?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Modify the global (Org-wide default] app setup policy.",
+//         "B. Modify the global (Org-wide default) app permission policy.",
+//         "C. Create app permission policies.",
+//         "D. Create app setup policies."
+//     ],
+//     answer: "D. Create app setup policies."
+// },
+
+// // 題目編號：299
+//     {
+//         type: "hotspot",
+//         hotspotType: "inline",
+//         text: `HOTSPOT\nYour company uses Microsoft Teams.\nYou have a meeting policy named Policy1 that is assigned to a group named Sales.\nYou need to ensure that all the meetings recorded by the Sales group are stored indefinitely.\nHow should you complete the PowerShell cmdlet? To answer, select the appropriate options in the\nanswer area. NOTE: Each correct selection is worth one point.\n`,
+//         instruction: "Hotspot: Select the appropriate options in the answer area.",
+//         hotspotHtml: `{0} -Identity Policy1 {1} -11`,
+//         rows: [
+//             {
+//                 options: [
+//                               "Set-CsTeamsMeeting BroadcastConfiguration",
+//                               "Set-CsTeamsMeeting BroadcastPolicy",
+//                               "Set-CsTeamsMeetingConfiguration",
+//                               "Set-CsTeams MeetingPolicy"
+//                     ],
+//                 answer: "Set-CsTeamsMeetingPolicy"
+//             }, // 對應 {0}
+//             {
+//                 options: [
+//                               "-AllowCloudRecording",
+//                               "-Channel Recording Download",
+//                               "-NewMeeting Recording ExpirationDays",
+//                               "-RecordingStorageMode"
+//                     ],
+//                 answer: "-NewMeetingRecording ExpirationDays"
+//             }, // 對應 {1}
+//         ]
+//     },
+
+// // 題目編號：300
+//     {
+//         type: "hotspot",
+//         hotspotType: "inline",
+//         text: `HOTSPOT\nYou have a Microsoft 365 subscription that uses Teams.\nYou have a template to create a team named Team1.\nYou need to modify the template so that only Team1 owners can delete channels and messages.\nHow should you complete the template? To answer, select the appropriate options in the answer area.\nNOTE: Each correct selection is worth one point.\n`,
+//         instruction: "Hotspot: Select the appropriate options in the answer area.",
+//         hotspotHtml: `{ \n "template@odata.bind": "https://graph.microsoft.com/beta/teams Templates ('standard')",.\n "displayName": "Team1",\n "description": "Team1 team",\n "channels":[],\n "memberSettings":\n {\n {0}\n  "allowAddRemoveApps": true,\n "allowCreateUpdateRemoveTabs": true,\n "allowCreateUpdateRemoveConnectors": true\n },\n "guestSettings":\n {\n {1}\n },\n "funSettings":\n {\n \n },\n "funSettings":\n {\n "allowGiphy": true,\n "giphyContentRating": "Moderate", \n "allowStickersAndMemes": true,\n "allowCustomMemes": true\n },\n "messagingSettings":\n {\n {2}\n "allowOwnerDeleteMessages": true,\n "allowTeamMentions": true,\n "allowChannelMentions": true\n }`,
+//         rows: [
+//             {
+//                 options: [
+//                               "allowDeleteChannels: false",
+//                               "allowDeleteChannels: true",
+//                               "allowCreateUpdateChannels: true",
+//                               "allowCreateUpdateChannels: false"
+//                     ],
+//                 answer: "allowDeleteChannels: false"
+//             }, // 對應 {0}
+//             {
+//                 options: [
+//                               "allowDeleteChannels: false",
+//                               "allowDeleteChannels: true",
+//                               "allowCreateUpdateChannels: false",
+//                               "allowCreateUpdateChannels: true"
+//                     ],
+//                 answer: "allowDeleteChannels: false"
+//             }, // 對應 {1}
+//             {
+//                 options: [
+//                               "allowUserEditMessages: true",
+//                               "allowUserEditMessages: false",
+//                               "allowUserDeleteMessages: false",
+//                               "allowUserDeleteMessages:true"
+//                     ],
+//                 answer: "allowUserDeleteMessages: false"
+//             } // 對應 {2}
+//         ]
+//     },
+
+// // 題目編號：301
+// {
+//     type: "radio",
+//     text: "Your company uses Teams.\nA user named User1 cannot invite guest users to Teams.\nWhat should you recommend using to identify the cause of the issue?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Microsoft Teams Network Assessment Tool",
+//         "B. Teams advisor",
+//         "C. Microsoft 365 network connectivity test tool",
+//         "D. self-help diagnostics"
+//     ],
+//     answer: "D. self-help diagnostics"
+// },
+
+// // 題目編號：302
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 subscription that uses Teams.\nYou have a room in Teams Rooms that contains a panel mounted at the entrance.\nYou need to ensure that the panel displays a maximum room occupancy notification.\nWhat should you configure?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. a configuration profile",
+//         "B. a notification rule",
+//         "C. an app setup policy",
+//         "D. a meeting policy"
+//     ],
+//     answer: "A. a configuration profile"
+// },
+
+// // 題目編號：303
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 E5 subscription that uses Teams.\nYou need to integrate Microsoft 365 Defender with Teams to prevent users from uploading malicious files\nto a Teams channel.\nWhat should you do first?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Turn on the Built-in protection (Microsoft) Safe Links policy.",
+//         "B. From Safe Links, edit the Global settings.",
+//         "C. From Safe Attachments, edit the Global settings.",
+//         "D. Create a Sate Attachments policy."
+//     ],
+//     answer: "C. From Safe Attachments, edit the Global settings."
+// },
+
+// // 題目編號：304
+//             {
+//                 type: "matrix",
+//                 text: `HOTSPOT\nYou are reviewing the planned implementation of information barriers for your company.\nYou run the following command.\n\n<img src='images/85.png' class='question-img'>\n\nYou activate the information barrier policies.\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE:\nEach correct selection is worth one point.\n`,
+//                 instruction: "Matrix: Select Yes or No for each statement.",
+//                 rows: [
+//                     {
+//                         label: "The users in HR can initiate a Microsoft Teams chat with the users in Sales.",
+//                         answer: "Yes"
+//                     },
+//                     {
+//                         label: "The users in Sales can invite the users in HR to a Microsoft Teams meeting.",
+//                         answer: "No"
+//                     },
+//                     {
+//                         label: "The users in Research and HR can collaborate in a Microsoft Teams channel.",
+//                         answer: "No"
+//                     }
+//                 ]
+//             },
+
+//             // 題目編號：305
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 E5 subscription that uses Teams.\nWhen you attempt to create a new sensitivity label for Teams, you discover that the Groups & sites\noption is unavailable as shown in the following exhibit.\n\n<img src='images/86.png' class='question-img'>\n\nYou need to be able to select Groups & sites when you create the sensitivity label.\nWhich cmdlet should you run?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Set-Uni-fiedQroup",
+//         "B. Set-AzureADDirectorySetting",
+//         "C. Set - SPOSiteoffice365Group",
+//         "D. Set-CsTeansEnhancedEncryptionPolicy"
+//     ],
+//     answer: "B. Set-AzureADDirectorySetting"
+// },
+
+// // 題目編號：304
+//             {
+//                 type: "matrix",
+//                 text: `HOTSPOT\nYour company has offices in New York and Seattle.\nYou have a Microsoft 365 subscription that uses Teams.\nYou plan to assess network connectivity and make recommendations to optimize connectivity from each\noffice to Teams.\nYou run the Microsoft 365 network connectivity test tool at both offices and produce the results shown in\nthe following table.\n\n<img src='images/87.png' class='question-img'>\n\nFor each of the following statements, select Yes if True. Otherwise select No. NOTE: Each correct\nselection is worth one point.\n`,
+//                 instruction: "Matrix: Select Yes or No for each statement.",
+//                 rows: [
+//                     {
+//                         label: "VPN split tunneling must be implemented in the New York office.",
+//                         answer: "Yes"
+//                     },
+//                     {
+//                         label: "Deploying a VPN connection to the Seattle office will improve the latency results for Teams.",
+//                         answer: "No"
+//                     },
+//                     {
+//                         label: "A local internet breakout must be implemented in the New York office to improve connectivity to Teams.",
+//                         answer: "Yes"
+//                     }
+//                 ]
+//             },
+
+//             // 題目編號：307
+// {
+//     type: "checkbox",
+//     text: "Your company uses Teams.\nYou plan to deploy Teams to a branch office that has limited bandwidth.\nWhich Two features can he used when the Teams client has a bandwidth restriction of 150 kilobit/s up\nand 150 kilobit/s down? Each correct answer presents a complete solution. NOTE: Each correct\nselection is worth one point.",
+//     instruction: "Select 2 items.",
+//     max: 2,
+//     options: [
+//         "A. one-to-one seen sharing",
+//         "B. one-to-one video",
+//         "C. video during meetings",
+//         "D. screen sharing during meetings",
+//         "E. audio during meetings"
+//     ],
+//     answer: [
+//         "A. one-to-one seen sharing",
+//         "E. audio during meetings"
+//     ]
+// },
+
+// // 題目編號：308
+//             {
+//                 type: "matrix",
+//                 text: `HOTSPOT\nYou have a Microsoft 365 subscription named contoso.com that uses Microsoft Teams and contains the\nusers shown in the following table.\n\n<img src='images/88.png' class='question-img'>\n\nIn Azure AO. the External collaboration settings are configured as shown in the exhibit (Click the Exhibit\ntab).\n\n<img src='images/89.png' class='question-img'>\n\nAllow guest access in Teams is set to On.\nYou have a team named Project! that contains the users shown in the following table.\n\n<img src='images/90.png' class='question-img'>\n\nBoth User1 and User3 are owners of a learn named Project1. User2 is a member of Project1.\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE:\nEach correct selection is worth one point.\n`,
+//                 instruction: "Matrix: Select Yes or No for each statement.",
+//                 rows: [
+//                     {
+//                         label: "User1 can invite a guest user named user3@adatum.com to Project1.",
+//                         answer: "No"
+//                     },
+//                     {
+//                         label: "User2 can invite a guest user named user4@fabrikam.com to Project1.",
+//                         answer: "No"
+//                     },
+//                     {
+//                         label: "User3 can invite a guest user named user5@fabrikam.com to Project1.",
+//                         answer: "Yes"
+//                     }
+//                 ]
+//             },
+
+//                     // 題目編號：309
+//         {
+//             type: "hotspot",
+//             text: "HOTSPOT\nYou have a Microsoft 365 subscription that uses Teams.\nYou need to implement a compliance solution that meets the following requirements:\n• Applies a watermark to the video feed of every user\n• Enables end-to end encryption for meetings\nWhich add-on license should you assign to the users, and which Teams feature will be disabled when\nusing the solution? To answer, select the appropriate options in the answer area. NOTE: Each correct\nselection is worth one point.\n",
+//             instruction: "Hotspot: Select the appropriate options in the answer area.",
+//             rows: [
+//                 {
+//                     label: "Add-on license:",
+//                     options: [
+//                         "Audio Conferencing",
+//                         "Communications Credits",
+//                         "Microsoft Teams Premium",
+//                         "Priva Privacy Risk Management"
+//                     ],
+//                     answer: "Microsoft Teams Premium"
+//                 },
+//                 {
+//                     label: "Feature:",
+//                     options: [
+//                         "Chat during meetings",
+//                         "Meeting recording",
+//                         "Screen sharing",
+//                         "Sharing content during meetings"
+//                     ],
+//                     answer: "Meeting recording"
+//                 }
+//             ]
+//         },
+
+//                 // 題目編號：310
+//         {
+//             type: "hotspot",
+//             text: "HOTSPOT\nYour company has the following departments:\n• Marketing\n• Information technology (IT) The company uses Teams.\nYou need to recommend an access solution that meets the following requirements:\n• The marketing department must collaborate with an external consultant by using a Microsoft\nPowerPoint presentation stored in the General channel of a new team.\n• The IT department must be able to communicate with external consultants by using a private Teams\nchat and Teams calls.\nWhich type of access should you recommend for each department? To answer, select the appropriate\noptions in the answer area. NOTE: Each correct selection is worth one point.\n",
+//             instruction: "Hotspot: Select the appropriate options in the answer area.",
+//             rows: [
+//                 {
+//                     label: "Marketing:",
+//                     options: [
+//                         "B2B direct connect",
+//                         "External access",
+//                         "Guest access"
+//                     ],
+//                     answer: "Guest access"
+//                 },
+//                 {
+//                     label: "IT:",
+//                     options: [
+//                         "B2B direct connect",
+//                         "External access",
+//                         "Guest access"
+//                     ],
+//                     answer: "B2B direct connect"
+//                 }
+//             ]
+//         },
+
+//         // 題目編號：308
+//             {
+//                 type: "matrix",
+//                 text: `HOTSPOT\nYou have a Microsoft 365 subscription that uses Teams and contains the users shown in the following\ntable.\n\n<img src='images/91.png' class='question-img'>\n\nYou have the messaging policies shown in the following table.\n\n<img src='images/92.png' class='question-img'>\n\nThe messaging polices are assigned as shown in the following table.\n\n<img src='images/93.png' class='question-img'>\n\nFor each of the following statements, select Yes if True. Otherwise select No. NOTE: Each correct\nselection is worth one point.\n`,
+//                 instruction: "Matrix: Select Yes or No for each statement.",
+//                 rows: [
+//                     {
+//                         label: "User1 can delete sent messages.",
+//                         answer: "Yes"
+//                     },
+//                     {
+//                         label: "User2 can delete sent messages.",
+//                         answer: "No"
+//                     },
+//                     {
+//                         label: "User3 cannot edit sent messages.",
+//                         answer: "No"
+//                     }
+//                 ]
+//             },
+
+//             // 題目編號：312
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 subscription that uses Teams.\nYou need to upload network IP subnet information to call analytics.\nWhat should you configure?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Reporting labels",
+//         "B. Notification & alerts",
+//         "C. Network topology",
+//         "D. Voice application policies"
+//     ],
+//     answer: "B. Notification & alerts"
+// },
+
+// // 題目編號：313
+//             {
+//                 type: "fill",
+//                 text: `DRAG DROP\nYou have a Microsoft 365 E5 subscription that uses Teams.\nYou need to implement a consistent team naming strategy that meets the following requirements:\n• All team names must start with the department name of the user that created the team.\n• All team names must be followed by the word Department.\nHow should you configure the group naming policy? To answer, drag the appropriate configurations to\nthe correct requirements. Each configuration may be used once, more than once, or not at all. You may\nneed to drag the split bar between panes or scroll to view content. NOTE: Each correct selection is worth\none point.\n`,
+//                 instruction: "拖選填空：將選項拖入空格。",
+//                 options: [
+//               "Add a prefix that has an attribute of Department.",
+//               "Add a prefix that has a string of Department.",
+//               "Add a suffix that has an attribute of Department.",
+//               "Add a suffix that has a string of Department."
+//     ],
+//                 fillHtml: `
+//                     <div class='question-content-scroll'><div><div>To ensure that all team names start with the department name of the user that created the team:：<div class='drop-zone-fill' data-idx='0' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div>
+//                     <div>To ensure that all team names are followed by the word Department:：<div class='drop-zone-fill' data-idx='1' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div></div></div>
+//                 `,
+//                 answer: ["Add a prefix that has an attribute of Department.","Add a suffix that has an attribute of Department."]
+//             },
+
+// // 題目編號：314
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 E5 subscription that uses Teams.\nUsers report that they receive a notification in their Teams client to fill in a survey and send the results to\nMicrosoft.\nYou need to use PowerShell to disable the notification.\nWhich PowerShell cmdlet should you run?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. New-CsTeamsMessagingPolicy",
+//         "B. New-CsTeamsFeedbackPolicy",
+//         "C. New-CsTeamsEventsPolicy",
+//         "D. New-CsTeamsAppPermissionPolicy"
+//     ],
+//     answer: "B. New-CsTeamsFeedbackPolicy"
+// },
+
+// // 題目編號：315
+// {
+//     type: "radio",
+//     text: "In the Microsoft Teams admin center, you attempt to add an emergency address as shown in the\nfollowing exhibit.\n\n<img src='images/94.png' class='question-img'>\n\nYou need to validate the address.\nWhat should you do?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Specify the latitude and longitude of the location.",
+//         "B. Provide The Emergency Location Identification Number (ELIN) associated with the emergency address.",
+//         "C. Create an emergency call routing policy.",
+//         "D. Create an emergency calling policy."
+//     ],
+//     answer: "C. Create an emergency call routing policy."
+// },
+
+// // 題目編號：316
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 E3 subscription that uses Teams. The subscription contains an\nadministrator named Admin1 that is assigned the Teams Administrator role.\nAdmin1 reports that he can assign default policy packages to users but cannot create and assign custom\npolicy packages.\nYou need to ensure that Admin1 can create and assign custom policy packages in Teams.\nWhat should you do?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. For Admin1, run the Grant-CsUserPolicyPackage PowerShell cmdlet.",
+//         "B. Assign a Teams Premium license to Admin1.",
+//         "C. For Admin1. run the Grant-CsGroupPolicyPackageAssigment PowerShell cmdlet.",
+//         "D. Assign a Microsoft 365 E5 license to Admin1."
+//     ],
+//     answer: "B. Assign a Teams Premium license to Admin1."
+// },
+
+// // 題目編號：317
+// {
+//     type: "radio",
+//     text: "Your company has three divisions. Each division has a Microsoft 365 E5 subscription and its own\nMicrosoft Entra ID instance. All the divisions use Teams for collaboration and communication. You need\nto recommend a seamless collaboration solution between all the divisions.\nThe solution must support the following:\n• Search for users\n• Free/busy status for Teams meetings\n• Collaboration on files stored in Teams\nWhat should you include in the recommendation?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. guest access",
+//         "B. a multitenant organization",
+//         "C. shared channels",
+//         "D. external access"
+//     ],
+//     answer: "B. a multitenant organization"
+// },
+
+// // 題目編號：318
+//             {
+//                 type: "fill",
+//                 text: `DRAG DROP\nYour company uses Teams.\nYou need to configure Teams apps to meet the following requirements:\n• Block members of a team named Sales from installing custom apps.\n• Pin apps in a specific order on the Teams app bar.\nWhich settings should you configure to meet each requirement? To answer, drag the appropriate settings\noptions to the correct requirements. Each settings option may be used once, more than once, or not at\nall. You may need to drag the split bar between panes or scroll to view content. NOTE: Each correct\nselection is worth one point.\n`,
+//                 instruction: "拖選填空：將選項拖入空格。",
+//                 options: [
+//               "App permission policies",
+//               "App setup policies",
+//               "Manage apps",
+//               "Org-wide app settings"
+//     ],
+//                 fillHtml: `
+//                     <div class='question-content-scroll'><div><div>Block the Sales team members from installing custom apps:：<div class='drop-zone-fill' data-idx='0' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div>
+//                     <div>Pin apps in a specific order on the Teams app bar.：<div class='drop-zone-fill' data-idx='1' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div></div></div>
+//                 `,
+//                 answer: ["App permission policies","App setup policies"]
+//             },
+
+        // // 題目編號：319
+        // {
+        //     type: "hotspot",
+        //     text: "HOTSPOT\nYou have a Microsoft 365 subscription that contains the users shown in the following table.\n<img src='images/95.png' class='question-img'>\nThe subscription contains the Microsoft Teams teams shown in the following table\n<img src='images/96.png' class='question-img'>\nYou need to identify how many additional org-wide teams you can create in the subscription. and which\nusers can create the org-wide teams?\nWhat should you identity? To answer, select the appropriate options in the answer area. NOTE: Each\ncorrect selection is worth one point\n",
+        //     instruction: "Hotspot: Select the appropriate options in the answer area.",
+        //     rows: [
+        //         {
+        //             label: "Additional org-wide teams:",
+        //             options: [
+        //                 "1",
+        //                 "3",
+        //                 "6"
+        //             ],
+        //             answer: "1"
+        //         },
+        //         {
+        //             label: "Users:",
+        //             options: [
+        //                 "Admin1 only",
+        //                 "Admin2 only",
+        //                 "Admin3 only",
+        //                 "Admin1 and Admin2 only",
+        //                 "Admin2 and Admin3 only",
+        //                 "Admin1. Admin2. and Admin3"
+        //             ],
+        //             answer: "Admin1 and Admin2 only"
+        //         }
+        //     ]
+        // },
+
+//         // 題目編號：320
+//             {
+//                 type: "matrix",
+//                 text: `HOTSPOT\nYou have a Microsoft 365 subscription that uses Teams and contains the users shown in the following\ntable.\n\n<img src='images/97.png' class='question-img'>\n\nYou have a private team named Sales that contains the members shown in the following table.\n\n<img src='images/98.png' class='question-img'>\n\nThe Sales team contains the channels shown in the following table.\n\n<img src='images/99.png' class='question-img'>\n\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE:\nEach correct selection is worth one point.\n`,
+//                 instruction: "Matrix: Select Yes or No for each statement.",
+//                 rows: [
+//                     {
+//                         label: "User1 is added automatically as an owner of the Budgets channel.",
+//                         answer: "No"
+//                     },
+//                     {
+//                         label: "User2 is the only member who can start a new post in the Planning channel.",
+//                         answer: "Yes"
+//                     },
+//                     {
+//                         label: "User4 can be added as a member of the Budgets channel.",
+//                         answer: "No"
+//                     }
+//                 ]
+//             },
+
+//         // 題目編號：321
+//         {
+//             type: "hotspot",
+//             text: "HOTSPOT\nYou have a Microsoft 365 subscription that uses Microsoft Teams.\nYou purchase three new Microsoft Teams display devices.\nYou need to provision the new devices remotely.\nWhat information should you use to identify each device, and which file format should you use for the\nupload? To answer, select the appropriate options in the answer area. NOTE: Each correct selection is\nworth one point.\n",
+//             instruction: "Hotspot: Select the appropriate options in the answer area.",
+//             rows: [
+//                 {
+//                     label: "Use:",
+//                     options: [
+//                         "The IP address",
+//                         "The device name",
+//                         "The MAC address",
+//                         "The resource account"
+//                     ],
+//                     answer: "The MAC address"
+//                 },
+//                 {
+//                     label: "File format:",
+//                     options: [
+//                         "CSV",
+//                         "PS1",
+//                         "XML",
+//                         "JSON"
+//                     ],
+//                     answer: "CSV"
+//                 }
+//             ]
+//         },
+
+//         // 題目編號：322
+// {
+//     type: "radio",
+//     text: "Your company uses Teams.\nA user named User1 selects Forward my calls and all incoming calls are forwarded to voicemail as\nshown in the following exhibit.\nCall answering rules\nChoose how you want to handle incoming calls.\nO Calls ring me\nO Forward my calls\nAll incoming calls will be forwarded to your voicemail.\nYou need to ensure that User1 can change the destination of the forwarded calls.\nWhat should you enable for User1?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. simultaneous ring",
+//         "B. Enterprise Voice",
+//         "C. Outbound calling",
+//         "D. Busy on busy when in a call"
+//     ],
+//     answer: "B. Enterprise Voice"
+// },
+
+    //     // 題目編號：323
+    //     {
+    //         type: "hotspot",
+    //         text: "323.HOTSPOT\nYou have a Microsoft 365 subscription named contoso.com.\nContoso.com uses Teams to collaborate with users from a partner company that has a Microsoft 365\nsubscription named fabnkam.com.\nYou need to enable Teams shared channels.\nThe solution must meet the following requirements:\n• The users in contoso.com must be able to invite only the users in fabrikam.com to a shared channel.\n• Contoso.com must trust multi-factor authentication (MFA) from fabrikam.com.\nWhat should you configure in the Azure portal for each requirement? To answer, select the appropriate\noptions in the answer area. NOTE: Each correct selection is worth one point.\n",
+    //         instruction: "Hotspot: Select the appropriate options in the answer area.",
+    //         rows: [
+    //             {
+    //                 label: "The contoso.com users must be able to invite the fabrikam.com users to a shared channel:",
+    //                 options: [
+    //                     "From Edit inbound defaults. set B2B direct connect to Allow access.",
+    //                     "From Edit outbound defaults. set B2B direct connect to Allow access.",
+    //                     "From Organizational settings. add fabrikam.com."
+    //                 ],
+    //                 answer: "From Edit inbound defaults. set B2B direct connect to Allow access."
+    //             },
+    //             {
+    //                 label: "Contoso.com must trust MFA from fabrikam.com:",
+    //                 options: [
+    //                     "Edit Guest user access restrictions.",
+    //                     "Create a Conditional Access policy.",
+    //                     "Configure the Trust settings for fabrikam.com."
+    //                 ],
+    //                 answer: "Edit Guest user access restrictions."
+    //             }
+    //         ]
+    //     },
+
+    //     // 題目編號：324
+    //         {
+    //             type: "fill",
+    //             text: `DRAG DROP\nYour company uses Teams.\nYou need to configure Teams to meet the following requirements:\n• The Teams client must display the Avatars app for all users.\n• The Games for Work app must be unavailable in the Teams client\n• Users must be prevented from unpinning and rearranging apps in the Teams client\nWhich type of policy should you configure for each requirement? To answer, drag the appropriate policy\ntypes to the correct requirements. Each policy type may be used once, more than once, or not at all. You\nmay need to drag the split bar between panes or scroll to view content. NOTE: Each correct selection is\nworth one point.\n`,
+    //             instruction: "拖選填空：將選項拖入空格。",
+    //             options: [
+    //           "Customization policy",
+    //           "Permission policy",
+    //           "Setup policy",
+    //           "Teams policy"
+    // ],
+    //             fillHtml: `
+    //                 <div class='question-content-scroll'><div><div>The Teams client must display the Avatars app for all users:：<div class='drop-zone-fill' data-idx='0' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div>
+    //                 <div>Users must be prevented from unpinning and rearranging apps in the Teams client:：<div class='drop-zone-fill' data-idx='1' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div>
+    //                 <div>The Games for Work app must be unavailable in the Teams client:：<div class='drop-zone-fill' data-idx='2' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div></div></div>
+    //             `,
+    //             answer: ["Setup policy","Customization policy","Permission policy"]
+    //         },
+// // 題目編號：325
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 E5 subscription that uses teams and contains the users shown in the\nfollowing table.\n\n<img src='images/100.png' class='question-img'>\n\nYou Create a group naming policy to enforce a consistent naming convention for teams names.\nWhich users are exempt from the naming policy restrictions?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. User1 only",
+//         "B. User2 only",
+//         "C. User3 only",
+//         "D. User1 only User3 only",
+//         "E. User1 User2, and User3"
+//     ],
+//     answer: "B. User2 only"
+// },
+
+// // 題目編號：326
+//             {
+//                 type: "fill",
+//                 text: `DRAG DROP\nYour company uses the Microsoft teams.\nYou are planning the governance strategy for Microsoft teams. All task must be performed by a user who\nwill be assigned the Global Administrator role and will not be a team owner.\nArchive a tea\nRestore a delete team\nPermanently delete a team\nWhich tool should you identify for each task? To answer, drag the appropriate tools to the correct tasks.\nEach tool may be used once. More than once, or not at all. You may need to drag the split bar between\npanes or scroll to view content. NOTE: Each correct selection is worth one point.\n`,
+//                 instruction: "拖選填空：將選項拖入空格。",
+//                 options: [
+//               "The Microsoft Teams admin center",
+//               "The Microsoft Teams desktop client",
+//               "The Microsoft Entra admin center"
+//     ],
+//                 fillHtml: `
+//                     <div class='question-content-scroll'><div><div>Restore a deleted team:：<div class='drop-zone-fill' data-idx='0' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div>
+//                     <div>Archive a team:：<div class='drop-zone-fill' data-idx='1' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div>
+//                     <div>Permanently delete a team:：<div class='drop-zone-fill' data-idx='2' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div></div></div>
+//                 `,
+//                 answer: ["The Microsoft Teams admin center","The Microsoft Entra admin center","The Microsoft Teams admin center"]
+//             },
+
+            // // 題目編號：327
+//             {
+//                 type: "matrix",
+//                 text: `HOTSPOT\nYou are reviewing the planned implementation of information barriers for your company.\nYou run the following command.\n\n<img src='images/85.png' class='question-img'>\n\nYou activate the information barrier policies.\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE:\nEach correct selection is worth one point.\n`,
+//                 instruction: "Matrix: Select Yes or No for each statement.",
+//                 rows: [
+//                     {
+//                         label: "The users in HR can initiate a Microsoft Teams chat with the users in Sales.",
+//                         answer: "Yes"
+//                     },
+//                     {
+//                         label: "The users in Sales can invite the users in HR to a Microsoft Teams meeting.",
+//                         answer: "No"
+//                     },
+//                     {
+//                         label: "The users in Research and HR can collaborate in a Microsoft Teams channel.",
+//                         answer: "No"
+//                     }
+//                 ]
+//             },
+
+// // 題目編號：328
+//     {
+//         type: "hotspot",
+//         hotspotType: "inline",
+//         text: `HOTSPOT\nYour company has two offices in Canada and Australia.\nYou have a Microsoft 365 subscription that uses Teams.\nA user named User1 moves from the Canada offices to the Australia office.\nYou need to use PowerShell to move data at rest to Australia for User1.\nHow should you complete PowerShell command? To answer, select the appropriate options in the\nanswer area.\n`,
+//         instruction: "Hotspot: Select the appropriate options in the answer area.",
+//         hotspotHtml: `{0} -UserID User1 {1} AUS`,
+//         rows: [
+//             {
+//                 options: [
+//                               "Update-MgUser",
+//                               "Update-MgUserExtension",
+//                               "Update-MgUserSetting"
+//                     ],
+//                 answer: "Update-MgUser"
+//             }, // 對應 {0}
+//             {
+//                 options: [
+//                               "-AdditionalProperties",
+//                               "-OfficeLocation",
+//                               "-PreferredDataLocation",
+//                               "-UsageLocation"
+//                     ],
+//                 answer: "-PreferredDataLocation"
+//             }, // 對應 {1}
+//         ]
+//     },
+
+//     // 題目編號：329
+//             {
+//                 type: "matrix",
+//                 text: `HOTSPOT\nYou have a Microsoft 365 subscription that uses Teams.\nThe subscription contains the users shown in the following table.\n\n<img src='images/101.png' class='question-img'>\n\nYou have the meeting policies shown in the following table.\n\n<img src='images/102.png' class='question-img'>\n\nThe meeting polices are assigned to teams as shown in the following table.\n\n<img src='images/103.png' class='question-img'>\n\nFor each of the following statements, select Yes if True. Otherwise select No. NOTE: Each correct\nselection is worth one point.\n`,
+//                 instruction: "Matrix: Select Yes or No for each statement.",
+//                 rows: [
+//                     {
+//                         label: "User1 can record meetings.",
+//                         answer: "No"
+//                     },
+//                     {
+//                         label: "User2 can enable meeting registrations.",
+//                         answer: "Yes"
+//                     },
+//                     {
+//                         label: "User3 can blur the video background.",
+//                         answer: "Yes"
+//                     }
+//                 ]
+//             },
+
+//             // 題目編號：330
+//     {
+//         type: "hotspot",
+//         hotspotType: "inline",
+//         text: `HOTSPOT\nYou have a Microsoft 365 subscription that uses Teams.\nYou need to create a custom policy named Policy1 that will disable the ability to send feedback and\nsuggestions about Teams to Microsoft.\nHow should you complete the PowerShell command? To answer, select the appropriate options in the\nanswer area. NOTE: Each correct selection is worth one point.\n`,
+//         instruction: "Hotspot: Select the appropriate options in the answer area.",
+//         hotspotHtml: `{0} -Identity "Policy1" {1} disabled`,
+//         rows: [
+//             {
+//                 options: [
+//                               "New-CsTeamsFeedbackPolicy",
+//                               "New-CsTeamsMessaging Policy",
+//                               "New-CSReportingConfiguration"
+//                     ],
+//                 answer: "New-CsTeamsFeedbackPolicy"
+//             }, // 對應 {0}
+//             {
+//                 options: [
+//                               "-AllowUserChat",
+//                               "-ReceiveSurveysMode",
+//                               "-UserInitiatedMode"
+//                     ],
+//                 answer: "-AllowUserChat"
+//             }, // 對應 {1}
+//         ]
+//     },
+
+//     // 題目編號：331
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 subscription that includes Teams. The subscription contains a user named\nUser1. You are deploying 10 new Teams devices.\nYou need to ensure that User1 can restart the Teams devices remotely.\nSolution: You assign the Teams Communications Administrator role to User1.\nDoes this meet the goal?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Yes",
+//         "B. No"
+//     ],
+//     answer: "B. No"
+// },
+
+// // 題目編號：332
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 subscription that includes Teams. The subscription contains a user named\nUser1. You are deploying 10 new Teams devices.\nYou need to ensure that User1 can restart the Teams devices remotely.\nSolution: You assign the Teams Administrator role to User1.\nDoes this meet the goal?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Yes",
+//         "B. No"
+//     ],
+//     answer: "A. Yes"
+// },
+
+// // 題目編號：333
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 subscription.\nIn Microsoft Teams, you create a new private team named Team1 and add a user named User1 as a\nmember. Used attempts to add members to Team1 and reports that approval is required. Vou need to\nensure that User1 can add members to Team1 without requiring approval.\nWhat should you do?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Configure guest access.",
+//         "B. Configure User1 as an owner of Team1.",
+//         "C. Assign the Teams Communications Support Specialist role to User1.",
+//         "D. Configure a new Microsoft Teams policy."
+//     ],
+//     answer: "B. Configure User1 as an owner of Team1."
+// },
+
+//         // 題目編號：334
+//         {
+//             type: "hotspot",
+//             text: "HOTSPOT\nYou have a Microsoft 365 subscription.\nYou have a virtualized desktop infrastructure (VDI) that contains the virtual machines shown in the\nfollowing table.\n<img src='images/104.png' class='question-img'>\nYou need to install the Teams for VDI client on the virtual machines. The solution must support\naudio/video (AV) optimization.\nWhich virtual machines support the Teams for VDI client, and what should you do to enable AV\noptimization? To answer, select the appropriate options in the answer area. NOTE: Each correct\nselection is worth one point.\n",
+//             instruction: "Hotspot: Select the appropriate options in the answer area.",
+//             rows: [
+//                 {
+//                     label: "Virtual machines:",
+//                     options: [
+//                         "Host1 and Host2 only",
+//                         "Host3 and Host4 only",
+//                         "Host1 and Host3 only",
+//                         "Host1. Host2. and Host4 only",
+//                         "Host1. Host2. Host3. and Host4"
+//                     ],
+//                     answer: "Host1. Host2. Host3. and Host4"
+//                 },
+//                 {
+//                     label: "To enable AV optimization:",
+//                     options: [
+//                         "Add a registry key to each virtual machine.",
+//                         "Run teamsbootstrapper.exe and specify the -o switch.",
+//                         "Run teamsbootstrapper.exe and specify the -x switch.",
+//                         "Update the display driver on each virtual machine."
+//                     ],
+//                     answer: "Run teamsbootstrapper.exe and specify the -o switch."
+//                 }
+//             ]
+//         },
+
+//         // 題目編號：335
+//     {
+//         type: "hotspot",
+//         hotspotType: "inline",
+//         text: `HOTSPOT\nYou have a Microsoft 365 subscription that contains an Azure Virtual Desktop deployment. The Azure\nVirtual Desktop deployment contains a session host named Host1.\nYou install the Remote Desktop WebRTC Redirector Service and the Teams for virtual desktop\ninfrastructure (VDI) client on Host1.\nYou need to ensure that your webcam delivers the highest quality video for Teams calls.\nHow should you complete the registry key? To answer, select the appropriate options in the answer area.\nNOTE: Each correct selection is worth one point.\n`,
+//         instruction: "Hotspot: Select the appropriate options in the answer area.",
+//         hotspotHtml: `{0}\SOFTWARE\Microsoft\Terminal Server Client\Default\Addins\WebRTC Redirector\n \n  Name: {1}\n   Type: DWORD`,
+//         rows: [
+//             {
+//                 options: [
+//                               "HKEY_CLASSES_ROOT",
+//                               "HKEY_CURRENT_CONFIG",
+//                               "HKEY_CURRENT_USER",
+//                               "HKEY_LOCAL_MACHINE"
+//                     ],
+//                 answer: "HKEY_CURRENT_USER"
+//             }, // 對應 {0}
+//             {
+//                 options: [
+//                               "DisableRAILAppSharing",
+//                               "DisableRAILScreensharing",
+//                               "ShareClientDesktop",
+//                               "UseHardwareEncoding"
+//                     ],
+//                 answer: "UseHardwareEncoding"
+//             }, // 對應 {1}
+//         ]
+//     },
+
+//     // 題目編號：336
+// {
+//     type: "radio",
+//     text: "Your company uses Teams.\nYou are assigned the Teams Communications Support Specialist role.\nYou discover that you cannot read activity reports in the Microsoft 36S admin center.\nYou need to be assigned a »ole that will enable you to read the activity reports. The solution must follow\nthe principle of least privilege.\nWhich role should be assigned to you?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Teams Communications Support Engineer",
+//         "B. Teams Administrator",
+//         "C. Global Administrator",
+//         "D. Teams Communications Administrator"
+//     ],
+//     answer: "D. Teams Communications Administrator"
+// },
+
+// // 題目編號：337
+// {
+//     type: "radio",
+//     text: "Your company uses Teams. All users are assigned a Microsoft 365 F1 license.\nYou need to retain chats and files in Teams channels for at least one year after they are deleted.\nWhat should you do first?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. From the Audit settings of the Microsoft Purview compliance portal, select Start recording user and admin activity.",
+//         "B. Assign the users a Microsoft 365 F3 license.",
+//         "C. From the Microsoft 365 admin center, enable Customer lockbox.",
+//         "D. Assign the users a Microsoft 365 E3 license."
+//     ],
+//     answer: "D. Assign the users a Microsoft 365 E3 license."
+// },
+
+// // 題目編號：338
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 subscription that contains 300 users. All the users have existing direct\ninward dial (DID) phone numbers. You plan to implement Phone System in Microsoft Teams. Vou need to\nmigrate the users' DID phone numbers to Microsoft Teams.\nWhat should you do?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. From the Microsoft 365 admin center, open a service request",
+//         "B. From the Microsoft Teams admin center, create a dial plan.",
+//         "C. From the Microsoft Teams admin center, run the porting wizard.",
+//         "D. From Voice in the Microsoft Teams admin center select Phone numbers, and then select Add"
+//     ],
+//     answer: "C. From the Microsoft Teams admin center, run the porting wizard."
+// },
+
+// // 題目編號：339
+//             {
+//                 type: "fill",
+//                 text: `DRAG DROP\nYou have a Microsoft 365 E5 subscription and use Microsoft Teams.\nYou plan to schedule the events shown in the following table.\n\n<img src='images/105.png' class='question-img'>\n\nWhich meeting template should you use for each event? To answer, drag the appropriate templates to\nthe correct events. Each template may be used once, more than once, or not at all. You may need to\ndrag the split bar between panes or scroll to view content. NOTE: Each correct selection is worth one\npoint.\n`,
+//                 instruction: "拖選填空：將選項拖入空格。",
+//                 options: [
+//               "Controlled-content meeting",
+//               "Live event",
+//               "Town hall",
+//               "Virtual appointment",
+//               "Webinar"
+//     ],
+//                 fillHtml: `
+//                     <div class='question-content-scroll'><div><div>Event1:：<div class='drop-zone-fill' data-idx='0' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div>
+//                     <div>Event2:：<div class='drop-zone-fill' data-idx='1' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div></div></div>
+//                 `,
+//                 answer: ["Webinar","Virtual appointment"]
+//             },
+
+//             // 題目編號：340
+//     {
+//         type: "hotspot",
+//         hotspotType: "inline",
+//         text: `HOTSPOT\nYou have a Microsoft 365 E5 subscription.\nYou purchase a new Teams Rooms device.\nYou need to create a Microsoft 365 resource account named Room1 for the device. The solution must\nensure that Room1 automatically accepts meeting invitations.\nHow should you complete the PowerShell command? To answer, select the appropriate options in the\nanswer area. NOTE: Each correct selection is worth one point.\n`,
+//         instruction: "Hotspot: Select the appropriate options in the answer area.",
+//         hotspotHtml: `New-Mailbox MicrosoftOnlineServicesID "Room1@contoso.com" -Name "Room1" -DisplayName "Room 1" -Room \n -EnableRoomMailboxAccount {0} -RoomMailboxPassword (ConvertTo-SecureString String "Pa55w.rd" -AsPlainText -Force)\n\n  m1@contoso.com" -AutomateProcessing AutoAccept -AddOrganizerToSubject $false -DeleteComments\n $fa {1} -Identity "Rocel@contoso.com" -AutomateProcessing AutoAccept AddOrganizerToSubject $false DeleteComments\n`,
+//         rows: [
+//             {
+//                 options: [
+//                               "$true",
+//                               "$false",
+//                               "Disabled"
+//                     ],
+//                 answer: "$false"
+//             }, // 對應 {0}
+//             {
+//                 options: [
+//                               "Set-CalendarNotification",
+//                               "Set-CalendarProcessing",
+//                               "Set-CsTeamsEventsPolicy",
+//                               "Set-Mailbox"
+//                     ],
+//                 answer: "Set-CalendarProcessing"
+//             }, // 對應 {1}
+//         ]
+//     },
+
+
+//             // 題目編號：341
+//         {
+//             type: "hotspot",
+//             text: "HOTSPOT\nYour company has a marketing department and a sales department.\nYou have a Teams deployment.\nYou need to recommend an infrastructure that meets the following requirements:\n• Users in the sales department must share system audio.\n• Users in the marketing department must upload custom backgrounds.\n• Whenever possible, the virtual desktop infrastructure (VDI) must be prioritized to save costs.\nWhat should you include in the recommendation for each department? To answer, select the appropriate\noptions in the answer area. NOTE: Each correct selection is worth one point.\n",
+//             instruction: "Hotspot: Select the appropriate options in the answer area.",
+//             rows: [
+//                 {
+//                     label: "Marketing:",
+//                     options: [
+//                         "A traditional desktop",
+//                         "Azure Virtual Desktop",
+//                         "Citrix DaaS",
+//                         "VMware"
+//                     ],
+//                     answer: "Azure Virtual Desktop"
+//                 },
+//                 {
+//                     label: "Sales:",
+//                     options: [
+//                         "A traditional desktop",
+//                         "Azure Virtual Desktop",
+//                         "Citrix DaaS",
+//                         "VMware"
+//                     ],
+//                     answer: "Azure Virtual Desktop"
+//                 }
+//             ]
+//         },
+
+//         // 題目編號：342
+//     {
+//         type: "rank",
+//         text: `DRAG DROP\nYou have a Microsoft E5 subscription that uses Teams.\nYour company uses the Microsoft Viva Connections app.\nYou need to configure the app to meet the following requirements:\n• Rename the app as Start\n• Replace Viva Connections with a custom logo.\nWhich three actions should you perform in sequence? To answer, move the appropriate actions from the\nlist of actions to the answer area and arrange them in the correct order.\n`,
+//         instruction: "拖選排名：請從左側選項中選擇正確的四個步驟，並按順序拖動到右側空格。",
+//         options: [
+//             "Configure a permission policy.",
+//             "Customize the app.",
+//             "Publish the app.",
+//             "Customize the app store.",
+//             "Upload the company logo.",
+//             "Modify the app details and icons.",
+//             "Assign a permission policy."
+//         ],
+//         answer: [
+//             "Customize the app.",
+//             "Modify the app details and icons.",
+//             "Publish the app."
+//         ]
+//     },
+
+//     // 題目編號：343
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 ES subscription that uses Teams with Operator Connect.\nYou plan to deploy Teams conference phones that support PSTN calls and one-touch join for Teams\ncalendar meetings.\nWhich license should you assign to each conference phone?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Microsoft Teams Shared Device",
+//         "B. Teams Rooms Pro",
+//         "C. Microsoft 365 E5",
+//         "D. Microsoft 365 Business Standard",
+//         "E. Microsoft 365 E3"
+//     ],
+//     answer: "A. Microsoft Teams Shared Device"
+// },
+
+// // 題目編號：344
+//             {
+//                 type: "fill",
+//                 text: `DRAG DROP\nYour company has a Microsoft 365 subscription that uses Teams.\nA user named User1 reports the following issues:\n• User1 cannot schedule a live event by using the teams client.\n• User1 experiences only one-way audio during a Teams call.\nYou need to troubleshoot the issues.\nWhich client-side log should you review for each issue? To answer, drag the appropriate logs to the correct issues. Each log may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content. NOTE: Each correct selection is worth one point.\n`,
+//                 instruction: "拖選填空：將選項拖入空格。",
+//                 options: [
+//               "Debug log",
+//               "Desktop log",
+//               "Media log",
+//               "Windows event log"
+//     ],
+//                 fillHtml: `
+//                     <div class='question-content-scroll'><div><div>User1 cannot schedule a live event by using the Teams client:：<div class='drop-zone-fill' data-idx='0' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div>
+//                     <div>User experiences only one-way audio during a Teams call:：<div class='drop-zone-fill' data-idx='1' ondrop='dropFill(event)' ondragover='allowDrop(event)'></div></div></div></div>
+//                 `,
+//                 answer: ["Debug log","Media log"]
+//             },
+
+//             // 題目編號：345
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 subscription that uses Teams.\nYou need to identify the percentage of meetings that follow one or more meeting best practices.\nWhat should you use?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. usage reports in the Microsoft learns admin center",
+//         "B. improvement actions in Compliance Manager",
+//         "C. Adoption Score in the Microsoft 365 admin center",
+//         "D. audit reports in the Microsoft Purview compliance portal"
+//     ],
+//     answer: "C. Adoption Score in the Microsoft 365 admin center"
+// },
+
+// // 題目編號：346
+// {
+//     type: "checkbox",
+//     text: "You have a Microsoft 365 E5 subscription.\nYou plan to have Teams administrators use sell-help diagnostics.\nWhich two scenarios are covered by self-help diagnostics? Each correct answer presents a complete\nsolution. NOTE: Each correct selection is worth one point.",
+//     instruction: "Select 2 items.",
+//     max: 2,
+//     options: [
+//         "A. Validate that a specified user can disable Teams live events.",
+//         "B. Validate that a specified user is configured to record meetings.",
+//         "C. Review Teams guest access.",
+//         "D. Attempt to locate a missing Teams meeting recording.",
+//         "E. Validate end-to-end encryption for strictly confidential Teams meetings"
+//     ],
+//     answer: [
+//         "B. Validate that a specified user is configured to record meetings.",
+//         "D. Attempt to locate a missing Teams meeting recording."
+//     ]
+// },
+
+// // 題目編號：347
+// {
+//     type: "radio",
+//     text: "You Have a Microsoft 365 subscription that includes Teams. The subscription contains a user named\nUser1 You are deploying 10 new learns devices.\nYou need to ensure that User1 can restart the Teams devices remotely.\nSolution: You assign the Teams Communications Support Engineer role to User1.\nDoes this meet the goal?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Yes",
+//         "B. No"
+//     ],
+//     answer: "B. No"
+// },
+
+// // 題目編號：348
+// {
+//     type: "checkbox",
+//     text: "You have a Microsoft 365 subscription that uses Microsoft Teams and contains a user named User1.\nMicrosoft Teams has a default conferencing toll phone number of +1 323 705-3393. The default number\nis assigned to User1.\nYou need to change the conferencing toll phone number assigned to User1.\nThe solution must meet the following requirements:\n• Update the existing meeting invites of User1 to use the new conferencing toll phone number.\n• Ensure that other users in your company continue to use the default number.\nWhich two actions should you perform? Each correct answer presents part of the solution, NOTE: Each\ncorrect selection is worth one point.",
+//     instruction: "Select 2 items.",
+//     max: 2,
+//     options: [
+//         "A. From PowerShell, run the update-csTenantMeetingUr1 cmdlet.",
+//         "B. From the Microsoft Entra admin center, modify the Usage location of User1.",
+//         "C. From PowerShell, run the start-csEXMeetingMgration cmdlet.",
+//         "D. From the Microsoft Teams admin center, modify the Users settings of User1.",
+//         "E. From the Microsoft Teams admin center, modify the default Bridge settings."
+//     ],
+//     answer: [
+//         "C. From PowerShell, run the start-csEXMeetingMgration cmdlet.",
+//         "D. From the Microsoft Teams admin center, modify the Users settings of User1."
+//     ]
+// },
+
+// // 題目編號：349
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 E5 subscription that includes Teams.\nAll users are assigned the Teams Premium add-on license.\nYou need to schedule an event that supports 20,000 streaming participants and uses enterprise content\ndelivery network (eCDN).\nWhich meeting template should you select?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Controlled-content meeting",
+//         "B. Webinar",
+//         "C. Town hall",
+//         "D. Virtual appointment"
+//     ],
+//     answer: "C. Town hall"
+// },
+
+// // 題目編號：350
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 E5 subscription and use Microsoft Teams.\nA user named User1 reports that the Redirect to a new number or contact option is unavailable in the\nCalls settings of the Teams client as shown in the following exhibit.\n\n<img src='images/106.png' class='question-img'>\n\nWhat is the cause of the missing option?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Busy on busy during calls is enabled for User1.",
+//         "B. A policy that limits calls to domestic only is applied to User1.",
+//         "C. Enterprise Voice is disabled for User1.",
+//         "D. Simultaneous ring is configured User1."
+//     ],
+//     answer: "C. Enterprise Voice is disabled for User1."
+// },
+
+// // 題目編號：351
+// {
+//     type: "radio",
+//     text: "You deploy a Teams Rooms device named Device 1.\nYou need to identify how many outbound meeting minutes were consumed during the last month by\nDevice1.\nWhich report should you run?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Audio Conferencing dial-out usage",
+//         "B. PSTN & SMS usage",
+//         "C. Summary Reports",
+//         "D. Rate My Call Reports"
+//     ],
+//     answer: "B. PSTN & SMS usage"
+// },
+
+// // 題目編號：352
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 subscription that uses Teams.\nYour company uses a license that includes 60 minutes of dial-out for Teams meetings.\nYou need to review the total costs of each meeting organizer for dial-out calls during meetings.\nWhich report should you review?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. the Microsoft Call Quality Dashboard summary report",
+//         "B. the Microsoft Call Quality Dashboard detailed report",
+//         "C. PSTN minute pools",
+//         "D. PSTN and SMS usage",
+//         "E. Audio Conferencing dial-out usage"
+//     ],
+//     answer: "E. Audio Conferencing dial-out usage"
+// },
+
+// // 題目編號：353
+// {
+//     type: "radio",
+//     text: "You have a Teams deployment.\nYou deploy the new Teams client to users.\nSome users report that the Teams Meeting add-in is missing from Microsoft Outlook after the\ndeployment.\nYou need to ensure that Outlook has the Teams Meeting add-in.\nWhat should you do?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Clear the Teams client cache.",
+//         "B. Runsfc.exe.",
+//         "C. Run the Teams client as an administrator.",
+//         "D. Uninstall the Teams Meeting add-in and restart Teams and Outlook."
+//     ],
+//     answer: "A. Clear the Teams client cache."
+// },
+
+// // 題目編號：354
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 E5 subscription that uses Teams.\nA user named User1 reports that the recording button is unavailable during a Teams meeting.\nYou need to ensure that the recording button is available for User1.\nWhat should you configure in the Microsoft Teams admin center?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. Meeting policies",
+//         "B. Meeting template policies",
+//         "C. Meeting settings",
+//         "D. Meeting templates"
+//     ],
+//     answer: "A. Meeting policies"
+// },
+
+// // 題目編號：355
+// {
+//     type: "radio",
+//     text: "You have a Microsoft 365 E5 subscription that includes Teams.\nYou need to identify app data for a specific date and time range for the following:\n• Teams apps that were installed on or removed from a Teams client\n• Teams apps that were added to or removed from the Microsoft Teams app catalog\nWhat should you do?",
+//     instruction: "Select the correct answer.",
+//     options: [
+//         "A. From Microsoft Teams apps in the Microsoft 365 admin center, review the App usage report.",
+//         "B. From the Microsoft Teams admin center, review Teams usage reports.",
+//         "C. From Compliance Manager, search the audit log.",
+//         "D. From the Microsoft Entra admin center, search the audit log."
+//     ],
+//     answer: "C. From Compliance Manager, search the audit log."
+// },
+// 題目編號：356
+    {
+        type: "hotspot",
+        hotspotType: "inline",
+        text: `HOTSPOT\nYour company uses Microsoft Teams.\nYou have a team named Team1.\nYou need to prevent users from posting animated images to Team1.\nHow should you complete the PowerShell cmdlet? To answer, select the appropriate options in the\nanswer area. NOTE: Each correct selection is worth one point.\n`,
+        instruction: "Hotspot: Select the appropriate options in the answer area.",
+        hotspotHtml: `get-team -DisplayName "Team1" | {0} {1} $falses`,
+        rows: [
+            {
+                options: [
+                              "Set-Team",
+                              "Set-TeamChannel",
+                              "Set-TeamPicture",
+                              "Set-TeamsApp"
+                    ],
+                answer: "Set-Team"
+            }, // 對應 {0}
+            {
+                options: [
+                              "-AllowCustomMemes",
+                              "-AllowGiphy",
+                              "-AllowStickersAndMemes",
+                              "-GiphyContentRating"
+                    ],
+                answer: "-AllowGiphy"
+            }, // 對應 {1}
+        ]
+    },
+        // 題目編號：357
+        {
+            type: "hotspot",
+            text: "HOTSPOT\nYou have a Teams Phone deployment.\nYou have an auto attendant named Autoattend1.\nYou need to configure Autoattend1 to meet the following requirements:\n• Exclude a group named Group1 from the directory.\n• Configure Dial key 1 to forward calls to a call queue.\nWhat should you do for each requirement? To answer, select the appropriate options in the answer area.\nNOTE: Each correct selection is worth one point.\n",
+            instruction: "Hotspot: Select the appropriate options in the answer area.",
+            rows: [
+                {
+                    label: "To exclude Group1, configure:",
+                    options: [
+                        "A dial scope",
+                        "Authorized users",
+                        "Call flows"
+                    ],
+                    answer: "A dial scope"
+                },
+                {
+                    label: "To configure Dial key 1 to forward calls to a call queue, redirect to:",
+                    options: [
+                        "A person in the organization",
+                        "A voice app",
+                        "An external phone number"
+                    ],
+                    answer: "A voice app"
+                }
+            ]
+        },
+
+                // 題目編號：358
+        {
+            type: "hotspot",
+            text: "HOTSPOT\nYour company has a marketing department and a finance department.\nYou have a Teams deployment.\nThe marketing department plans to host a Teams session that has the following requirements:\n• External attendees must register by using a registration page.\n• Attendees must be able to use Microsoft Whiteboard during the session.\nThe finance department plans to host a Teams session that has the following requirements:\n• 1,500 attendees must be able to interact within a Q&A session.\n• The session must use enterprise content delivery network (eCDN) integration.\nWhich type of meeting should you recommend for each department? To answer, select the appropriate\noptions in the answer area. NOTE: Each correct selection is worth one point.\n",
+            instruction: "Hotspot: Select the appropriate options in the answer area.",
+            rows: [
+                {
+                    label: "Marketing:",
+                    options: [
+                        "Meeting",
+                        "Town hall",
+                        "Webinar"
+                    ],
+                    answer: "Webinar"
+                },
+                {
+                    label: "Finance:",
+                    options: [
+                        "Meeting",
+                        "Town hall",
+                        "Webinar"
+                    ],
+                    answer: "Town hall"
+                }
+            ]
+        },        
+        
+        // 題目編號：359
+        {
+            type: "hotspot",
+            text: "HOTSPOT\nYou are planning a Teams deployment to a branch office.\nYou need to recommend the following information for the deployment:\n• The network ports required for audio, video, and screen sharing.\n• The minimum bandwidth requirements in kilobits/s up and down for screen sharing during Teams\nmeetings.\nWhat should you recommend? To answer, select the appropriate options in the answer area. NOTE;\nEach correct selection is worth one point.\n",
+            instruction: "Hotspot: Select the appropriate options in the answer area.",
+            rows: [
+                {
+                    label: "Network ports:",
+                    options: [
+                        "TCP 443",
+                        "TCP 5223",
+                        "UDP 3478-3481"
+                    ],
+                    answer: "UDP 3478-3481"
+                },
+                {
+                    label: "Minimum bandwidth:",
+                    options: [
+                        "150/200",
+                        "200/200",
+                        "250/250",
+                        "1000/1500"
+                    ],
+                    answer: "200/200"
+                }
+            ]
+        },
+
+        // 題目編號：360
+{
+    type: "radio",
+    text: "You have a Teams deployment.\nFrom Microsoft Call Quality Dashboard, you discover that internal calls are marked as outside.\nYou need to ensure that inside and outside calls are reported correctly.\nWhat should you configure?",
+    instruction: "Select the correct answer.",
+    options: [
+        "A. Tenant Data Upload",
+        "B. Roaming policies under Network topology",
+        "C. Network sites under Network topology",
+        "D. Trusted IPs under Network topology",
+        "E. Voice routing policies"
+    ],
+    answer: "A. Tenant Data Upload"
+},
+
+// 題目編號：361
+    {
+        type: "rank",
+        text: `DRAG DROP\nYou have a Teams deployment that contains a Teams Rooms Pro subscription.\nA consultant deploys a Teams Rooms on Windows device named Boardroom1.\nYou need to ensure that the consultant can complete the sign-in process for Boardroom 1 without access\nto a username and password.\nWhich three actions should you perform in sequence? To answer, move the appropriate actions from the\nlist of actions to the answer area and arrange them in the correct order.\n`,
+        instruction: "拖選排名：請從左側選項中選擇正確的四個步驟，並按順序拖動到右側空格。",
+        options: [
+            "Create and license a Microsoft Exchange Online resource account.",
+            "Add the MAC address of Boardroom1 to the device.",
+            "Generate a verification code and instruct the consultant to provision the device.",
+            "From the Teams admin center, complete the pending sign-in process.",
+            "Create and license a Teams resource account.",
+            "Generate a one-time password and instruct the consultant to provision the device.",
+            "From the Teams Room Pro Management portal, approve the sign-in request."
+        ],
+        answer: [
+            "Create and license a Teams resource account.",
+            "Generate a verification code and instruct the consultant to provision the device.",
+            "From the Teams admin center, complete the pending sign-in process."
+        ]
+    },
+
+    // 題目編號：362
 {
     type: "checkbox",
-    text: "You have a Microsoft 365 subscription that uses Microsoft Teams.\nYou plan to deploy Microsoft Teams voice.\nWhich two settings require a resource account? Each correct answer presents part of the solution.\nNOTE: Each correct selection worth one point.",
+    text: "You have a Microsoft 365 E5 subscription that has Teams Premium licenses. The subscription\ncontains an Azure Virtual Desktop deployment that has a session host named Host1.\nYou plan to install the Teams for virtual desktop infrastructure (VDl) client on Host1.\nYou need to identify which Teams features will be unavailable to Host1.\nWhich two features should you identify? Each correct answer presents a complete solution. NOTE Each\ncorrect selection is worth one point",
     instruction: "Select 2 items.",
     max: 2,
     options: [
-        "A. Call park policies",
-        "B. Auto attendant",
-        "C. Call queues",
-        "D. Emergency polices",
-        "E. Guest access"
+        "A. end-to-end encryption",
+        "B. background blur",
+        "C. live captions",
+        "D. custom meeting backgrounds",
+        "E. multi-window"
     ],
     answer: [
-        "B. Auto attendant",
-        "C. Call queues"
+        "A. end-to-end encryption",
+        "D. custom meeting backgrounds"
     ]
 },
 
-// 題目編號：206
+        // 題目編號：363
+        {
+            type: "hotspot",
+            text: "HOTSPOT\nYou have an Azure Virtual Desktop deployment.\nYou have a Teams deployment.\nYou deploy the Teams for virtual desktop infrastructure (VDI) client on an Azure Virtual Desktop session\nhost and configure the registry settings as shown in the following exhibit.\n<img src='images/107.png' class='question-img'>\nUse the drop-down menus to select the answer choice that completes each statement based on the\ninformation presented in the graphic. NOTE: Each correct selection is worth one point.\n",
+            instruction: "Hotspot: Select the appropriate options in the answer area.",
+            rows: [
+                {
+                    label: "To enable screen sharing, you must change the [answer choice] key.",
+                    options: [
+                        "DisableRAILAppSharing",
+                        "DisableRAILScreenSharing",
+                        "ShareClientDesktop"
+                    ],
+                    answer: "ShareClientDesktop"
+                },
+                {
+                    label: "To prevent users from sharing their desktop, you must change the [answer choice] key.",
+                    options: [
+                        "DisableRAILAppSharing",
+                        "DisableRAILScreenSharing",
+                        "ShareClientDesktop"
+                    ],
+                    answer: "DisableRAILScreenSharing",
+                }
+            ]
+        },
+
+        // 題目編號：364
 {
     type: "radio",
-    text: "You have a Microsoft 365 subscription that uses Microsoft Teams and contains a user named User.\nYou need to ensure that User1 can investigate call-quality issues and identify the following types of\ninformation:\n✑ Caller and recipient names\n✑ Device names and IP addresses\n✑ The number and names of all meeting participants\nThe solution must use the principle of least privilege.\nWhich role should you assign to User1?\n\n\n\n\n206.You have a Microsoft 365 subscription that uses Microsoft Teams and contains a user named User.\nYou need to ensure that User1 can investigate call-quality issues and identify the following types of\ninformation:\n✑ Caller and recipient names\n✑ Device names and IP addresses\n✑ The number and names of all meeting participants\nThe solution must use the principle of least privilege.\nWhich role should you assign to User1?\n\n\n\nAnswer: B",
+    text: "You have a Microsoft 365 E5 subscription that uses Teams.\nYour company collaborates with a partner company named fabrikam.com.\nYou plan to invite guest users from fabnkam.com to a standard Teams channel.\nYou need to ensure that all the guest users accept your company s terms of use (ToU) before gaining\naccess to Teams.\nWhat should you do?",
     instruction: "Select the correct answer.",
     options: [
-        "A. Teams Device Administrator",
-        "B. Teams communication support engineer",
-        "C. Teams Administrator",
-        "D. Teams communication admin",
-        "E. Teams Device Administrator",
-        "F. Teams communication support engineer"
+        "A. Create a Conditional Access policy.",
+        "B. Configure an access review.",
+        "C. Configure Privileged Identity Management (P1M).",
+        "D. Configure the Microsoft Entra Verified ID service."
     ],
-    answer: "B. Teams communication support engineer"
+    answer: "A. Create a Conditional Access policy."
 },
 
-// 題目編號：207
+// 題目編號：365
+{
+    type: "checkbox",
+    text: "You have a Microsoft 365 subscription that uses Teams.\nYou deploy Teams to a branch office that has limited internet bandwidth.\nYou need to configure policy settings to enforce network bandwidth restrictions only when Teams users\nare in the branch office.\nWhich two policies should you configure? Each correct answer presents part of the solution. NOTE:\nEach correct selection is worth one point.",
+    instruction: "Select 2 items.",
+    max: 2,
+    options: [
+        "A. a meeting policy",
+        "B. an Audio Conferencing routing policy",
+        "C. a calling policy",
+        "D. a voice routing policy",
+        "E. a network roaming policy"
+    ],
+    answer: [
+        "A. a meeting policy",
+        "E. a network roaming policy"
+    ]
+},
+
+        // 題目編號：366
+        {
+            type: "hotspot",
+            text: "HOTSPOT\nYou have a Microsoft 365 subscription that uses Teams.\nYou plan to deploy Teams to a branch office named Branch1.\nYou need to review Microsoft 365 network telemetry insights and estimate the required network\nbandwidth required for the deployment to Branch1.\nWhat should you do for each requirement? To answer, select the appropriate options in the answer\narea. NOTE: Each correct selection is worth one point.\n",
+            instruction: "Hotspot: Select the appropriate options in the answer area.",
+            rows: [
+                {
+                    label: "Review Microsoft 365 network telemetry insights:",
+                    options: [
+                        "From the Microsoft 365 admin center. configure the Network connectivity settings.",
+                        "From the Microsoft Teams admin center. configure the Network topology settings.",
+                        "From the Microsoft Teams admin center. use Network planner."
+                    ],
+                    answer: "From the Microsoft 365 admin center. configure the Network connectivity settings."
+                },
+                {
+                    label: "Estimate the required network bandwidth by using:",
+                    options: [
+                        "Network planner",
+                        "Self-help diagnostics",
+                        "Teams advisor",
+                        "The Call Quality Dashboard (CQD)"
+                    ],
+                    answer: "Network planner"
+                }
+            ]
+        },
+
+        // 題目編號：367
+{
+    type: "radio",
+    text: "You have a Teams channel named Project1.\nYou have a third-party project management app named App1.\nYou need to recommend an extensibility solution that integrates App1 into Teams.\nThe solution must meet the following requirements:\n• Users must be able to access App1 directly from Project1.\n• The members of Project! must be able to collaborate.\nWhat should you include in the recommendation?",
+    instruction: "Select the correct answer.",
+    options: [
+        "A. a connector",
+        "B. a tab",
+        "C. a bot",
+        "D. a meeting extension",
+        "E. a message extension"
+    ],
+    answer: "B. a tab"
+},
+
+// 題目編號：368
+{
+    type: "radio",
+    text: "You have a Teams deployment.\nYou start a meeting and enable the following settings:\n• Enable Green room\n• Provide CART Captions\n• Enable end-to-end Encryption\n• Anonymous users can join the meeting\nWhat feature is no longer available during the meeting?",
+    instruction: "Select the correct answer.",
+    options: [
+        "A. Microsoft 365 Copilot in Teams meetings and events",
+        "B. meeting chat",
+        "C. Raise hand",
+        "D. screen sharing"
+    ],
+    answer: "A. Microsoft 365 Copilot in Teams meetings and events"
+},
+
+// 題目編號：369
+{
+    type: "radio",
+    text: "You have a Microsoft 365 subscription.\nYou plan to implement Teams.\nYou need to recommend a solution to assess the current environment and identify configurations that\nmust be updated to support Teams meetings and online conferences.\nWhat should you include in the recommendation?",
+    instruction: "Select the correct answer.",
+    options: [
+        "A. Network planner",
+        "B. the Microsoft 365 Assessment tool",
+        "C. Microsoft Office Deployment Tool (ODT)",
+        "D. Teams advisor"
+    ],
+    answer: "D. Teams advisor"
+},
+
+// 題目編號：370
+{
+    type: "radio",
+    text: "You have a Microsoft 365 E5 subscription that includes Teams. The subscription contains a user\nnamed User1 that is an owner of a team named Team1. Team1 contains members that include guest\nuser accounts.\nYou need to ensure that User1 provides a quarterly confirmation for all the guest users that have a\nlegitimate business need for membership to Team1.\nWhat should you do?",
+    instruction: "Select the correct answer.",
+    options: [
+        "A. From the Microsoft Entra admin center, configure the Access reviews settings.",
+        "B. From the Microsoft Entra admin center, configure the External collaboration settings.",
+        "C. From the Microsoft Teams admin center, configure the External access settings.",
+        "D. From the Microsoft Teams admin center, configure the Guest access settings."
+    ],
+    answer: "A. From the Microsoft Entra admin center, configure the Access reviews settings."
+},
+
+// 題目編號：371
+{
+    type: "checkbox",
+    text: "You have a Microsoft 365 E5 subscription that uses Teams.\nA group named Group1 collaborates with users from a partner company named fabrikam.com. You need\nto ensure that only the members of Group1 can create shared channels and invite users from\nfabrikam.com.\nWhich two actions should you perform? Each correct answer presents part of the solution. NOTE: Each\ncorrect selection is worth one point.",
+    instruction: "Select 2 items.",
+    max: 2,
+    options: [
+        "A. Configure Teams settings.",
+        "B. From Outbound access settings, configure B2B direct connect for fabrikam.com.",
+        "C. Configure an app setup policy in Teams.",
+        "D. Configure a Teams policy.",
+        "E. From Inbound access settings, configure B2B direct connect for fabrikam.com."
+    ],
+    answer: [
+        "B. From Outbound access settings, configure B2B direct connect for fabrikam.com.",
+        "D. Configure a Teams policy."
+    ]
+},
+
+// 題目編號：372
+{
+    type: "radio",
+    text: "You have a Microsoft 365 E5 subscription.\nYou plan to use Teams.\nYou run the Microsoft 365 network connectivity test tool and generate a report.\nYou discover that the Microsoft Teams section of the report has a warning notification for media\nconnectivity.\nYou suspect a firewall issue at the test location.\nWhich destination protocol and port range should you configure on the firewall?",
+    instruction: "Select the correct answer.",
+    options: [
+        "A. UDP ports 3478 through 3481",
+        "B. UDP ports 50000 through 50019",
+        "C. UDP ports 50020 through 50059",
+        "D. TCP ports 3478 through 3481"
+    ],
+    answer: "A. UDP ports 3478 through 3481"
+},
+
+// 題目編號：373
+{
+    type: "radio",
+    text: "You have a Microsoft 365 E5 subscription that uses Teams.\nYou have a team named Team1 that contains guest users.\nYou need to ensure that the members of Team1 are prevented from sharing sensitive information with\nthe guest users during Teams private chats or in Teams channels.\nWhich type of policy should you configure?",
+    instruction: "Select the correct answer.",
+    options: [
+        "A. information barrier policy",
+        "B. messaging policy",
+        "C. sensitivity label policy",
+        "D. data loss prevention (DLP) policy"
+    ],
+    answer: "D. data loss prevention (DLP) policy"
+},
+
+// 題目編號：374
+{
+    type: "radio",
+    text: "You have a Teams deployment.\nAll users are assigned Microsoft 365 Copilot licenses.\nYou need to ensure that Teams meeting participants can access Copilot features during and after a\nmeeting.\nWhich setting should you enable first?",
+    instruction: "Select the correct answer.",
+    options: [
+        "A. Live captions",
+        "B. Transcription",
+        "C. Live streaming",
+        "D. Require participant agreement for recording and transcription"
+    ],
+    answer: "B. Transcription"
+},
+
+// 題目編號：375
+{
+    type: "radio",
+    text: "You have a Teams deployment.\nYou need to customize the message that is displayed when a user requests access to a blocked app.\nWhat should you do in the Microsoft Teams admin center?",
+    instruction: "Select the correct answer.",
+    options: [
+        "A. Create a policy package.",
+        "B. Configure the Customize app store settings.",
+        "C. From Teams settings, configure the Notifications and feeds settings.",
+        "D. From Manage apps, configure the Org-wide app settings.",
+        "E. Create an app setup policy."
+    ],
+    answer: "D. From Manage apps, configure the Org-wide app settings."
+},
+
+// 題目編號：376
+{
+    type: "radio",
+    text: "You have a Microsoft 365 subscription that uses Microsoft Teams. You need to prevent users from\ncreating private channels.\nWhat should you do?",
+    instruction: "Select the correct answer.",
+    options: [
+        "A. Create a messaging policy.",
+        "B. Create a Teams policy.",
+        "C. Modify the Teams settings.",
+        "D. Create an app permission policy."
+    ],
+    answer: "B. Create a Teams policy."
+},
+
+// 題目編號：377
+{
+    type: "radio",
+    text: "You have a Microsoft 365 E5 subscription and use Microsoft Teams.\nYou plan to support meetings that use breakout rooms.\nYou need to recommend a breakout room solution that meets the following requirements:\n• Supports 500 participants\n• Supports content sharing and chat\nWhat should you include in the recommendation?",
+    instruction: "Select the correct answer.",
+    options: [
+        "A. meetings",
+        "B. live events",
+        "C. town halls",
+        "D. webinars"
+    ],
+    answer: "A. meetings"
+},
+
+// 題目編號：378
+{
+    type: "radio",
+    text: "You have a Teams deployment.\nYou change the display name and profile photo of a user named User1.\nYou need to ensure that the changes are displayed as soon as possible in the new Teams client for\nUser1.\nWhat should you do?",
+    instruction: "Select the correct answer.",
+    options: [
+        "A. Run the Microsoft Support and Recovery Assistant.",
+        "B. Run the self-help diagnostics took",
+        "C. Clear the Teams client cache.",
+        "D. Clear the web browser cache."
+    ],
+    answer: "C. Clear the Teams client cache."
+},
+
+// 題目編號：379
+{
+    type: "radio",
+    text: "You have a Microsoft 365 E5 subscription that includes Teams.\nYou need to recommend a solution to investigate actions that relate to the following Teams activities:\n• A new team is created.\n• A new channel is added to a team.\n• A team member changes their role membership.\nThe solution must ensure that you can specify a start date and end date of the activities.\nWhat should you include in the recommendation?",
+    instruction: "Select the correct answer.",
+    options: [
+        "A. Teams advisor",
+        "B. eDiscovery",
+        "C. Microsoft Purview Audit",
+        "D. Teams usage reports"
+    ],
+    answer: "C. Microsoft Purview Audit"
+},
+
+// 題目編號：380
+{
+    type: "radio",
+    text: "You have a Microsoft 365 E5 subscription and use Microsoft Teams.\nA user named User1 reports that Microsoft Teams Meeting Add-in for Microsoft Outlook is unavailable\nand cannot be installed.\nYou need to ensure that the add-in can be installed.\nWhat should you do?",
+    instruction: "Select the correct answer.",
+    options: [
+        "A. Validate the Meeting policies settings.",
+        "B. Clear the Teams client cache of User1.",
+        "C. Validate the Teams policies settings.",
+        "D. Instruct User1 to update to the most recent version of the Teams client."
+    ],
+    answer: "D. Instruct User1 to update to the most recent version of the Teams client."
+},
+
+// 題目編號：381
+{
+    type: "radio",
+    text: "You have a Microsoft 365 E5 subscription that uses Teams and contains three teams named Team1, Team2, and Team3.\nYou need to validate the owner of each team and identify the number of guest users that were added to\neach team.\nWhat should you use in the Microsoft Teams admin center?",
+    instruction: "Select the correct answer.",
+    options: [
+        "A. Teams advisor",
+        "B. Manage users",
+        "C. Manage teams",
+        "D. Usage reports"
+    ],
+    answer: "C. Manage teams"
+},
+
+// 題目編號：382
+{
+    type: "radio",
+    text: "You have a Teams Phone deployment.\nYou discover that the Teams client cannot receive PSTN calls but can receive Teams calls.\nYou need to ensure that the Teams client can receive both PSTN and Teams calls.\nWhat should you configure in the Teams client?",
+    instruction: "Select the correct answer.",
+    options: [
+        "A. Manage call group",
+        "B. Manage delegates",
+        "C. Redirect external phone calls",
+        "D. Forward all calls"
+    ],
+    answer: "C. Redirect external phone calls"
+},
+
+// 題目編號：383
             {
                 type: "matrix",
-                text: `HOTSPOT\nYou have a Microsoft 365 subscription that uses Microsoft Teams and contains the users shown in the\nfollowing table.\n\n<img src='images/52.png' class='question-img'>\n\nYou have the team shown in the following table.\nA new access review needs to be created for Project1.\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No. NOTE:\nEach correct selection is worth one point.\n`,
+                text: `HOTSPOT\nYou have a Microsoft 365 subscription that uses Teams.\nThe subscription contains the users shown in the following table.\n\n<img src='images/108.png' class='question-img'>\n\nUser3 owns a public team named Sales that contains two channels named Planning and Budgets.\nYou have the following custom blocked words list.\nProject, Contoso, Group, Team\nFor each of the following statements, select Yes if True. Otherwise select No. NOTE: Each correct\nselection is worth one point.\n`,
                 instruction: "Matrix: Select Yes or No for each statement.",
                 rows: [
                     {
-                        label: "User1 can create and manage the access review.",
+                        label: "User1 can create a team named Project A.",
+                        answer: "No"
+                    },
+                    {
+                        label: "User2 can create a team named Contoso.",
                         answer: "Yes"
                     },
                     {
-                        label: "User2 can be assigned as a reviewer of the access review.",
-                        answer: "Yes"
-                    },
-                    {
-                        label: "Guest1 can be assigned as a reviewer of the access review.",
+                        label: "In the Sales team, User3 can create a channel named Contoso.",
                         answer: "No"
                     }
                 ]
             },
-
-            // 題目編號：208
-{
-    type: "radio",
-    text: "You have a Microsoft 365 subscription that uses Microsoft Teams.\nYou plan to implement Microsoft Teams Rooms. The solution must meet the following requirements:\n- Support Microsoft Teams Rooms, Microsoft Surface Hub, and collaboration bars for Microsoft Teams.\n- Ensure that Microsoft manages firmware and application updates for room systems and peripherals.\n- Ensure that Microsoft monitors and troubleshoots room system and peripherals.\nWhich license should you purchase?",
-    instruction: "Select the correct answer.",
-    options: [
-        "A. Advanced Communications",
-        "B. Microsoft Teams Rooms Premium",
-        "C. Microsoft Teams Rooms Standard",
-        "D. Microsoft 365 Business Voice"
-    ],
-    answer: "B. Microsoft Teams Rooms Premium"
-},
-
-// 題目編號：209
-{
-    type: "radio",
-    text: "You have a Microsoft 365 subscription that uses Microsoft Teams.\nThe subscription contains 1,000 users in the groups shown in the following table.\n\n<img src='images/53.png' class='question-img'>\n\nYou need to configure Microsoft Teams to meet the requirements. The solution must minimize\nadministrative effort.\nWhat should you use?",
-    instruction: "Select the correct answer.",
-    options: [
-        "A. policy packages",
-        "B. app setup policies",
-        "C. Microsoft Teams policies",
-        "D. Meetings policies"
-    ],
-    answer: "A. policy packages"
-},
-
-        // 題目編號：210
-        {
-            type: "hotspot",
-            text: "HOTSPOT\nYour company has a Microsoft 365 E5 subscription.\nYou plan to create a team that will automatically include all new and existing users at the company.\nYou need to identify which role-based access control (RBAC) role is required to create the team, and\nwhich tool must be used to create the team. The solution must use the principle of least privilege.\nWhat should you identify? To answer, select the appropriate options in the answer area. NOTE: Each\ncorrect selection is worth one point.\n",
-            instruction: "Hotspot: Select the appropriate options in the answer area.",
-            rows: [
-                {
-                    label: "Role:",
-                    options: [
-                        "Global Administrator",
-                        "Groups administrator",
-                        "Teams Administrator",
-                        "User Administrator"
-                    ],
-                    answer: "Global Administrator"
-                },
-                {
-                    label: "Tool:",
-                    options: [
-                        "Azure Active Directory admin center",
-                        "Microsoft Teams admin center",
-                        "Microsoft Teams client",
-                        "Microsoft Teams PowerShell"
-                    ],
-                    answer: "Microsoft Teams client"
-                }
-            ]
-        },
 
 
     // ...topic1_questions,
